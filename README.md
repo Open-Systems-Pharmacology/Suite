@@ -8,7 +8,7 @@ We invite everyone in the field of Systems Pharmacology, be it in academia, indu
 
 ## Unmatched Flexibility - Unlimited Transparency
 
-The Computational Open Systems Pharmacology Software Suite contains different softwaretools and has been designed 
+The Open Systems Pharmacology Software Suite contains different software tools and has been designed 
 using a modular concept to allow efficient multi-scale modeling and simulation. 
 The overall platform with its various software tools is implemented in a modular way 
 as will be explained in more detail below. 
