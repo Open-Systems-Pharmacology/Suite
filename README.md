@@ -8,7 +8,7 @@ We invite everyone in the field of Systems Pharmacology, be it in academia, indu
 
 ## Unmatched Flexibility - Unlimited Transparency
 
-The Open Systems Pharmacology Software Suite contains different software tools and has been designed 
+The Open Systems Pharmacology Suite contains different software tools and has been designed 
 using a modular concept to allow efficient multi-scale modeling and simulation. 
 The overall platform with its various software tools is implemented in a modular way 
 as will be explained in more detail below. 
@@ -77,15 +77,13 @@ for the import of experimental data via MS Excel® and models based on SBML or t
 
 ## Software installation
 
-How to install setups for the Open Systems Pharmacology Software Suite with PK-Sim® and MoBi®
-
-If you would like to install the Software from scratch:
+How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and MoBi®
 
 1. Download the Software Setup and install it on your computer
   
   Make sure you are provided with administrator rights; these are required!
 2. Download PK-Sim Express Gene Expression Database and copy to a folder accessible for all users. 
-3. Configure PK-Sim Gene Expression Database (for details view OSP Suite manual chapter 10 „PK-Sim Options“)
+3. Configure PK-Sim Gene Expression Database (for details view the Open Systems Pharmacology Suite manual chapter 10 „PK-Sim Options“)
 
 ## System Requirements
 
