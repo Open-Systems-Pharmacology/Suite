@@ -2,11 +2,10 @@ This open source Systems Pharmacology project makes formerly commercial software
 
 We invite everyone in the field of Systems Pharmacology, be it in academia, industry or regulatory bodies, to use the platform. Active participation of computer and modeling & simulation scientists in the further development of the modeling & simulation platform, the incorporated systems models, processes for their qualifaction and application etc. is encouraged and highly welcome! Please follow the community’s activities in this GitHub project.
 
-
-
 # Open Systems Pharmacology Suite with PK-Sim® and MoBi® for Quantitative Systems Pharmacology
 
 ## Unmatched Flexibility - Unlimited Transparency
+![platform concept](https://cloud.githubusercontent.com/assets/1041237/22481683/1df757ea-e7c4-11e6-8599-76428a7398ac.png)
 
 The Open Systems Pharmacology Suite contains different software tools and has been designed 
 using a modular concept to allow efficient multi-scale modeling and simulation. 
