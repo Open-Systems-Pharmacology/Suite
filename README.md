@@ -1,4 +1,4 @@
-This open source Systems Pharmacology project makes formerly commercial software tools PK-Sim® and MoBi® available as freeware under GPLv2. All source code goes public. 
+This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](http://www.open-systems-pharmacology.org/pk-sim) and [MoBi®](http://www.open-systems-pharmacology.org/mobi) available as freeware under GPLv2. All source code goes public. 
 
 We invite everyone in the field of Systems Pharmacology, be it in academia, industry or regulatory bodies, to use the platform. Active participation of computer and modeling & simulation scientists in the further development of the modeling & simulation platform, the incorporated systems models, processes for their qualifaction and application etc. is encouraged and highly welcome! Please follow the community’s activities in this GitHub project.
 
@@ -15,64 +15,6 @@ The central software tools PK-Sim® and MoBi® make use of building blocks as in
 While PK-Sim® is based on a whole-body concept, 
 the focus of its counterpart, MoBi®, is at the molecular level. 
 However, both tools extend to additional physiological scales as illustrated.
-
-## PK-Sim
-![pksim](https://cloud.githubusercontent.com/assets/1041237/22438535/5b908010-e6fa-11e6-802b-a79992b54188.png)
-
-PK-Sim® is a comprehensive software tool for whole-body physiologically based pharmacokinetic modeling. 
-It enables rapid access to all relevant anatomical and physiological parameters for humans and 
-the most common pre-clinical animal models (mouse, rat, minipig, dog, and monkey) 
-that are contained in the integrated database. Moreover, access to different PBPK calculation methods 
-to allow for fast and efficient model building and parameterization is provided. 
-Relevant generic passive processes, such as distribution through blood flow 
-as well as specific active processes such as metabolization by a certain enzyme 
-are automatically taken into account by PK-Sim®. 
-Like most PBPK modeling tools, PK-Sim® is designed for use by non-modeling experts 
-and only allows for minor structural model modifications. 
-Unlike most PBPK modeling tools though, PK-Sim® offers different model structures to choose from, 
-e.g. to account for important differences between small and large molecules. 
-More importantly, PK-Sim® is fully compatible with the expert modeling software tool MoBi®, 
-thereby allowing full access to all model details including the option for extensive model modifications and extensions. 
-This way customized systems pharmacology models may be set up to deal with the challenges of modern drug research and development.
-
-PK-Sim® uses building blocks that are grouped into Individuals, Populations, Compounds, Formulations, 
-Administration Protocols, Events, and Observed Data. Building blocks from these groups are combined to produce a model. 
-The advantage of building blocks is that they can be reused. 
-For example, after having established a model for a drug after single dose intravenous administration to an animal species, 
-just substitute the individual by a suitably parameterized virtual human population and obtain a first in man simulation model. 
-Further substitute the formulation, to obtain a controlled-release per oral simulation model, substitute the protocol 
-to obtain a multiple dose simulation model, or substitute the compound to obtain a simulation model for another drug.
- 
-
-## MoBi
-![mobi](https://cloud.githubusercontent.com/assets/1041237/22438534/5b8d6b28-e6fa-11e6-9180-3d079eea356a.png)
-
-MoBi® is a software tool for multiscale physiological modeling and simulation. 
-Within the restrictions of ordinary differential equations, almost any kind of (biological) model 
-can be imported or set up from scratch. Examples include biochemical reaction networks, 
-compartmental disease progression models, or PBPK models. However, de novo development of a PBPK model, 
-for example, is very cumbersome such that the preferred procedure is to import them from PK-Sim®. 
-Importantly, MoBi® also allows for the combination of the described examples and thereby is a very powerful tool 
-for modeling and simulation of multi-scale physiological systems covering molecular details on the one hand 
-and whole-body architecture on the other hand.
-
-De novo model establishment and simulation is supported by graphical tools and building blocks to support expert users. 
-MoBi® uses building blocks that are grouped into Molecules, Reactions, Spatial Structures, Passive Transports, 
-Observers, Events, Molecule Start Values, Parameter Start Values, and Observed Data. 
-The different building blocks are described in detail in Part IV, “Working with MoBi®”. 
-Building blocks out of the above-mentioned groups can be combined to generate models. 
-The advantage of building blocks is that they can be reused. For example, a different set of starting values 
-may define a new scenario, situation, or individual. Refine a Reaction(s) network and update it in all tissues 
-where it should be considered.
-
-## Toolboxes for Matlab and R
-
-The MoBi® toolboxes for R and Matlab® are interfaces to the common statistical and technical computing environments, respectively. 
-Basically, the toolboxes can be used to access and modify model parameters as well as to execute simulations and retrieve results. 
-That way, the toolboxes can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. 
-Results can be visualized using the options available in the respective environment. 
-Apart from the  communication and exchange via Matlab®, PK-Sim® and MoBi® have import and export functions that allow 
-for the import of experimental data via MS Excel® and models based on SBML or the export of simulation results via MS Excel®, for example. 
 
 ## Software installation
 
