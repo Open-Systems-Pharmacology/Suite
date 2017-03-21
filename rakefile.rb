@@ -2,6 +2,7 @@ require 'open-uri'
 require 'openssl'
 require_relative 'scripts/utils'
 require_relative 'scripts/wix'
+require_relative 'scripts/copy-dependencies'
 
 OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 
@@ -93,7 +94,9 @@ task :clean do
   FileUtils.mkdir_p deploy_dir  
   FileUtils.mkdir_p output_dir  
 
-  copy "setup/*.*", deploy_dir
+  copy_depdencies current_dir,  deploy_dir do
+    copy_files 'setup', '*'
+  end
 end
 
 def prepare_msi(msi)
