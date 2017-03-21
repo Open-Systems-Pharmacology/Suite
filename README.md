@@ -1,4 +1,4 @@
-This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](http://www.open-systems-pharmacology.org/pk-sim) and [MoBi®](http://www.open-systems-pharmacology.org/mobi) available as freeware under GPLv2. All source code goes public. 
+This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](http://www.open-systems-pharmacology.org/pk-sim) and [MoBi®](http://www.open-systems-pharmacology.org/mobi) available as freeware under the [GPLv2 License](LICENSE). All source code goes public. 
 
 We invite everyone in the field of Systems Pharmacology, be it in academia, industry or regulatory bodies, to use the platform. Active participation of computer and modeling & simulation scientists in the further development of the modeling & simulation platform, the incorporated systems models, processes for their qualifaction and application etc. is encouraged and highly welcome! Please follow the community’s activities in this GitHub project.
 
@@ -15,6 +15,9 @@ The central software tools PK-Sim® and MoBi® make use of building blocks as in
 While PK-Sim® is based on a whole-body concept, 
 the focus of its counterpart, MoBi®, is at the molecular level. 
 However, both tools extend to additional physiological scales as illustrated.
+
+## Code Status
+[![Build status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/master?svg=true&passingText=master%20-%20passing)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/master)
 
 ## Software installation
 
@@ -42,8 +45,10 @@ Minimum: 2 GB
  * Matlab® (version 2013b or later - 32bit)
  * R® (versions 3.3 or later - 32bit) 
     
-## Additional information
+## Code of conduct
+Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md).
 
-www.open-systems-pharmacology.org
+## Contribution
+We encourage contribution to the Open Systems Pharmacology community. Before getting started please read the [contribution guidelines](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CONTRIBUTING.md). If you are contributing code, please be familiar with the [coding standard](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODING_STANDARD.md).
 
 All trademarks within this document belong to their legitimate owners.
