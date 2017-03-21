@@ -78,11 +78,9 @@ for the import of experimental data via MS Excel® and models based on SBML or t
 
 How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and MoBi®
 
-1. Download the Software Setup and install it on your computer
-  
-  Make sure you are provided with administrator rights; these are required!
-2. Download PK-Sim Express Gene Expression Database and copy to a folder accessible for all users. 
-3. Configure PK-Sim Gene Expression Database (for details view the Open Systems Pharmacology Suite manual chapter 10 „PK-Sim Options“)
+1. Download the Software Setup and install it on your computer. Make sure you are provided with administrator rights; these are required!
+1. Download PK-Sim Express Gene Expression Database and copy to a folder accessible for all users. 
+1. Configure PK-Sim Gene Expression Database (for details view the Open Systems Pharmacology Suite manual chapter 10 „PK-Sim Options“)
 
 ## System Requirements
 
