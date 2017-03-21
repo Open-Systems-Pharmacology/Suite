@@ -1,0 +1,39 @@
+environment:
+  app_version: '7.1.0'
+
+version: '%app_version%.{build}'
+
+install:
+  - cmd: set PATH=C:\Ruby22\bin;%PATH%
+  - cmd: git submodule update --init --recursive
+  - ps: >-
+      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkId=397708', 'c:\\netfx452.exe')
+
+      Copy-Item c:\netfx452.exe .
+
+  - ps: >-
+      (new-object net.webclient).DownloadFile('https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x86.exe', 'C:\\vc_redist.x86.exe')
+
+      Copy-Item C:\vc_redist.x86.exe .
+
+  - ps: >-
+      (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', 'C:\\MikTex.msi')
+
+      Copy-Item C:\MikTex.msi .
+
+build_script:
+  rake "create_setup[%APPVEYOR_BUILD_VERSION%]"
+
+artifacts:
+  - path: '**/output/*.exe'  
+  - path: '**/output/versions.txt'  
+    name: 'versions'
+
+notifications:
+  - provider: Slack
+    incoming_webhook:      
+      secure: 4MH9Em6TtrKalq6808dhPOqypTfYBJvVlqPaa9akNyF1h7st5qNdNezFp6T+bWXqrcZ4q/smtPcJ7LkUFHL46JDYUFlIL8FDz+ApX/vP+x0=
+
+skip_commits:
+  files:
+    - '*.md'
