@@ -17,7 +17,7 @@ MSI = {}
 desc "Create suite setup"
 task :create_setup,[:product_version, :branch_name]  do |t, args|
   @product_version = args.product_version
-  @branch_name = args.branch_name || 'master'
+  @branch_name = args.branch_name || 'develop'
   release_version_split = @product_version.split('.')
   @product_release_version = "#{release_version_split[0]}.#{release_version_split[1]}"
   @product_full_version = "#{@product_release_version}.#{release_version_split[2]}"
