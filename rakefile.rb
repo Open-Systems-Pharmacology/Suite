@@ -36,11 +36,19 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   
   Rake::Task['downlad_all_packages'].invoke
   
-  versions  = File.join(output_dir,'versions.txt')
-
+  create_versions_file
 #  create_setup 'no', 'SBSuite-WebInstall'
  
   create_setup 'yes', 'Setup-Full'  
+end
+
+def create_versions_file
+  version_file = File.join(output_dir,'versions.txt')
+  File.open(version_file, 'w') do |file| 
+    MSI.each do |key, package|
+      file.puts "#{package[:git_repository]}: #{package[:file_name]}"
+    end
+  end
 end
 
 def create_package(appveyor_project_name,  git_repository = nil, artifact_name =  'setup.zip', version = @product_version, branch = @branch_name)
@@ -103,10 +111,10 @@ def prepare_msi(msi)
   package =  MSI[msi]
   file = download package
   puts file
-  package_name = retrieve_package_name(file, package) 
-  download_path = "https://github.com/#{GITHUB_NAME}/#{package[:git_repository]}/releases/download/v#{package[:version]}/#{package_name}"
+  package[:file_name] = retrieve_package_name(file, package) 
+  download_path = "https://github.com/#{GITHUB_NAME}/#{package[:git_repository]}/releases/download/v#{package[:version]}/#{package[:file_name]}"
   VARIABLES["#{msi}DownloadPath"] = download_path
-  VARIABLES[msi] = package_name
+  VARIABLES[msi] = package[:file_name]
 end
 
 def download(package)
@@ -164,4 +172,3 @@ end
 def current_dir
   File.dirname(__FILE__)
 end
-
