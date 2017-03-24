@@ -17,7 +17,7 @@ the focus of its counterpart, MoBi®, is at the molecular level.
 However, both tools extend to additional physiological scales as illustrated.
 
 ## Code Status
-[![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/master?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
+[![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/master?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/master)
 [![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/master?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
 [![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/master?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
 [![Matlab status](https://ci.appveyor.com/api/projects/status/2pxt8se6bgjvrrh0/branch/master?svg=true&passingText=Matlab-Toolbox)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/matlab-toolbox/branch/develop)
