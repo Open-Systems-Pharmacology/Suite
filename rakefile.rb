@@ -37,9 +37,8 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   Rake::Task['downlad_all_packages'].invoke
   
   create_versions_file
-#  create_setup 'no', 'SBSuite-WebInstall'
- 
-  create_setup 'yes', 'Setup-Full'  
+  create_setup compressed:'no', output_name:'OSPSuite-WebInstall' 
+  create_setup compressed:'yes', output_name:'OSPSuite-Full'  
 end
 
 def create_versions_file
@@ -79,8 +78,8 @@ def run_light(exe)
   Utils.run_cmd(Wix.light, command_line)
 end
 
-def create_setup(compressed, name)
-  exe = "#{output_dir}/#{name}.#{@product_full_version}.exe"
+def create_setup(compressed:'yes', output_name:'OSPSuite')
+  exe = File.join(output_dir,"#{output_name}.#{@product_full_version}.exe")
   run_candle compressed
   run_light exe
 end
