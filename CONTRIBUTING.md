@@ -7,6 +7,7 @@ Here are some ways ***you*** can contribute:
 * by submitting new models
 * by reporting bugs
 * by fixing bugs
+* by implementing new features (e.g. new algorithms)
 * by commenting on ongoing discussions
 * by writing or editing documentation
 * by writing tests
