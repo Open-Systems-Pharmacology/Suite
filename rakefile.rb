@@ -118,7 +118,7 @@ end
 
 def download(package)
   file_name = package[:artifact_name]
-  uri = "https://ci.appveyor.com/api/projects/#{APPVEYOR_ACCOUNT_NAME}/#{package[:appveyor_project_name]}/artifacts/#{package[:artifact_path]}#{file_name}?branch=#{package[:branch]}"
+  uri = "https://ci.appveyor.com/api/projects/#{APPVEYOR_ACCOUNT_NAME}/#{package[:appveyor_project_name]}/artifacts/#{file_name}?branch=#{package[:branch]}"
   download_file package[:appveyor_project_name], file_name, uri
 end
 
