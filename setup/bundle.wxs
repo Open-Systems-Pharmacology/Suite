@@ -85,6 +85,16 @@
           >
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
         </MsiPackage>
+
+        <MsiPackage 
+          Id="validator"
+          Vital="yes"
+          SourceFile="$(var.validator)"
+          Compressed="$(var.Compressed)"
+          DownloadUrl="$(var.validatorDownloadPath)"
+          >
+          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
+        </MsiPackage>
       </Chain>
 
    </Bundle>

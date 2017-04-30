@@ -33,6 +33,7 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   MSI[:mobi] = create_package('mobi')
   MSI[:matlab] = create_package('matlab-toolbox')
   MSI[:r] = create_package('r-toolbox')
+  MSI[:validator] = create_package('ospsuite-installationvalidator', 'OSPSuite.InstallationValidator')
   
   Rake::Task['downlad_all_packages'].invoke
   
