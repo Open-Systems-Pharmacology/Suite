@@ -29,11 +29,11 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   VARIABLES[:ProductVersion] =  @product_version
   VARIABLES[:ProductFullVersion] =  @product_full_version
 
-  MSI[:pksim] = create_package('pk-sim')
-  MSI[:mobi] = create_package('mobi')
-  MSI[:matlab] = create_package('matlab-toolbox')
-  MSI[:r] = create_package('r-toolbox')
-  MSI[:validator] = create_package('ospsuite-installationvalidator', 'OSPSuite.InstallationValidator')
+  MSI[:pksim] = create_package('pk-sim', 'PK-Sim')
+  MSI[:mobi] = create_package('mobi', 'MoBi')
+  MSI[:matlab] = create_package('matlab-toolbox', 'Matlab-Toolbox')
+  MSI[:r] = create_package('r-toolbox', 'R-Toolbox')
+  MSI[:validator] = create_package('installationvalidator', 'InstallationValidator')
   
   Rake::Task['downlad_all_packages'].invoke
   
