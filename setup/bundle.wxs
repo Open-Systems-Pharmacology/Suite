@@ -33,7 +33,7 @@
           Compressed="$(var.Compressed)"
           PerMachine="yes"
           Permanent="yes"          
-		      DownloadUrl="https://download.microsoft.com/download/9/3/F/93FCF1E7-E6A4-478B-96E7-D4B285925B00/vc_redist.x86.exe"
+		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkID=615459&clcid=0x409"
         />
       
         <MsiPackage
