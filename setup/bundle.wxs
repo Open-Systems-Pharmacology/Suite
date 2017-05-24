@@ -33,7 +33,7 @@
           Compressed="$(var.Compressed)"
           PerMachine="yes"
           Permanent="yes"          
-		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkID=615459&clcid=0x409"
+		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkID=615459&amp;clcid=0x409"
         />
       
         <MsiPackage
