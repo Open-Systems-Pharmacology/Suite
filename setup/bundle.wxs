@@ -41,7 +41,7 @@
           Vital ="yes"
           SourceFile="MikTex.msi"
           Compressed="$(var.Compressed)"
-          DownloadUrl="https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi"
+          DownloadUrl="http://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi"
         >
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
         </MsiPackage>
