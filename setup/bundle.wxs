@@ -41,7 +41,7 @@
           Vital ="yes"
           SourceFile="MikTex.msi"
           Compressed="$(var.Compressed)"
-          DownloadUrl="https://github-cloud.s3.amazonaws.com/releases/84485378/05b6377e-04dd-11e7-8b42-d741e6480b85.msi?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20170525%2Fus-east-1%2Fs3%2Faws4_request&X-Amz-Date=20170525T013711Z&X-Amz-Expires=300&X-Amz-Signature=143e7b92881523242e51c3d3c6157a40f588a226b3e6149fb3ff1c5efaaa962e&X-Amz-SignedHeaders=host&actor_id=0&response-content-disposition=attachment%3B%20filename%3DMikTex.2.9.3.msi&response-content-type=application%2Foctet-stream"
+          DownloadUrl="https://github-cloud.s3.amazonaws.com/releases/84485378/05b6377e-04dd-11e7-8b42-d741e6480b85.msi?X-Amz-Algorithm=AWS4-HMAC-SHA256&amp;X-Amz-Credential=AKIAISTNZFOVBIJMK3TQ%2F20170525%2Fus-east-1%2Fs3%2Faws4_request&amp;X-Amz-Date=20170525T013711Z&X-Amz-Expires=300&X-Amz-Signature=143e7b92881523242e51c3d3c6157a40f588a226b3e6149fb3ff1c5efaaa962e&amp;X-Amz-SignedHeaders=host&amp;actor_id=0&amp;response-content-disposition=attachment%3B%20filename%3DMikTex.2.9.3.msi&amp;response-content-type=application%2Foctet-stream"
         >
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
         </MsiPackage>
