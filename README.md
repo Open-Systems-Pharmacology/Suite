@@ -17,11 +17,12 @@ the focus of its counterpart, MoBi®, is at the molecular level.
 However, both tools extend to additional physiological scales as illustrated.
 
 ## Code Status
-[![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/master?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/master)
-[![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/master?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
-[![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/master?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
-[![Matlab status](https://ci.appveyor.com/api/projects/status/2pxt8se6bgjvrrh0/branch/master?svg=true&passingText=Matlab-Toolbox)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/matlab-toolbox/branch/develop)
-[![R status](https://ci.appveyor.com/api/projects/status/6wssc33akfebg3yk/branch/master?svg=true&passingText=R-Toolbox)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/r-toolbox/branch/develop)
+[![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
+[![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/develop?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
+[![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
+[![Matlab status](https://ci.appveyor.com/api/projects/status/2pxt8se6bgjvrrh0/branch/develop?svg=true&passingText=Matlab-Toolbox)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/matlab-toolbox/branch/develop)
+[![R status](https://ci.appveyor.com/api/projects/status/6wssc33akfebg3yk/branch/develop?svg=true&passingText=R-Toolbox)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/r-toolbox/branch/develop)
+[![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
 
 
 ## Software installation
@@ -54,6 +55,6 @@ Minimum: 2 GB
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md).
 
 ## Contribution
-We encourage contribution to the Open Systems Pharmacology community. Before getting started please read the [contribution guidelines](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CONTRIBUTING.md). If you are contributing code, please be familiar with the [coding standard](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODING_STANDARD.md).
+We encourage contribution to the Open Systems Pharmacology community. Before getting started please read the [contribution guidelines](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CONTRIBUTING.md). If you are contributing code, please be familiar with the [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODING_STANDARDS.md).
 
 All trademarks within this document belong to their legitimate owners.

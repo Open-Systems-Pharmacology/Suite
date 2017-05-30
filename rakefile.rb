@@ -29,17 +29,17 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   VARIABLES[:ProductVersion] =  @product_version
   VARIABLES[:ProductFullVersion] =  @product_full_version
 
-  MSI[:pksim] = create_package('pk-sim')
-  MSI[:mobi] = create_package('mobi')
-  MSI[:matlab] = create_package('matlab-toolbox')
-  MSI[:r] = create_package('r-toolbox')
+  MSI[:pksim] = create_package('pk-sim', 'PK-Sim')
+  MSI[:mobi] = create_package('mobi', 'MoBi')
+  MSI[:matlab] = create_package('matlab-toolbox', 'Matlab-Toolbox')
+  MSI[:r] = create_package('r-toolbox', 'R-Toolbox')
+  MSI[:validator] = create_package('installationvalidator', 'InstallationValidator')
   
   Rake::Task['downlad_all_packages'].invoke
   
   create_versions_file
-#  create_setup 'no', 'SBSuite-WebInstall'
- 
-  create_setup 'yes', 'Setup-Full'  
+  create_setup compressed:'no', output_name:'OSPSuite-WebInstall' 
+  create_setup compressed:'yes', output_name:'OSPSuite-Full'  
 end
 
 def create_versions_file
@@ -79,8 +79,8 @@ def run_light(exe)
   Utils.run_cmd(Wix.light, command_line)
 end
 
-def create_setup(compressed, name)
-  exe = "#{output_dir}/#{name}.#{@product_full_version}.exe"
+def create_setup(compressed:'yes', output_name:'OSPSuite')
+  exe = File.join(output_dir,"#{output_name}.#{@product_full_version}.exe")
   run_candle compressed
   run_light exe
 end
@@ -119,7 +119,7 @@ end
 
 def download(package)
   file_name = package[:artifact_name]
-  uri = "https://ci.appveyor.com/api/projects/#{APPVEYOR_ACCOUNT_NAME}/#{package[:appveyor_project_name]}/artifacts/#{package[:artifact_path]}#{file_name}?branch=#{package[:branch]}"
+  uri = "https://ci.appveyor.com/api/projects/#{APPVEYOR_ACCOUNT_NAME}/#{package[:appveyor_project_name]}/artifacts/#{file_name}?branch=#{package[:branch]}"
   download_file package[:appveyor_project_name], file_name, uri
 end
 
