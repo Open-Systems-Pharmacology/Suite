@@ -2,6 +2,9 @@ This open source Systems Pharmacology project makes formerly commercial software
 
 We invite everyone in the field of Systems Pharmacology, be it in academia, industry or regulatory bodies, to use the platform. Active participation of computer and modeling & simulation scientists in the further development of the modeling & simulation platform, the incorporated systems models, processes for their qualifaction and application etc. is encouraged and highly welcome! Please follow the community’s activities in this GitHub project.
 
+# Discussion forum for the Open Systems Pharmacology Project
+Visit and subscribe to the [Open Systems Pharmacology Project Forum](http://forum.open-systems-pharmacology.org) to stay up-to-date with the community and receive updates on new software releases, models as well as discussions.
+
 # Open Systems Pharmacology Suite with PK-Sim® and MoBi® for Quantitative Systems Pharmacology
 
 ## Unmatched Flexibility - Unlimited Transparency
@@ -15,9 +18,6 @@ The central software tools PK-Sim® and MoBi® make use of building blocks as in
 While PK-Sim® is based on a whole-body concept, 
 the focus of its counterpart, MoBi®, is at the molecular level. 
 However, both tools extend to additional physiological scales as illustrated.
-
-## Discussion forum for the Open Systems Pharmacology Project
-Visit and subscribe to the [Open Systems Pharmacology Project Forum](http://forum.open-systems-pharmacology.org) to stay up-to-date with the community and receive updates on new software releases, models as well as discussions.
 
 ## Code Status
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
