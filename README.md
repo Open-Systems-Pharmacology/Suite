@@ -17,7 +17,7 @@ the focus of its counterpart, MoBi®, is at the molecular level.
 However, both tools extend to additional physiological scales as illustrated.
 
 ## Discussion forum for the Open Systems Pharmacology Project
-Visit and subscribte to the [Open Systems Pharmacology Project Forum](http://forum.open-systems-pharmacology.org) to stay up-to-date with the community and receive updates on new software releases, models as well as discussions.
+Visit and subscribe to the [Open Systems Pharmacology Project Forum](http://forum.open-systems-pharmacology.org) to stay up-to-date with the community and receive updates on new software releases, models as well as discussions.
 
 ## Code Status
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
