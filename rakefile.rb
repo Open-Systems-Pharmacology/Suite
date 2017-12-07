@@ -112,7 +112,7 @@ def prepare_msi(msi)
   file = download package
   puts file
   package[:file_name] = retrieve_package_name(file, package) 
-  download_path = "https://github.com/#{GITHUB_NAME}/#{package[:git_repository]}/releases/download/v#{package[:version]}/#{package[:file_name]}"
+  download_path = "https://systems-biology.com/fileadmin/sb_ftp/OSP_Updates/#{package[:file_name]}"
   VARIABLES["#{msi}DownloadPath"] = download_path
   VARIABLES[msi] = package[:file_name]
 end

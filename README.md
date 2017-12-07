@@ -1,6 +1,12 @@
-This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](http://www.open-systems-pharmacology.org/pk-sim) and [MoBi®](http://www.open-systems-pharmacology.org/mobi) available as freeware under the [GPLv2 License](LICENSE). All source code goes public. 
+This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](http://www.open-systems-pharmacology.org/pk-sim) and [MoBi®](http://www.open-systems-pharmacology.org/mobi) available as freeware under the [GPLv2 License](LICENSE). All source code is public. 
 
+Latest suite release can be found here:
+http://setup.open-systems-pharmacology.org
+ 
 We invite everyone in the field of Systems Pharmacology, be it in academia, industry or regulatory bodies, to use the platform. Active participation of computer and modeling & simulation scientists in the further development of the modeling & simulation platform, the incorporated systems models, processes for their qualifaction and application etc. is encouraged and highly welcome! Please follow the community’s activities in this GitHub project.
+
+# Discussion forum for the Open Systems Pharmacology Project
+Visit and subscribe to the [Open Systems Pharmacology Project Forum](http://forum.open-systems-pharmacology.org) to stay up-to-date with the community and receive updates on new software releases, models as well as discussions.
 
 # Open Systems Pharmacology Suite with PK-Sim® and MoBi® for Quantitative Systems Pharmacology
 
