@@ -29,8 +29,8 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   VARIABLES[:ProductVersion] =  @product_version
   VARIABLES[:ProductFullVersion] =  @product_full_version
 
-  MSI[:pksim] = create_package('pk-sim', 'PK-Sim', 'setup.zip', @product_version, 'hotfix/7.2.1')
-  MSI[:mobi] = create_package('mobi', 'MoBi', 'setup.zip', @product_version, 'hotfix/7.2.1')
+  MSI[:pksim] = create_package('pk-sim', 'PK-Sim')
+  MSI[:mobi] = create_package('mobi', 'MoBi')
   MSI[:matlab] = create_package('matlab-toolbox', 'Matlab-Toolbox')
   MSI[:r] = create_package('r-toolbox', 'R-Toolbox')
   MSI[:validator] = create_package('installationvalidator', 'InstallationValidator')
@@ -51,7 +51,7 @@ def create_versions_file
   end
 end
 
-def create_package(appveyor_project_name,  git_repository = nil, artifact_name =  'setup.zip', version = @product_version, branch = @branch_name)
+def create_package(appveyor_project_name,  git_repository, artifact_name: 'setup.zip', version: @product_version, branch: @branch_name)
   compressed = artifact_name.include? '.zip'
   git_repo = git_repository || appveyor_project_name
 
