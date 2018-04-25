@@ -7,12 +7,12 @@ install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
   - cmd: git submodule update --init --recursive
   - ps: >-
-      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkId=397708', 'c:\\netfx452.exe')
+      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkId=780600', 'c:\\netfx462.exe')
 
-      Copy-Item c:\netfx452.exe .
+      Copy-Item c:\netfx462.exe .
 
   - ps: >-
-      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkID=615459&clcid=0x409', 'C:\\vc_redist.x86.exe')
+      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkId=746571', 'C:\\vc_redist.x86.exe')
 
       Copy-Item C:\vc_redist.x86.exe .
 
