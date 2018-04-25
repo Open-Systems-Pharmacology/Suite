@@ -51,7 +51,7 @@ def create_versions_file
   end
 end
 
-def create_package(appveyor_project_name,  git_repository, artifact_name: 'setup.zip', version: @product_version, branch: @branch_name)
+def create_package(appveyor_project_name,  git_repository, artifact_name: 'setup.zip', version: @product_version, branch: @branch_name, uri:nil)
   compressed = artifact_name.include? '.zip'
   git_repo = git_repository || appveyor_project_name
 
@@ -61,7 +61,8 @@ def create_package(appveyor_project_name,  git_repository, artifact_name: 'setup
     branch: branch,
     compressed: compressed,
     git_repository: git_repo,
-    version: version
+    version: version,
+    uri:uri
   } 
 end
 
@@ -120,6 +121,9 @@ end
 def download(package)
   file_name = package[:artifact_name]
   uri = "https://ci.appveyor.com/api/projects/#{APPVEYOR_ACCOUNT_NAME}/#{package[:appveyor_project_name]}/artifacts/#{file_name}?branch=#{package[:branch]}"
+  
+  #Path of package is predefined. This is typically the case for a hotfix when some packages should be fixed
+  uri = package[:uri] if package[:uri]
   download_file package[:appveyor_project_name], file_name, uri
 end
 
