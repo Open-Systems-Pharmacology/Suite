@@ -42,7 +42,7 @@ How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and 
 ## System Requirements
 
 ### Operating Systems
-Windows 7®, Windows 8®, Windows 10®
+Windows 7®, Windows 8®, Windows 10®, Windows Server 2008 R2®, Windows Server 2012 R2®, Windows Server 2016
  
 ### Processor
 Minimum: 1 GHz (the faster the better!)
