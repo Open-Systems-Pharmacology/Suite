@@ -5,27 +5,23 @@
    
    <Bundle Name="$(var.ProductFullName)" Version="$(var.ProductFullVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="8511e368-91f8-4ab3-bb1e-31ffcb9c849a">
       <Log Disable="no" PathVariable="TEMP"/>
-      <?define NetFx452MinRelease = 379893 ?>
       <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
       <WixVariable Id="WixStdbaLicenseRtf" Value="EULA.rtf" />
       <WixVariable Id="WixStdbaLogo" Value="Banner.png" />
-      <WixVariable Id="NetFx452RedistDetectCondition" Value="NETFRAMEWORK45 &gt;= $(var.NetFx452MinRelease)" Overridable="yes" />
-      <WixVariable Id="NetFx452RedistInstallCondition" Value="" Overridable="yes" />
-
+    
       <Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]"/>      
       <Chain>
         <ExePackage
-          Id="Netfx452"
+          Id="netfx462"
           Compressed="$(var.Compressed)"
           PerMachine="yes" 
           Permanent="yes" 
           Vital="yes" 
           InstallCommand="/q /norestart"
-          SourceFile="netfx452.exe"
-          DetectCondition="!(wix.NetFx452RedistDetectCondition)"
-          InstallCondition="!(wix.NetFx452RedistInstallCondition)"
-          DownloadUrl="http://go.microsoft.com/fwlink/?LinkId=397708"
+          SourceFile="netfx462.exe"
+          DownloadUrl="http://go.microsoft.com/fwlink/?LinkId=780600"
         />    
+
         <ExePackage
           SourceFile="vc_redist.x86.exe"
           InstallCommand='/q '
@@ -33,8 +29,11 @@
           Compressed="$(var.Compressed)"
           PerMachine="yes"
           Permanent="yes"          
-		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkID=615459&amp;clcid=0x409"
-        />
+		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkId=746571"
+        >
+          <!-- Ignore "Newer version installed" error -->
+          <ExitCode Value="1638" Behavior="success"/>
+        </ExePackage>
       
         <MsiPackage
           Id="miktex"
