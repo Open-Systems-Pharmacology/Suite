@@ -5,6 +5,8 @@ Here are some ways ***you*** can contribute:
 
 * by submitting new ideas or features
 * by submitting new models
+* by providing use cases for the platform qualification
+* by writing tutorials
 * by reporting bugs
 * by fixing bugs
 * by implementing new features (e.g. new algorithms)
