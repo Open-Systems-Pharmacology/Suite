@@ -29,10 +29,10 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   VARIABLES[:ProductVersion] =  @product_version
   VARIABLES[:ProductFullVersion] =  @product_full_version
 
-  MSI[:pksim] = create_package('pk-sim', 'PK-Sim', 'setup.zip', @product_version, 'hotfix/7.2.1')
-  MSI[:mobi] = create_package('mobi', 'MoBi', 'setup.zip', @product_version, 'hotfix/7.2.1')
+  MSI[:pksim] = create_package('pk-sim', 'PK-Sim')
+  MSI[:mobi] = create_package('mobi', 'MoBi')
   MSI[:matlab] = create_package('matlab-toolbox', 'Matlab-Toolbox')
-  MSI[:r] = create_package('r-toolbox', 'R-Toolbox')
+  # MSI[:r] = create_package('r-toolbox', 'R-Toolbox')
   MSI[:validator] = create_package('installationvalidator', 'InstallationValidator')
   
   Rake::Task['downlad_all_packages'].invoke
@@ -110,6 +110,7 @@ end
 
 def prepare_msi(msi)
   package =  MSI[msi]
+
   file = download package
   puts file
   package[:file_name] = retrieve_package_name(file, package) 

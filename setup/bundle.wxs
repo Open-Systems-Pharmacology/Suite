@@ -9,7 +9,7 @@
       <WixVariable Id="WixStdbaLicenseRtf" Value="EULA.rtf" />
       <WixVariable Id="WixStdbaLogo" Value="Banner.png" />
     
-      <Variable Name="InstallFolder" Type="string" Value="[ProgramFilesFolder]"/>      
+      <Variable Name="InstallFolder" Type="string" Value="[ProgramFiles64Folder]"/>      
       <Chain>
         <ExePackage
           Id="netfx462"
@@ -23,13 +23,13 @@
         />    
 
         <ExePackage
-          SourceFile="vc_redist.x86.exe"
+          SourceFile="vc_redist.x64.exe"
           InstallCommand='/q '
           Vital="yes"
           Compressed="$(var.Compressed)"
           PerMachine="yes"
           Permanent="yes"          
-		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkId=746571"
+		      DownloadUrl="http://go.microsoft.com/fwlink/?LinkId=746572"
         >
           <!-- Ignore "Newer version installed" error -->
           <ExitCode Value="1638" Behavior="success"/>
@@ -75,7 +75,7 @@
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
         </MsiPackage>
 
-        <MsiPackage 
+      <!--   <MsiPackage 
           Id="r"
           Vital="yes"
           SourceFile="$(var.r)"
@@ -83,7 +83,7 @@
           DownloadUrl="$(var.rDownloadPath)"
           >
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
+        </MsiPackage> -->
 
         <MsiPackage 
           Id="validator"
