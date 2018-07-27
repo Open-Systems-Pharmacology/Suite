@@ -75,7 +75,7 @@
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
         </MsiPackage>
 
-      <!--   <MsiPackage 
+        <MsiPackage 
           Id="r"
           Vital="yes"
           SourceFile="$(var.r)"
@@ -83,7 +83,7 @@
           DownloadUrl="$(var.rDownloadPath)"
           >
           <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage> -->
+        </MsiPackage>
 
         <MsiPackage 
           Id="validator"
