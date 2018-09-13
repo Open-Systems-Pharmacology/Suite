@@ -1,7 +1,4 @@
-environment:
-  app_version: '7.4.0'
-
-version: '%app_version%.{build}'
+version: '7.4.0.{build}'
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
