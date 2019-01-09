@@ -1,7 +1,4 @@
-environment:
-  app_version: '7.3.0'
-
-version: '%app_version%.{build}'
+version: '7.4.0.{build}'
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
@@ -12,9 +9,9 @@ install:
       Copy-Item c:\netfx462.exe .
 
   - ps: >-
-      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkId=746571', 'C:\\vc_redist.x86.exe')
+      (new-object net.webclient).DownloadFile('http://go.microsoft.com/fwlink/?LinkId=746572', 'C:\\vc_redist.x64.exe')
 
-      Copy-Item C:\vc_redist.x86.exe .
+      Copy-Item C:\vc_redist.x64.exe .
 
   - ps: >-
       (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', 'C:\\MikTex.msi')
