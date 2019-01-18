@@ -17,10 +17,23 @@ The Open Systems Pharmacology Suite contains different software tools and has be
 using a modular concept to allow efficient multi-scale modeling and simulation. 
 The overall platform with its various software tools is implemented in a modular way 
 as will be explained in more detail below. 
-The central software tools PK-Sim® and MoBi® make use of building blocks as introduced here. 
+The central software tools PK-Sim® and MoBi® make use of building blocks as introduced [here](https://docs.open-systems-pharmacology.org/open-systems-pharmacology-suite/modules-philsophy-building-blocks). 
 While PK-Sim® is based on a whole-body concept, 
 the focus of its counterpart, MoBi®, is at the molecular level. 
 However, both tools extend to additional physiological scales as illustrated.
+
+### PK-Sim
+[PK-Sim®](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation) is a comprehensive software tool for whole-body physiologically based pharmacokinetic modeling. It enables rapid access to all relevant anatomical and physiological parameters for humans and the most common laboratory animals (**mouse**, **rat**, **minipig**, **dog**, **monkey**, **beagle** and **rabbit**) that are contained in the integrated database. Moreover, access to different PBPK calculation methods to allow for fast and efficient model building and parameterization is provided. Relevant generic passive processes, such as distribution through blood flow as well as specific active processes such as metabolization by a certain enzyme are automatically taken into account by PK-Sim®. Like most PBPK modeling tools, PK-Sim® is designed for use by non-modeling experts and only allows for minor structural model modifications. Unlike most PBPK modeling tools though, PK-Sim® offers different model structures to choose from, e.g. to account for important differences between _small_ and _large_ molecules. More importantly, PK-Sim® is fully compatible with the expert modeling software tool MoBi®, thereby allowing full access to all model details including the option for extensive model modifications and extensions. This way customized systems pharmacology models may be set up to deal with the challenges of modern drug research and development.
+
+PK-Sim® uses building blocks that are grouped into [**Individuals**](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-creating-individuals), [**Populations**](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-creating-populations), [**Compounds**](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-compounds-definition-and-work-flow), [**Formulations**](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-formulations), [**Administration Protocols**](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-administration-protocols), [**Events**](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-events) and [**Observed Data**](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/import-edit-observed-data). Building blocks from these groups are combined to produce a [model](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-simulations). The advantage of building blocks is that they can be reused. For example, after having established a model for a drug after single dose intravenous administration to an animal species, just substitute the individual by a suitably parameterized virtual human population and obtain a first in man simulation model. Further substitute the formulation, to obtain a controlled-release per oral simulation model, substitute the protocol to obtain a multiple dose simulation model, or substitute the compound to obtain a simulation model for another drug. 
+
+### MoBi
+[MoBi®](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation) is a systems biology software tool for multiscale physiological modeling and simulation. Within the restrictions of ordinary differential equations, almost any kind of (biological) model can be imported or set up from scratch. Examples include biochemical reaction networks, compartmental disease progression models, or PBPK models. However, de novo development of a PBPK model, for example, is very cumbersome such that the preferred procedure is to import them from PK-Sim®. Importantly, MoBi® also allows for the combination of the described examples and thereby is a very powerful tool for modeling and simulation of multi-scale physiological systems covering molecular details on the one hand and whole-body architecture on the other hand.
+
+De novo model establishment and simulation is supported by graphical tools and building blocks to support expert users. MoBi® uses building blocks that are grouped into [**Molecules**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#molecules), [**Reactions**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#reactions), [**Spatial Structures**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#spatial-structures), [**Passive Transports**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#transport-processes), [**Observers**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#observers), [**Events**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#events-and-applications), [**Molecule Start Values**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#molecule-start-values), [**Parameter Start Values**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#parameter-start-values) and [**Observed Data**](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/import-edit-observed-data). Building blocks out of the above-mentioned groups can be combined to [generate models](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/setting-up-simulation). The advantage of building blocks is that they can be reused. For example, a different set of starting values may define a new scenario, situation, or individual. Refine a Reaction(s) network and update it in all tissues where it should be considered. 
+
+### Toolboxes for Matlab and R
+The MoBi® toolboxes for [R](https://docs.open-systems-pharmacology.org/working-with-matlab-and-r/r-introduction) and [Matlab®](https://docs.open-systems-pharmacology.org/working-with-matlab-and-r/matlab-introduction) are interfaces to the common statistical and technical computing environments, respectively. Basically, the toolboxes can be used to access and modify model parameters as well as to execute simulations and retrieve results. That way, the toolboxes can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. Results can be visualized using the options available in the respective environment. Apart from the  communication and exchange via Matlab®, PK-Sim® and MoBi® have import and export functions that allow for the import of experimental data via MS Excel® and models based on SBML or the export of simulation results via MS Excel®, for example. 
 
 ## Code Status
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
@@ -41,7 +54,7 @@ How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and 
 
 ## System Requirements
 
-### Operating Systems
+### Operating Systems (64 bit only)
 Windows 7®, Windows 8®, Windows 10®, Windows Server 2008 R2®, Windows Server 2012 R2®, Windows Server 2016®
  
 ### Processor
@@ -54,8 +67,8 @@ Minimum: 2 GB RAM (3+ GB recommended)
 Minimum: 2 GB
  
 ### Optional Software
- * Matlab® (version 2013b or later - 32bit)
- * R® (versions 3.3 or later - 32bit) 
+ * Matlab® (version 2017b or later)
+ * R® (versions 3.5 or later - 64bit) 
     
 ## Code of conduct
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md).
