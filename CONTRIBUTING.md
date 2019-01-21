@@ -3,15 +3,15 @@ The Open Systems Pharmacology Project is an open source project and we encourage
 
 Here are some ways ***you*** can contribute:
 
-* by submitting new ideas or features
-* by submitting new models
+* by [submitting new ideas or features](#new-feature--feature-change-requests)
+* by [submitting new models](#models)
 * by providing use cases for the platform qualification
-* by writing tutorials
-* by reporting bugs
-* by fixing bugs
+* by writing [tutorials](http://www.open-systems-pharmacology.org/#tutorials)
+* by [reporting bugs](#reporting-a-bug)
+* by [fixing bugs](#bug-fix-contributions)
 * by implementing new features (e.g. new algorithms)
 * by commenting on ongoing discussions
-* by writing or editing documentation
+* by [writing or editing documentation](https://docs.open-systems-pharmacology.org/how-to-contribute)
 * by writing tests
 * by refactoring code (no patch is too small: fix typos, clean up inconsistent whitespace, ...)
 * by reviewing pull requests
@@ -111,4 +111,4 @@ A great way to be involved with the development of the Open Systems Pharmacology
 
 ## Models
 
-Contribute models to the open source model repository 
+Contribute models to the open source model repositories. S. some examples [here](http://osp-models.open-systems-pharmacology.org/) 
