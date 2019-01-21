@@ -49,8 +49,8 @@ The MoBi® toolboxes for [R](https://docs.open-systems-pharmacology.org/working-
 How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and MoBi®
 
 1. Download the [Software Setup](http://setup.open-systems-pharmacology.org) and install it on your computer. Make sure you are provided with administrator rights; these are required!
-1. Download PK-Sim Gene Expression Database and copy to a folder accessible for all users. 
-1. Configure PK-Sim Gene Expression Database (for details view the [Open Systems Pharmacology Suite manual](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-options))
+1. Download [PK-Sim Gene Expression Database(s)](http://setup.open-systems-pharmacology.org) and copy to a folder accessible for all users. 
+1. Configure PK-Sim Gene Expression Database(s) (for details view the [Open Systems Pharmacology Suite manual](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-options))
 
 ## System Requirements
 
