@@ -25,6 +25,7 @@ If you find a bug in any of our tools, you can report that bug to the correct is
 * [MoBi](https://github.com/Open-Systems-Pharmacology/MoBi/issues)
 * [Matlab-Toolbox](https://github.com/Open-Systems-Pharmacology/Matlab-Toolbox/issues)
 * [R-Toolbox](https://github.com/Open-Systems-Pharmacology/R-Toolbox/issues)
+* [Installation Validator](https://github.com/Open-Systems-Pharmacology/InstallationValidator/issues)
 
 The first step when reporting a bug is to search the existing issues for duplicates. If you find a bug report that describes what you have found, you can add a 'me too' or +1 to the existing issue and make any helpful comments here.
 
@@ -111,4 +112,4 @@ A great way to be involved with the development of the Open Systems Pharmacology
 
 ## Models
 
-Contribute models to the open source model repositories. S. some examples [here](http://osp-models.open-systems-pharmacology.org/) 
+Contribute models to the open source [model repositories](http://osp-models.open-systems-pharmacology.org). 
