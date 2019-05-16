@@ -1,4 +1,4 @@
-version: '7.4.0.{build}'
+version: "8.0.{build}"
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
@@ -18,19 +18,18 @@ install:
 
       Copy-Item C:\MikTex.msi .
 
-build_script:
-  rake "create_setup[%APPVEYOR_BUILD_VERSION%]"
+build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%]"
 
 artifacts:
-  - path: '**/output/OSPSuite*.exe'  
-  - path: '**/output/versions.txt'  
-    name: 'versions'
+  - path: "**/output/OSPSuite*.exe"
+  - path: "**/output/versions.txt"
+    name: "versions"
 
 notifications:
   - provider: Slack
-    incoming_webhook:      
-      secure: 4MH9Em6TtrKalq6808dhPOqypTfYBJvVlqPaa9akNyF1h7st5qNdNezFp6T+bWXqrcZ4q/smtPcJ7LkUFHL46JDYUFlIL8FDz+ApX/vP+x0=
+    incoming_webhook:
+      secure: 4MH9Em6TtrKalq6808dhPOqypTfYBJvVlqPaa9akNyFEAs8X080yIO8g1FLt3tNfBN4OpeBnkgrXzf7AqNKV5561x7Coux3ByGrHmsL1sCo=
 
 skip_commits:
   files:
-    - '*.md'
+    - "*.md"
