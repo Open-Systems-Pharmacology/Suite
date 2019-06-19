@@ -1,4 +1,4 @@
-# Unit and integration tests
+### Unit and integration tests
 
 * [PK-Sim](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/builds/25268316/tests)
 * [MoBi](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/builds/25269420/tests)
@@ -12,4 +12,12 @@
 * [OSPSuite.Utility](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-utility/builds/22701760/tests)
 * [OSPSuite.TeXReporting](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-texreporting/branch/master/tests)
 
-# [Batch comparison tests](BatchComparison)
+### [Batch comparison tests](BatchComparison)
+
+### [UI tests](Ranorex_Testcases)
+
+### [Project conversion tests](Ranorex_ProjectConversion)
+
+### [Platform tests](PlattformTest_Results)
+
+
