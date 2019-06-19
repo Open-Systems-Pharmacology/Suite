@@ -6,7 +6,7 @@
 * [OSPSuite.Core](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-core/builds/25221373/tests)
 * [OSPSuite.SimModel](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/24100473/tests)
 * [OSPSuite.SimModel.Solver.CVODES](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel-solver-cvodes/builds/24073518/tests)
-* [OSPSuite.FuncParser](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-funcparser/builds/25361988/tests)
+* [OSPSuite.FuncParser](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-funcparser/builds/22310440/tests)
 * [OSPSuite.DataBinding.DevExpress](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-databinding-devexpress/builds/23174184/tests)
 * [OSPSuite.DataBinding](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-databinding/builds/22913138/tests)
 * [OSPSuite.Utility](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-utility/builds/22701760/tests)
