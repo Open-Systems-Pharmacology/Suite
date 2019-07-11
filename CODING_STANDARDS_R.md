@@ -41,12 +41,22 @@ stuff.r
 
 - True constant variables should use **ALL_CAPS Casing**
 
-```
-- Class name: `Parameter`
-- Variable name: `parameter_to_delete`
-- Method and function name: `perform_simulation`
-- Constant variable: `DEFAULT_PERCENTILE <- 0.5
+```R
+# Class
 
+Parameter <- setRefClass("Parameter", ....)
+
+# Variable
+
+parameter_to_delete <- ...
+
+# Method and function
+
+perform_simulation <- function (...)
+
+# Constant variables
+
+DEFAULT_PERCENTILE <- 0.5
 ```
 
 - Do not use Hungarian notation (e.g. g for global, b for boolean, s for strings etc...)
