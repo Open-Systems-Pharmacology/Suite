@@ -76,6 +76,30 @@ Only use `return()` for early returns. Otherwise, rely on R to return the result
 - If a lot of comments are required to make a method easier to understand, break down the method in smaller methods
 - Really, do not comment the obvious
 
+## Documentation
+
+Using roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
+
+### Documenting functions
+http://r-pkgs.had.co.nz/man.html#man-functions
+
+### Documenting classes
+Reference classes are different to S3 and S4 because methods are associated with classes, not generics. RC also has a special convention for documenting methods: the docstring. The docstring is a string placed inside the definition of the method which briefly describes what it does. This makes documenting RC simpler than S4 because you only need one roxygen block per class.
+
+```R
+#' A Reference Class to represent a bank account.
+#'
+#' @field balance A length-one numeric vector.
+Account <- setRefClass("Account",
+  fields = list(balance = "numeric"),
+  methods = list(
+    withdraw = function(x) {
+      "Withdraw money from account. Allows overdrafts"
+      balance <<- balance - x
+    }
+  )
+)
+```
 # Syntax
 
 ## Spacing
