@@ -1,11 +1,17 @@
 # Coding Standards for R
 
-We will follow the https://style.tidyverse.org/ style guide to benefit from two R packages supporting this style guide:
+We will follow the https://style.tidyverse.org/ style guide with very few changes to benefit from two R packages supporting this style guide:
 
 - [styler](http://styler.r-lib.org/)
 - [lintr](https://github.com/jimhester/lintr)
 
 This coding standards will outline the more important aspects of the aforementioned style.
+
+# Modifications from tidyverse Coding Standards
+
+- Naming will use `camelCase` instead of `snack_case`
+
+- Favor usage of `return()` even when the return value does not need to be specified explicitely.
 
 # RStudio IDE Settings
 
