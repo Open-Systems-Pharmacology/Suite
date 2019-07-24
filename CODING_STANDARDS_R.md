@@ -35,7 +35,7 @@ stuff.r
 
 ## Object names
 
-- Variable and function names should use only lowercase letters, numbers, and _. Use underscores (_) (so called **snake case**) to separate words within a name.
+- Variable and function names should use only lowercase letters, numbers. Use **camel case** to separate words within a name.
 
 - Class names on the other hand should use **Pascal Casing**
 
@@ -44,15 +44,15 @@ stuff.r
 ```R
 # Class
 
-Parameter <- setRefClass("Parameter", ....)
+Parameter <- R6Class("Parameter", ....)
 
 # Variable
 
-parameter_to_delete <- ...
+parameterToDelete <- ...
 
 # Method and function
 
-perform_simulation <- function (...)
+performSimulation <- function (...)
 
 # Constant variables
 
@@ -63,7 +63,7 @@ DEFAULT_PERCENTILE <- 0.5
 
 ## Functions
 
-Only use `return()` for early returns. Otherwise, rely on R to return the result of the last evaluated expression.
+Prefer use `return()` for returning result. You can rely on R to return the result of the last evaluated expression for simple functions.
 
 ## Comments
 
@@ -81,25 +81,45 @@ Only use `return()` for early returns. Otherwise, rely on R to return the result
 Using roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
 
 ### Documenting functions
+
 http://r-pkgs.had.co.nz/man.html#man-functions
 
 ### Documenting classes
+
 Reference classes are different to S3 and S4 because methods are associated with classes, not generics. RC also has a special convention for documenting methods: the docstring. The docstring is a string placed inside the definition of the method which briefly describes what it does. This makes documenting RC simpler than S4 because you only need one roxygen block per class.
 
 ```R
-#' A Reference Class to represent a bank account.
+#' This is my Person class
+#' @title Person Class
+#' @docType class
+#' @description Person class description
+#' @field name Name of the person
+#' @field hair Hair colour
 #'
-#' @field balance A length-one numeric vector.
-Account <- setRefClass("Account",
-  fields = list(balance = "numeric"),
-  methods = list(
-    withdraw = function(x) {
-      "Withdraw money from account. Allows overdrafts"
-      balance <<- balance - x
-    }
+#' @section Methods:
+#' \describe{
+#' \item{set_hair Set the hair color}
+#' }
+#'
+#' @examples
+#' Person$new(name="Bill", hair="Blond")
+#' @export
+Person <- R6::R6Class("Person",
+  public = list(
+    name = NULL,
+    hair = NULL,
+    initialize = function(name = NA, hair = NA) {
+      self$name <- name
+      self$hair <- hair
+    },
+
+    set_hair = function(val) {
+      self$hair <- val
+    },
   )
 )
 ```
+
 # Syntax
 
 ## Spacing
