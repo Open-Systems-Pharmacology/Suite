@@ -17,7 +17,7 @@
 
     * Initialize Repository with Readme
 
-    * (Optional) short description of the Repository           <img width="451" alt="UploadModel_02" src="https://user-images.githubusercontent.com/25061876/68377694-2a2d2c80-014b-11ea-8d0e-08cc856be755.PNG">
+    * (Optional) short description of the Repository           <br><img width="451" alt="UploadModel_02" src="https://user-images.githubusercontent.com/25061876/68377694-2a2d2c80-014b-11ea-8d0e-08cc856be755.PNG">
 
     * Define [Repository-topics](https://help.github.com/articles/classifying-your-repository-with-topics/):
 
