@@ -2,7 +2,7 @@
 
 1. If you are an OSP community member: create a model repository as described in step 2. Otherwise: post an Issue in the [Forum](https://github.com/Open-Systems-Pharmacology/Forum/issues) and ask to create an empty model repository for you. For this, please provide the information below (s. step 2 for the details). 
 
-    * name of your model (e.g. *Midazolam*)
+    * name of your model (e.g. *Midazolam*, check if already exists, otherwise use another name)
     
     * short description of the model repository (e.g. *Whole-body PBPK model of midazolam as CYP3A4 DDI victim drug*)
     
