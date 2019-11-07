@@ -1,6 +1,6 @@
 # Creating a new model repository.
 
-1. If you are an OSP community member: create a model repository as described in the step 2. Otherwise: post an Issue in the [Forum](https://github.com/Open-Systems-Pharmacology/Forum/issues) and ask to create an empty model repository for you. For this, please provide the information below (s. step 2 for the details). 
+1. If you are an OSP community member: create a model repository as described in step 2. Otherwise: post an Issue in the [Forum](https://github.com/Open-Systems-Pharmacology/Forum/issues) and ask to create an empty model repository for you. For this, please provide the information below (s. step 2 for the details). 
 
     * name of your model (e.g. *Midazolam*)
     
@@ -8,7 +8,7 @@
     
     * repository topics (e.g. *pbpk*, *pbpd*, *ddi*, *pediatrics*, ...)
 
-    As soon as an empty model repository is created: continue with the step 3.
+    As soon as an empty model repository is created: continue with step 3.
 
 2. Creating a model repository:
     * Please create **one repository per substance** (where possible)
@@ -41,7 +41,7 @@
 
    * If you need to *modify* a file: you can do it locally and simply upload the modified file version. It will automatically overwrite the previous version. <br><br>
 
-5. Every model repository must contain project snapshots of all PK-Sim projects and ideally also the projects itself. Also a description of the repository in the **README.md** file (s. the step 6.). E.g. <img width="422" alt="UploadModel_05" src="https://user-images.githubusercontent.com/25061876/68380417-159f6300-0150-11ea-9c18-661e0cfe2d97.PNG">
+5. Every model repository must contain project snapshots of all PK-Sim projects and ideally also the projects itself. Also a description of the repository in the **README.md** file (s. step 6.). E.g. <img width="422" alt="UploadModel_05" src="https://user-images.githubusercontent.com/25061876/68380417-159f6300-0150-11ea-9c18-661e0cfe2d97.PNG">
 
 6. **README.md** is written in the _Markdown-Format_ (s. [here](https://guides.github.com/features/mastering-markdown) and [here](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) for details.). It can be edited directly on GitHub in your Fork of a model repository when you click on the Edit button.
 
