@@ -1,4 +1,4 @@
-# Ondansetron-Model
+# MyDrug-Model
 **_tbd._**
 
 ## Repository files
