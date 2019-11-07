@@ -1,6 +1,8 @@
 # Creating a new model repository.
 
-1. If you are an OSP community member: create a model repository as described in step 2. Otherwise: post an Issue in the [Forum](https://github.com/Open-Systems-Pharmacology/Forum/issues) and ask to create an empty model repository for you. For this, please provide the information below (s. step 2 for the details). 
+1. If you are an OSP community member: create a model repository as described in step 3. 
+
+2. Otherwise (in case you are **not** an OSP community member): post an Issue in the [Forum](https://github.com/Open-Systems-Pharmacology/Forum/issues) and ask to create an empty model repository for you. For this, please provide the information below (s. step 3 for the details). 
 
     * name of your model (e.g. *Midazolam*, check if already exists, otherwise use another name)
     
@@ -8,9 +10,9 @@
     
     * repository topics (e.g. *pbpk*, *pbpd*, *ddi*, *pediatrics*, ...)
 
-    As soon as an empty model repository is created: continue with step 3.
+    As soon as an empty model repository is created: continue with step 4.
 
-2. Creating a model repository:
+3. Creating a model repository:
     * Please create **one repository per substance** (where possible)
 
     * Repository name: `<Substance>-Model` (e.g. `Midazolam-Model`)
@@ -32,18 +34,18 @@
         * *pediatrics*
 <img width="292" alt="UploadModel_03" src="https://user-images.githubusercontent.com/25061876/68377845-5ea0e880-014b-11ea-83e4-70652f0ad519.PNG">
 
-3. Create a so called *Fork* of the OSP Model repository. This will create your own personal copy of the OSP repository, where you can upload and modify files (this copy is still **public and visible to everybody**). S. https://guides.github.com/activities/forking/ for more details.
+4. Create a so called *Fork* of the OSP Model repository. This will create your own personal copy of the OSP repository, where you can upload and modify files (this copy is still **public and visible to everybody**). S. https://guides.github.com/activities/forking/ for more details.
 
    <img width="496" alt="UploadModel_04" src="https://user-images.githubusercontent.com/25061876/68378146-e5ee5c00-014b-11ea-97c5-9dd77fcdbd4b.PNG">
    
-4. To upload files in your fork, just click on the “upload files” button and select your
+5. To upload files in your fork, just click on the “upload files” button and select your
    local files (**[this works for files <=25 MB](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository)**. For files between 25 and 100 MB [use the command line](https://help.github.com/en/github/managing-files-in-a-repository/adding-a-file-to-a-repository-using-the-command-line) )
 
    * If you need to *modify* a file: you can do it locally and simply upload the modified file version. It will automatically overwrite the previous version. <br><br>
 
-5. Every model repository must contain project snapshots of all PK-Sim projects and ideally also the projects itself. Also a description of the repository in the **README.md** file (s. step 6.). E.g. <img width="422" alt="UploadModel_05" src="https://user-images.githubusercontent.com/25061876/68380417-159f6300-0150-11ea-9c18-661e0cfe2d97.PNG">
+6. Every model repository must contain project snapshots of all PK-Sim projects and ideally also the projects itself. Also a description of the repository in the **README.md** file (s. step 6.). E.g. <img width="422" alt="UploadModel_05" src="https://user-images.githubusercontent.com/25061876/68380417-159f6300-0150-11ea-9c18-661e0cfe2d97.PNG">
 
-6. **README.md** is written in the _Markdown-Format_ (s. [here](https://guides.github.com/features/mastering-markdown) and [here](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) for details.). It can be edited directly on GitHub in your Fork of a model repository when you click on the Edit button.
+7. **README.md** is written in the _Markdown-Format_ (s. [here](https://guides.github.com/features/mastering-markdown) and [here](https://help.github.com/en/github/writing-on-github/basic-writing-and-formatting-syntax) for details.). It can be edited directly on GitHub in your Fork of a model repository when you click on the Edit button.
 
     * A template is provided under [MODEL_REPO_README_TEMPLATE](MODEL_REPO_README_TEMPLATE.md). 
 
