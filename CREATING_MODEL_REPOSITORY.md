@@ -17,7 +17,7 @@
 
     * Repository name: `<Substance>-Model` (e.g. `Midazolam-Model`)
 
-    * Initialize Repository with Readme
+    * Initialize Repository with Readme (see screenshot below)
 
     * (Optional) short description of the Repository           <br><br><img width="451" alt="UploadModel_02" src="https://user-images.githubusercontent.com/25061876/68377694-2a2d2c80-014b-11ea-8d0e-08cc856be755.PNG">
 
