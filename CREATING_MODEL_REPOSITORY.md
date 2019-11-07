@@ -53,3 +53,14 @@
     * Some README examples
       * [Alfentanil-Model README](https://github.com/Open-Systems-Pharmacology/Alfentanil-Model/blob/master/README.md)
       * [Glucose-Insulin-Model README](https://github.com/Open-Systems-Pharmacology/Glucose-Insulin-Model/blob/master/README.md)
+
+8. When you are finished with uploading files and Readme in your fork of the model repository, you must create a so called _Pull Request_ (PR). This is so to say a proposal for the OSP to integrate your work back into the the original repository. For this, click on the “Code” tab first and then on “New pull Request”.
+<img width="242" src="https://user-images.githubusercontent.com/25061876/68391340-b3eaf300-0167-11ea-9cd4-fd863b4b3a1e.PNG">
+
+9. On the next page, click on "Create Pull Request".
+<img width="637" src="https://user-images.githubusercontent.com/25061876/68391555-396ea300-0168-11ea-8841-b82a4f267fe3.png">
+
+10. On the next page you can **optionally** select reviewers for your Pull Request. Finally, click on “Create Pull Request” button.
+<img width="514" alt="UploadModel_08" src="https://user-images.githubusercontent.com/25061876/68391844-c154ad00-0168-11ea-9b74-44265deae0d3.png">
+Now somebody from the OSP maintainers team can integrate your work backt into the OSP (or ask you for changes if e.g. something needs to be modified before the PR can be accepted).
+
