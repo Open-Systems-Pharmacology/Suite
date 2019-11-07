@@ -112,4 +112,4 @@ A great way to be involved with the development of the Open Systems Pharmacology
 
 ## Models
 
-Contribute models to the open source [model repositories](http://osp-models.open-systems-pharmacology.org). 
+Contribute models to the open source [model repositories](http://osp-models.open-systems-pharmacology.org). S. [CREATING_MODEL_REPOSITORY](CREATING_MODEL_REPOSITORY.md) for details.
