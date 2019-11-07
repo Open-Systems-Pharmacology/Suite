@@ -24,7 +24,6 @@
     * Define [Repository-topics](https://help.github.com/articles/classifying-your-repository-with-topics/):
 
       * Mandatory topic for model repositories: **osp-model**
-      * Mandatory topic for qualification repositories: **osp-qualification**
       * Further topics: Optional. Topics are free text; however try to use predefined topics if available. Some predefined topics are:
         * *pbpk*
         * *pbpd*
