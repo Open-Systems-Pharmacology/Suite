@@ -60,7 +60,7 @@
 9. On the next page, click on "Create Pull Request".
 <img width="637" src="https://user-images.githubusercontent.com/25061876/68391555-396ea300-0168-11ea-8841-b82a4f267fe3.png">
 
-10. On the next page you can **optionally** select reviewers for your Pull Request. Finally, click on “Create Pull Request” button.
+10. On the next page you can **optionally** select reviewers for your PR. Finally, click on “Create Pull Request” button.
 <img width="514" alt="UploadModel_08" src="https://user-images.githubusercontent.com/25061876/68391844-c154ad00-0168-11ea-9b74-44265deae0d3.png">
 Now somebody from the OSP maintainers team can integrate your work backt into the OSP (or ask you for changes if e.g. something needs to be modified before the PR can be accepted).
 
