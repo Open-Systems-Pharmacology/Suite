@@ -20,7 +20,7 @@
           InstallCommand="/q /norestart"
           SourceFile="netfx472.exe"
           DownloadUrl="https://go.microsoft.com/fwlink/?LinkID=863265"
-        >
+        />
 
         <ExePackage
           SourceFile="vc_redist.x64.exe"
