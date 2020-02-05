@@ -31,8 +31,6 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
 
   MSI[:pksim] = create_package('pk-sim', 'PK-Sim')
   MSI[:mobi] = create_package('mobi', 'MoBi')
-  MSI[:matlab] = create_package('matlab-toolbox', 'Matlab-Toolbox')
-  MSI[:r] = create_package('r-toolbox', 'R-Toolbox')
   MSI[:validator] = create_package('installationvalidator', 'InstallationValidator')
   
   Rake::Task['downlad_all_packages'].invoke
