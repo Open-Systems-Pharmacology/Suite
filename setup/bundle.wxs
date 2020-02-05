@@ -1,100 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi"
-     xmlns:util="http://schemas.microsoft.com/wix/UtilExtension"
-     xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
-   
-   <Bundle Name="$(var.ProductFullName)" Version="$(var.ProductFullVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="8511e368-91f8-4ab3-bb1e-31ffcb9c849a">
-      <Log Disable="no" PathVariable="TEMP"/>
-      <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
-      <WixVariable Id="WixStdbaLicenseRtf" Value="EULA.rtf" />
-      <WixVariable Id="WixStdbaLogo" Value="Banner.png" />
-    
-      <Variable Name="InstallFolder" Type="string" Value="[ProgramFiles64Folder]"/>      
-      <Chain>
-        <ExePackage
-          Id="netfx472"
-          Compressed="$(var.Compressed)"
-          PerMachine="yes" 
-          Permanent="yes" 
-          Vital="yes" 
-          InstallCommand="/q /norestart"
-          SourceFile="netfx472.exe"
-          DownloadUrl="https://go.microsoft.com/fwlink/?LinkID=863265"
-        />
+<Wix xmlns="http://schemas.microsoft.com/wix/2006/wi" 
+  xmlns:util="http://schemas.microsoft.com/wix/UtilExtension" 
+  xmlns:netfx="http://schemas.microsoft.com/wix/NetFxExtension">
 
-        <ExePackage
-          SourceFile="vc_redist.x64.exe"
-          InstallCommand='/q '
-          Vital="yes"
-          Compressed="$(var.Compressed)"
-          PerMachine="yes"
-          Permanent="yes"          
-          DownloadUrl="https://aka.ms/vs/16/release/vc_redist.x64.exe"
-        >
-          <!-- Ignore "Newer version installed" error -->
-          <ExitCode Value="1638" Behavior="success"/>
-        </ExePackage>
-      
-        <MsiPackage
-          Id="miktex"
-          Vital ="yes"
-          SourceFile="MikTex.msi"
-          Compressed="$(var.Compressed)"
-          DownloadUrl="https://systems-biology.com/fileadmin/sb_ftp/OSP_Updates/MikTex.2.9.3.msi"
-        >
-          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
-        
-        <MsiPackage 
-          Id="pksim"
-          Vital="yes"
-          SourceFile="$(var.pksim)"
-          Compressed="$(var.Compressed)"
-          DownloadUrl="$(var.pksimDownloadPath)"
-        >
-          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
+  <Bundle Name="$(var.ProductFullName)" Version="$(var.ProductFullVersion)" Manufacturer="$(var.Manufacturer)" UpgradeCode="8511e368-91f8-4ab3-bb1e-31ffcb9c849a">
+    <Log Disable="no" PathVariable="TEMP"/>
+    <BootstrapperApplicationRef Id="WixStandardBootstrapperApplication.RtfLicense" />
+    <WixVariable Id="WixStdbaLicenseRtf" Value="EULA.rtf" />
+    <WixVariable Id="WixStdbaLogo" Value="Banner.png" />
 
-        <MsiPackage 
-          Id="matlab"
-          Vital="yes"
-          SourceFile="$(var.matlab)"
-          Compressed="$(var.Compressed)"
-          DownloadUrl="$(var.matlabDownloadPath)"
-        >
-          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
-      
-        <MsiPackage 
-          Id="mobi"
-          Vital="yes"
-          SourceFile="$(var.mobi)"
-          Compressed="$(var.Compressed)"
-          DownloadUrl="$(var.mobiDownloadPath)"
-        >
-          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
+    <Variable Name="InstallFolder" Type="string" Value="[ProgramFiles64Folder]"/>
+    <Chain>
+      <ExePackage Id="netfx472" Compressed="$(var.Compressed)" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q /norestart" SourceFile="netfx472.exe" DownloadUrl="https://go.microsoft.com/fwlink/?LinkID=863265" />
 
-        <MsiPackage 
-          Id="r"
-          Vital="yes"
-          SourceFile="$(var.r)"
-          Compressed="$(var.Compressed)"
-          DownloadUrl="$(var.rDownloadPath)"
-          >
-          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
+      <ExePackage SourceFile="vc_redist.x64.exe" InstallCommand='/q ' Vital="yes" Compressed="$(var.Compressed)" PerMachine="yes" Permanent="yes" DownloadUrl="https://aka.ms/vs/16/release/vc_redist.x64.exe">
+        <!-- Ignore "Newer version installed" error -->
+        <ExitCode Value="1638" Behavior="success"/>
+      </ExePackage>
 
-        <MsiPackage 
-          Id="validator"
-          Vital="yes"
-          SourceFile="$(var.validator)"
-          Compressed="$(var.Compressed)"
-          DownloadUrl="$(var.validatorDownloadPath)"
-          >
-          <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-        </MsiPackage>
-      </Chain>
+      <MsiPackage Id="miktex" Vital ="yes" SourceFile="MikTex.msi" Compressed="$(var.Compressed)" DownloadUrl="https://systems-biology.com/fileadmin/sb_ftp/OSP_Updates/MikTex.2.9.3.msi">
+        <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
+      </MsiPackage>
 
-   </Bundle>
+      <MsiPackage Id="pksim" Vital="yes" SourceFile="$(var.pksim)" Compressed="$(var.Compressed)" DownloadUrl="$(var.pksimDownloadPath)">
+        <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
+      </MsiPackage>
+
+      <MsiPackage Id="mobi" Vital="yes" SourceFile="$(var.mobi)" Compressed="$(var.Compressed)" DownloadUrl="$(var.mobiDownloadPath)">
+        <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
+      </MsiPackage>
+
+      <MsiPackage Id="validator" Vital="yes" SourceFile="$(var.validator)" Compressed="$(var.Compressed)" DownloadUrl="$(var.validatorDownloadPath)">
+        <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
+      </MsiPackage>
+    </Chain>
+
+  </Bundle>
 </Wix>
