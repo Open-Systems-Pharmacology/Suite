@@ -54,7 +54,13 @@ How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and 
 ## System Requirements
 
 ### Operating Systems (64 bit only)
-Windows 7®, Windows 8®, Windows 10®, Windows Server 2008 R2®, Windows Server 2012 R2®, Windows Server 2016®
+
+#### OSP Suite 
+Windows 7®, Windows 8®, Windows 10®, Windows Server 2008 R2®, Windows Server 2012 R2®, Windows Server 2016®, Windows Server 2019®
+
+#### R-Toolbox
+
+All Windows operating systems listed above and Linux (*precompiled* packages available for *Ubuntu 18.04* and *CentOS 7*)
 
 ### Processor
 Minimum: 1 GHz (the faster the better!)
@@ -67,7 +73,7 @@ Minimum: 2 GB
 
 ### Optional Software
  * Matlab® (version 2017b or later)
- * R® (versions 3.5 or later - 64bit) 
+ * R® (versions 3.5 / 3.6 - 64bit) 
    
 ## Code of conduct
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md).
