@@ -60,7 +60,7 @@ Windows 7®, Windows 8®, Windows 10®, Windows Server 2008 R2®, Windows Server
 
 #### R-Toolbox
 
-All Windows operating systems listed above and Linux (*precompiled* packages available for *Ubuntu 18.04* and *CentOS 7*)
+All Windows operating systems listed above and Linux (_precompiled_ packages available for _Ubuntu 18.04_ and _CentOS 7_)
 
 ### Processor
 Minimum: 1 GHz (the faster the better!)
