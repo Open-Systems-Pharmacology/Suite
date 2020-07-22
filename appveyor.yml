@@ -1,4 +1,4 @@
-version: "9.0.{build}"
+version: "9.1.{build}"
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
@@ -18,7 +18,7 @@ install:
 
       Copy-Item C:\MikTex.msi .
 
-build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%]"
+build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%, hotfix/v9.1]"
 
 artifacts:
   - path: "**/output/OSPSuite*.exe"
