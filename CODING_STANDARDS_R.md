@@ -9,7 +9,7 @@ This coding standards will outline the more important aspects of the aforementio
 
 # Modifications from tidyverse Coding Standards
 
-- Naming will use `camelCase` instead of `snack_case`
+- Naming will use `camelCase` instead of `snake_case`
 
 - Favor usage of `return()` even when the return value does not need to be specified explicitely.
 
