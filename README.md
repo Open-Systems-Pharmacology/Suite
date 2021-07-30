@@ -32,7 +32,7 @@ De novo model establishment and simulation is supported by graphical tools and b
 
 ### Qualification framework
 
-The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. Qualification framework will be described in detail in [Qualification‌](../part-5/qualification.md).
+The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. Qualification framework is described in detail [he‌re](../part-5/qualification.md).
 
 ### Validation and automation tools
 
