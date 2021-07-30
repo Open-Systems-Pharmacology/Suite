@@ -32,18 +32,18 @@ De novo model establishment and simulation is supported by graphical tools and b
 
 ### Qualification framework
 
-The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. Qualification framework is described in detail [he‌re](../part-5/qualification.md).
+The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. Qualification framework is described in detail [here](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/qualification).
 
 ### Validation and automation tools
 
 Validation and automation tools include for example:
 
 * **Installation Validator**: enables "1-Click" validation of the OSP Suite installation on a target computer. The validation is performed by execution of the predefined set of simulation scenarios and comparison of the simulated results with the (validated) reference values.
-* **Command Line Interface** (*CLI*): allows batch processing of multiple projects in PK-Sim and is described in [Command Line Interface - CLI](../part-3/pk-sim-command-line-interface.md).
+* **Command Line Interface** (*CLI*): allows batch processing of multiple projects in PK-Sim and is described in [Command Line Interface - CLI](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-command-line-interface).
 
-### Toolboxes‌
+### Toolboxes
 
-The MoBi® toolbox for R is an interface to the common statistical computing environment. Basically, the R-toolbox can be used to access and modify model parameters as well as to execute simulations and retrieve results. That way, the R-toolbox can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. Results can be visualized using the options available in the respective environment. The MoBi® toolbox for R is described in detail in [R documentation](../part-6/introduction-ospsuite.md).
+The MoBi® toolbox for R is an interface to the common statistical computing environment. Basically, the R-toolbox can be used to access and modify model parameters as well as to execute simulations and retrieve results. That way, the R-toolbox can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. Results can be visualized using the options available in the respective environment. The MoBi® toolbox for R is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
 
 **OSP Qualification Framework and MoBi® toolbox for R are not included into the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools.**
 
@@ -51,10 +51,10 @@ The MoBi® toolbox for R is an interface to the common statistical computing env
 
 Models created in PK-Sim® or MoBi® can be exported in *PK Modeling Language* (***.pkml**) format and shared between the OSP tools. Internally, PKML file format is nothing more than XML with a predefined structure.
 
-### Import and Export‌
+### Import and Export
 
 Apart from the communication and exchange via R, PK-Sim® and MoBi® have import and export functions for MS Excel®, CSV and NONMEM® that allow for the import of experimental data or the export of simulation results, for example.  MoBi® has SBML import functionalities. 
-PK-Sim can also import and export *project snapshots* in [JSON format](https://en.wikipedia.org/wiki/JSON) (s. [Exporting Project to Snapshot](../part-3/importing-exporting-project-data-models.md#exporting-project-to-snapshot-loading-project-from-snapshot) for details).
+PK-Sim can also import and export *project snapshots* in [JSON format](https://en.wikipedia.org/wiki/JSON) (s. [Exporting Project to Snapshot](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/importing-exporting-project-data-models#exporting-project-to-snapshot-loading-project-from-snapshot) for details).
 
 ## Code Status
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
