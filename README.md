@@ -43,9 +43,9 @@ Validation and automation tools include for example:
 
 ### Toolboxes
 
-The MoBi® toolbox for R is an interface to the common statistical computing environment. Basically, the R-toolbox can be used to access and modify model parameters as well as to execute simulations and retrieve results. That way, the R-toolbox can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. Results can be visualized using the options available in the respective environment. The MoBi® toolbox for R is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
+The OSP toolbox for R is an interface to the common statistical computing environment. Basically, the R-toolbox can be used to access and modify model parameters as well as to execute simulations and retrieve results. That way, the R-toolbox can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. Results can be visualized using the options available in the respective environment. The OSP toolbox for R is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
 
-**OSP Qualification Framework and MoBi® toolbox for R are not included into the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools.**
+**OSP Qualification Framework and OSP toolbox for R are not included into the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools.**
 
 ### OSP Model exchange format
 
