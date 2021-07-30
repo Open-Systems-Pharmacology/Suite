@@ -1,4 +1,4 @@
-This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](http://www.open-systems-pharmacology.org/pk-sim) and [MoBi®](http://www.open-systems-pharmacology.org/mobi) available as freeware under the [GPLv2 License](LICENSE). All source code is public. 
+This open source Systems Pharmacology project makes formerly commercial software tools [PK-Sim®](#pk-sim) and [MoBi®](#mobi) available as freeware under the [GPLv2 License](LICENSE). All source code is public. 
 
 Latest suite release can be found here:
 http://setup.open-systems-pharmacology.org
@@ -93,8 +93,7 @@ Minimum: 2 GB RAM (3+ GB recommended)
 Minimum: 2 GB
 
 ### Optional Software
- * Matlab® (version 2017b or later)
- * R® (versions 3.5 / 3.6 - 64bit) 
+ * R® (versions 3.x / 4.x - 64bit) 
    
 ## Code of conduct
 Everyone interacting in the Open Systems Pharmacology community (codebases, issue trackers, chat rooms, mailing lists etc...) is expected to follow the Open Systems Pharmacology [code of conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md).
