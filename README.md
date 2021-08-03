@@ -41,11 +41,16 @@ Validation and automation tools include for example:
 * **Installation Validator**: enables "1-Click" validation of the OSP Suite installation on a target computer. The validation is performed by execution of the predefined set of simulation scenarios and comparison of the simulated results with the (validated) reference values.
 * **Command Line Interface** (*CLI*): allows batch processing of multiple projects in PK-Sim and is described in [Command Line Interface - CLI](https://docs.open-systems-pharmacology.org/working-with-pk-sim/pk-sim-documentation/pk-sim-command-line-interface).
 
-### Toolboxes
+### R-packages
 
-The R-toolbox is an interface to the common statistical computing environment. Basically, the R-toolbox can be used to access and modify model parameters as well as to execute simulations and retrieve results. That way, the R-toolbox can be used to script or code batch simulations, analysis tasks, or customized workflows to any complexity. Results can be visualized using the options available in the respective environment. The R-toolbox is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
+The OSP software suite provides a set of packages for the R computing environment that allow scripted workflows with the models developed in PK-Sim® and MoBi®.
 
-**OSP Qualification Framework and R-toolbox are not included into the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools.**
+- [ospsuite](https://github.com/Open-Systems-Pharmacology/OSPSuite-R) package provides the functionality of loading, manipulating, and simulating the simulations created in PK-Sim® and MoBi®. It also offers extended workflows such as parameter sensitivity or PK-parameter calculation. The package is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
+- [TLF](https://github.com/Open-Systems-Pharmacology/TLF-Library) package offers a set of functions and methods for creating standardized reporting **T**ables, **L**ists, and **F**igures.
+- [OSPSuite.ReportingEngine](https://github.com/Open-Systems-Pharmacology/OSPSuite.ReportingEngine) for automated generating of model reports.
+- [OSPSuite.ParameterIdentification](https://github.com/Open-Systems-Pharmacology/OSPSuite.ParameterIdentification) provides the functionality of performing parameter identification (i.e., fitting the model to observed data) with simulations. The package is currently under development and everyone is encouraged to contribute. 
+
+**OSP Qualification Framework R packages are not included into the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools or on the GitHub download site.**
 
 ### OSP Model exchange format
 
@@ -60,7 +65,7 @@ PK-Sim can also import and export *project snapshots* in [JSON format](https://e
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
 [![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/develop?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
 [![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
-[![R status](https://ci.appveyor.com/api/projects/status/5ug50xlaot1x59jy/branch/develop?svg=true&passingText=R-Toolbox)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-r/branch/develop)
+[![R status](https://ci.appveyor.com/api/projects/status/5ug50xlaot1x59jy/branch/develop?svg=true&passingText=R-package)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-r/branch/develop)
 [![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
 
 
@@ -79,7 +84,7 @@ How to install setups for the Open Systems Pharmacology Suite with PK-Sim® and 
 #### OSP Suite 
 Windows 7®, Windows 8®, Windows 10®, Windows Server 2008 R2®, Windows Server 2012 R2®, Windows Server 2016®, Windows Server 2019®
 
-#### R-Toolbox
+#### R package
 
 All Windows operating systems listed above and Linux (_precompiled_ packages available for _Ubuntu 18.04_ and _CentOS 7_)
 
