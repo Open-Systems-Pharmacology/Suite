@@ -192,3 +192,44 @@ Refer to chapter [Tests](https://style.tidyverse.org/tests.html)
 # Error messages
 
 Refer to chapter [Errors](https://style.tidyverse.org/error-messages.html)
+
+# Rmarkdown
+
+Package vignettes are written using `{rmarkdown}` package. Here are some good practices to follow while writing these documents:
+
+- It is strongly recommended that only alphanumeric characters (`a-z`, `A-Z` and `0-9`) and dashes (`-`) are used in chunk labels, because they are not special characters and will surely work for all output formats. Other characters, spaces and underscores in particular, may cause trouble in certain packages, such as **bookdown**, **styler**. 
+Ref: <https://bookdown.org/yihui/rmarkdown/r-code.html>
+
+````
+# bad
+
+```{r load theme, echo=FALSE}
+```
+
+# good
+
+```{r load-theme, echo=FALSE}
+```
+````
+
+- Let your rmarkdown breathe. You should use blank lines to separate different elements to avoid ambiguity.
+Ref: <https://yihui.org/en/2021/06/markdown-breath/>
+
+
+````
+# bad -----------------
+
+My line is right above my chunk.
+```{r}
+```
+# and the next section right below
+
+# good -----------------
+
+There is a line between text and chunk.
+
+```{r}
+```
+
+# and the next section is separated by line as well
+````
