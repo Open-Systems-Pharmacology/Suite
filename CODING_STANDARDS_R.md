@@ -16,7 +16,25 @@ This coding standards will outline the more important aspects of the aforementio
 # RStudio IDE Settings
 
 - Indentation of 2
+
 - Use spaces instead of tabs
+
+- Use UTF-8 text encoding (Ref: <https://yihui.org/en/2018/11/biggest-regret-knitr/>)
+
+<img src="figures/utf8.jfif" alt="drawing" width="300"/>
+
+- Use `{tinytex}` for `LaTeX` compilation (Ref: <https://yihui.org/tinytex/pain/>)
+
+<img src="figures/tinytex.jfif" alt="drawing" width="300"/>
+
+- Use AGG graphics device (Ref: <https://www.tidyverse.org/blog/2021/02/modern-text-features/>)
+
+<img src="figures/agg.jfif" alt="drawing" width="300"/>
+
+- Use a blank slate (there should not be any residue from previous session when you start a new session to ensure long-term reproducibility of the software)
+
+<img src="figures/blank.PNG" alt="drawing" width="300"/>
+
 
 # Naming Convention
 
@@ -84,11 +102,19 @@ Prefer using `return()` for returning result. You can rely on R to return the re
 
 ## Documentation
 
-Use roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
+- Use roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
 
-Prefer to use `markdown` syntax to write roxygen documentation (e.g. use `**` instead of `\bold{}`).
+- Internal functions, if documented, should use the tag `#' @keywords internal`.
 
-To automate the conversion of existing documentation to use `markdown` syntax, install [roxygen2md](https://roxygen2md.r-lib.org/) package and run `roxygen2md::roxygen2md()` in the package root directory and carefully check the conversion.
+- Prefer to use `markdown` syntax to write roxygen documentation (e.g. use `**` instead of `\bold{}`).
+
+- To automate the conversion of existing documentation to use `markdown` syntax, install [roxygen2md](https://roxygen2md.r-lib.org/) package and run `roxygen2md::roxygen2md()` in the package root directory and carefully check the conversion.
+
+## Conventions
+
+- Function names as code (good: `dplyr::mutate`, `mutate`, `mutate()`; bad: *mutate*, **mutate**)
+- Package names as code with `{` (good: `{dplyr}`; bad: `dplyr`, *dplyr*, **dplyr**)
+- Programming language names as code (e.g. `markdown`, `C++`)
 
 ### Documenting functions
 
@@ -160,9 +186,9 @@ Don't put `;` at the end of a line, and don't use `;` to put multiple commands o
 
 ### Code blocks
 
-- `{` should be the last character on the line. Related code (e.g., an if clause, a function declaration, a trailing comma, …) must be on the same line as the opening brace.
+- `{` should be the last character on the line. Related code (e.g., an `if` clause, a function declaration, a trailing comma, etc.) must be on the same line as the opening brace.
 
-- The contents should be indented
+- The contents should be indented.
 
 - `}` should be the first character on the line.
 
@@ -197,7 +223,7 @@ Refer to chapter [Errors](https://style.tidyverse.org/error-messages.html)
 
 Package vignettes are written using `{rmarkdown}` package. Here are some good practices to follow while writing these documents:
 
-- It is strongly recommended that only alphanumeric characters (`a-z`, `A-Z` and `0-9`) and dashes (`-`) are used in chunk labels, because they are not special characters and will surely work for all output formats. Other characters, spaces and underscores in particular, may cause trouble in certain packages, such as **bookdown**, **styler**. 
+- It is strongly recommended that only alphanumeric characters (`a-z`, `A-Z` and `0-9`) and dashes (`-`) are used in chunk labels, because they are not special characters and will surely work for all output formats. Other characters, spaces and underscores in particular, may cause trouble in certain packages, such as `{bookdown}`, `{styler}`. 
 Ref: <https://bookdown.org/yihui/rmarkdown/r-code.html>
 
 ````
