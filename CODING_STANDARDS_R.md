@@ -1,6 +1,6 @@
 # Coding Standards for R
 
-We will follow the https://style.tidyverse.org/ style guide with very few changes to benefit from two R packages supporting this style guide:
+We will follow the <https://style.tidyverse.org/> style guide with very few changes to benefit from two R packages supporting this style guide:
 
 - [styler](http://styler.r-lib.org/)
 - [lintr](https://github.com/jimhester/lintr)
@@ -9,24 +9,42 @@ This coding standards will outline the more important aspects of the aforementio
 
 # Modifications from tidyverse Coding Standards
 
-- Naming will use `camelCase` instead of `snack_case`
+- Naming will use `camelCase` instead of `snake_case`.
 
-- Favor usage of `return()` even when the return value does not need to be specified explicitely.
+- Favor usage of `return()` even when the return value does not need to be specified explicitly.
 
 # RStudio IDE Settings
 
-- Identation of 2
+- Indentation of 2
+
 - Use spaces instead of tabs
+
+- Use UTF-8 text encoding (Ref: <https://yihui.org/en/2018/11/biggest-regret-knitr/>)
+
+<img src="figures/utf8.jfif" alt="drawing" width="300"/>
+
+- Use `{tinytex}` for `LaTeX` compilation (Ref: <https://yihui.org/tinytex/pain/>)
+
+<img src="figures/tinytex.jfif" alt="drawing" width="300"/>
+
+- Use AGG graphics device (Ref: <https://www.tidyverse.org/blog/2021/02/modern-text-features/>)
+
+<img src="figures/agg.jfif" alt="drawing" width="300"/>
+
+- Use a blank slate (there should not be any residue from previous session when you start a new session to ensure long-term reproducibility of the software)
+
+<img src="figures/blank.PNG" alt="drawing" width="300"/>
+
 
 # Naming Convention
 
-Use meaningful and understandable names. Code should read as a story and only some well known abbreviations such as pk etc. should be used
+Use meaningful and understandable names. Code should read as a story and only some well known abbreviations (such as pk) should be used
 
 ## Files
 
-- Underscores separated for multiple words
+- Underscores separated multiple words
 - All lower case
-- Ends in .R
+- Ends in `.R`
 
 ```
 # Good
@@ -41,13 +59,13 @@ stuff.r
 
 ## Object names
 
-- Variable and function names should use only lowercase letters, numbers. Use **camel case** to separate words within a name.
+- Variable and function names should use only lowercase letters and numbers. Use **camelCase** to separate words within a name.
 
-- Class names on the other hand should use **Pascal Casing**
+- Class names on the other hand should use **Pascal Casing**.
 
-- True constant variables should use **ALL_CAPS Casing**
+- True constant variables should use **ALL_CAPS Casing**.
 
-```R
+```r
 # Class
 
 Parameter <- R6Class("Parameter", ....)
@@ -65,36 +83,48 @@ performSimulation <- function (...)
 DEFAULT_PERCENTILE <- 0.5
 ```
 
-- Do not use Hungarian notation (e.g. g for global, b for boolean, s for strings etc...)
+- Do not use Hungarian notation (e.g., g for global, b for boolean, s for strings, etc.)
 
 ## Functions
 
-Prefer use `return()` for returning result. You can rely on R to return the result of the last evaluated expression for simple functions.
+Prefer using `return()` for returning result. You can rely on R to return the result of the last evaluated expression for simple functions.
 
 ## Comments
 
-- Do not comment the obvious
-- Use comments to explain the “why” not the “what” or “how”.
-- Indent comment at the same level of indentation as the code you are documenting
-- All comments must be written in English
-- Do not generate commments automatically
-- Do comment algorithm specifics. For example why would you start a loop at index 1 and not at 0 etc...
-- If a lot of comments are required to make a method easier to understand, break down the method in smaller methods
-- Really, do not comment the obvious
+- Do not comment the obvious.
+- Use comments to explain the **why**, and not the **what** or **how**.
+- Indent comment at the same level of indentation as the code you are documenting.
+- All comments must be written in English.
+- Do not generate comments automatically.
+- Do comment algorithm specifics. For example, why would you start a loop at index 1 and not at 0, etc.
+- If a lot of comments are required to make a method easier to understand, break down the method in smaller methods.
+- Really, do not comment the obvious.
 
 ## Documentation
 
-Using roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
+- Use roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
+
+- Internal functions, if documented, should use the tag `#' @keywords internal`.
+
+- Prefer to use `markdown` syntax to write roxygen documentation (e.g. use `**` instead of `\bold{}`).
+
+- To automate the conversion of existing documentation to use `markdown` syntax, install [roxygen2md](https://roxygen2md.r-lib.org/) package and run `roxygen2md::roxygen2md()` in the package root directory and carefully check the conversion.
+
+## Conventions
+
+- Function names as code (good: `dplyr::mutate`, `mutate`, `mutate()`; bad: *mutate*, **mutate**)
+- Package names as code with `{` (good: `{dplyr}`; bad: `dplyr`, *dplyr*, **dplyr**)
+- Programming language names as code (e.g. `markdown`, `C++`)
 
 ### Documenting functions
 
-http://r-pkgs.had.co.nz/man.html#man-functions
+<http://r-pkgs.had.co.nz/man.html#man-functions>
 
 ### Documenting classes
 
-Reference classes are different to S3 and S4 because methods are associated with classes, not generics. RC also has a special convention for documenting methods: the docstring. The docstring is a string placed inside the definition of the method which briefly describes what it does. This makes documenting RC simpler than S4 because you only need one roxygen block per class.
+Reference classes are different across S3 and S4 because methods are associated with classes, not generics. RC also has a special convention for documenting methods: the docstring. The docstring is a string placed inside the definition of the method which briefly describes what it does. This makes documenting RC simpler than S4 because you only need one roxygen block per class.
 
-```R
+```r
 #' This is my Person class
 #' @title Person Class
 #' @docType class
@@ -130,19 +160,19 @@ Person <- R6::R6Class("Person",
 
 ## Spacing
 
-Use the `styler` plugin. It will style the file for you. Otherwise see [here](https://style.tidyverse.org/syntax.html#spacing)
+Use the `styler` addin for RStudio. It will style the files for you. For more, see [here](https://style.tidyverse.org/syntax.html#spacing)
 
 ## Global Variables
 
-- Except for program constants or trully global states, never use global variables. If a global object is required, this should be absolutely discussed in team.
+- Except for program constants or truly global states, never use global variables. If a global object is required, this should be absolutely discussed with the team.
 
-- No hard coded strings and magic number should be used. Declare a constant instead
+- No hard coded strings and magic number should be used. Declare a constant instead.
 
 ## Style
 
 ### Long Lines
 
-Strive to limit your code to 80 characters per line
+Strive to limit your code to 80 characters per line.
 
 ### Assignments
 
@@ -150,19 +180,19 @@ Use `<-`, not `=`, for assignment.
 
 ### Semicolons
 
-Don’t put `;` at the end of a line, and don’t use `;` to put multiple commands on one line.
+Don't put `;` at the end of a line, and don't use `;` to put multiple commands on one line.
 
-**Note:** All these styling issues, and much more, are corrected automatically with `styler`
+**Note:** All these styling issues, and much more, are corrected automatically with `styler`.
 
 ### Code blocks
 
-- `{` should be the last character on the line. Related code (e.g., an if clause, a function declaration, a trailing comma, …) must be on the same line as the opening brace.
+- `{` should be the last character on the line. Related code (e.g., an `if` clause, a function declaration, a trailing comma, etc.) must be on the same line as the opening brace.
 
-- The contents should be indented
+- The contents should be indented.
 
 - `}` should be the first character on the line.
 
-- It is s ok to drop the curly braces for very simple statements that fit on one line, **as long as they don’t have side-effects**.
+- It is OK to drop the curly braces for very simple statements that fit on one line, **as long as they don't have side-effects**.
 
 ```
 # Good
@@ -188,3 +218,44 @@ Refer to chapter [Tests](https://style.tidyverse.org/tests.html)
 # Error messages
 
 Refer to chapter [Errors](https://style.tidyverse.org/error-messages.html)
+
+# Rmarkdown
+
+Package vignettes are written using `{rmarkdown}` package. Here are some good practices to follow while writing these documents:
+
+- It is strongly recommended that only alphanumeric characters (`a-z`, `A-Z` and `0-9`) and dashes (`-`) are used in chunk labels, because they are not special characters and will surely work for all output formats. Other characters, spaces and underscores in particular, may cause trouble in certain packages, such as `{bookdown}`, `{styler}`. 
+Ref: <https://bookdown.org/yihui/rmarkdown/r-code.html>
+
+````
+# bad
+
+```{r load theme, echo=FALSE}
+```
+
+# good
+
+```{r load-theme, echo=FALSE}
+```
+````
+
+- Let your rmarkdown breathe. You should use blank lines to separate different elements to avoid ambiguity.
+Ref: <https://yihui.org/en/2021/06/markdown-breath/>
+
+
+````
+# bad -----------------
+
+My line is right above my chunk.
+```{r}
+```
+# and the next section right below
+
+# good -----------------
+
+There is a line between text and chunk.
+
+```{r}
+```
+
+# and the next section is separated by line as well
+````
