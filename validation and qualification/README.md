@@ -4,7 +4,7 @@
 
 ### Unit and integration tests
 
-* [PK-Sim](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/builds/41188143/tests)
+* [PK-Sim](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/builds/41229114/tests)
 * [MoBi](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/builds/41188331/tests)
 * [Installation Validator](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/builds/41188144/tests)
 * [OSPSuite.Core]https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-core/builds/41187013/tests)
