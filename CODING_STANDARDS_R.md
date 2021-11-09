@@ -2,8 +2,8 @@
 
 We will follow the <https://style.tidyverse.org/> style guide with very few changes to benefit from two R packages supporting this style guide:
 
-- [styler](http://styler.r-lib.org/)
-- [lintr](https://github.com/jimhester/lintr)
+- [`{styler}`](http://styler.r-lib.org/)
+- [`{lintr}`](https://github.com/jimhester/lintr)
 
 This coding standards will outline the more important aspects of the aforementioned style.
 
@@ -34,7 +34,6 @@ This coding standards will outline the more important aspects of the aforementio
 - Use a blank slate (there should not be any residue from previous session when you start a new session to ensure long-term reproducibility of the software)
 
 <img src="figures/blank.PNG" alt="drawing" width="300"/>
-
 
 # Naming Convention
 
@@ -83,7 +82,7 @@ performSimulation <- function (...)
 DEFAULT_PERCENTILE <- 0.5
 ```
 
-- Do not use Hungarian notation (e.g., g for global, b for boolean, s for strings, etc.)
+- Do not use Hungarian notation (e.g., g for global, b for Boolean, s for strings, etc.)
 
 ## Functions
 
@@ -112,9 +111,12 @@ Prefer using `return()` for returning result. You can rely on R to return the re
 
 ## Conventions
 
-- Function names as code (good: `dplyr::mutate`, `mutate`, `mutate()`; bad: *mutate*, **mutate**)
+- Function names as code with parentheses (good: `dplyr::mutate()`, `mutate()`; bad: *mutate*, **mutate**)
+- Variable and (`R6`/`S3`/`S4`) object names as code (good: `x`; bad: x, *x*, **x**)
 - Package names as code with `{` (good: `{dplyr}`; bad: `dplyr`, *dplyr*, **dplyr**)
 - Programming language names as code (e.g. `markdown`, `C++`)
+
+Note that these conventions are adopted to facilitate (auto-generated) cross-linking in `{pkgdown}` websites.
 
 ### Documenting functions
 
@@ -122,7 +124,7 @@ Prefer using `return()` for returning result. You can rely on R to return the re
 
 ### Documenting classes
 
-Reference classes are different across S3 and S4 because methods are associated with classes, not generics. RC also has a special convention for documenting methods: the docstring. The docstring is a string placed inside the definition of the method which briefly describes what it does. This makes documenting RC simpler than S4 because you only need one roxygen block per class.
+Reference classes are different across `S3` and `S4` because methods are associated with classes, not generics. RC also has a special convention for documenting methods: the docstring. The docstring is a string placed inside the definition of the method which briefly describes what it does. This makes documenting RC simpler than `S4` because you only need one roxygen block per class.
 
 ```r
 #' This is my Person class
@@ -156,6 +158,10 @@ Person <- R6::R6Class("Person",
 )
 ```
 
+When referring to the class property (`$name`) or method (`$set_hair()`) in package vignettes, use the `$` sign to highlight that they belong to an object. Note that the method always has parentheses to distinguish it from a property.
+
+If a class has a private method, its name should start with `.` to highlight this (e.g. `$.set_hair_color()`).
+
 # Syntax
 
 ## Spacing
@@ -182,7 +188,7 @@ Use `<-`, not `=`, for assignment.
 
 Don't put `;` at the end of a line, and don't use `;` to put multiple commands on one line.
 
-**Note:** All these styling issues, and much more, are corrected automatically with `styler`.
+**Note:** All these styling issues, and much more, are corrected automatically with `{styler}`.
 
 ### Code blocks
 
@@ -258,4 +264,8 @@ There is a line between text and chunk.
 ```
 
 # and the next section is separated by line as well
-````
+```
+
+# See also
+
+A more comprehensive list of tools helpful for package development can be found in this [resource](https://github.com/IndrajeetPatil/awesome-r-pkgtools/blob/master/README.md).
