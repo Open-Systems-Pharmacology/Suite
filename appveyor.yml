@@ -1,4 +1,7 @@
-version: "10.0.{build}"
+version: '{build}'
+
+init:
+- ps: Update-AppveyorBuild -Version "$($env:ospsuite_version).$($env:appveyor_build_version)"
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
