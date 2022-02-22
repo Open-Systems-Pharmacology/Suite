@@ -24,7 +24,7 @@ Use meaningful and understandable names. Code should read as a story and only so
 * All members variable should be declared at one place of a class definition.
 * Prefer variables initialization at the point of declaration .
 * Do not use public members. Use properties instead.
-* Do not use Hungarian notation (e.g. b for Boolean, s for strings etc.).
+* Do not use Hungarian notation (e.g. b for boolean, s for strings etc.).
 * Except for program constants, never use global variables.
 
 ## Comments
