@@ -37,7 +37,7 @@ This coding standards will outline the more important aspects of the aforementio
 
 # Naming Convention
 
-Use meaningful and understandable names. Code should read as a story and only some well known abbreviations (such as pk) should be used
+Use meaningful and understandable names. Code should read as a story and only some well known abbreviations (such as pk) should be used.
 
 ## Files
 
@@ -86,7 +86,7 @@ DEFAULT_PERCENTILE <- 0.5
 
 ## Functions
 
-Prefer using `return()` for returning result. You can rely on R to return the result of the last evaluated expression for simple functions.
+Prefer using `return()` for explicitly returning result, although you can rely on R to implicitly return the result of the last evaluated expression in a function.
 
 ## Comments
 
@@ -101,11 +101,24 @@ Prefer using `return()` for returning result. You can rely on R to return the re
 
 ## Documentation
 
-- Use roxygen comments as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments)
+- Use roxygen comments (`#'`) as described [here](http://r-pkgs.had.co.nz/man.html#roxygen-comments).
 
-- Internal functions, if documented, should use the tag `#' @keywords internal`.
+- Do not include empty lines between the function code and its documentation.
 
-- Prefer to use `markdown` syntax to write roxygen documentation (e.g. use `**` instead of `\bold{}`).
+```r
+# Good
+#' @export
+weekend <- list("Saturday", "Sunday")
+
+# Bad
+#' @export
+
+weekend <- list("Saturday", "Sunday")
+```
+
+- Internal functions, if documented, should use the tag `#' @keywords internal`. This makes sure that package websites don't include these internal functions.
+
+- Prefer using `markdown` syntax to write roxygen documentation (e.g. use `**` instead of `\bold{}`).
 
 - To automate the conversion of existing documentation to use `markdown` syntax, install [roxygen2md](https://roxygen2md.r-lib.org/) package and run `roxygen2md::roxygen2md()` in the package root directory and carefully check the conversion.
 
@@ -178,7 +191,7 @@ Use the `styler` addin for RStudio. It will style the files for you. For more, s
 
 ### Long Lines
 
-Strive to limit your code to 80 characters per line.
+Strive to limit your code (including comments and roxygen documentation) to 80 characters per line.
 
 ### Assignments
 
@@ -200,7 +213,7 @@ Don't put `;` at the end of a line, and don't use `;` to put multiple commands o
 
 - It is OK to drop the curly braces for very simple statements that fit on one line, **as long as they don't have side-effects**.
 
-```
+```r
 # Good
 y <- 10
 x <- if (y < 20) "Too low" else "Too high"
@@ -264,7 +277,7 @@ There is a line between text and chunk.
 ```
 
 # and the next section is separated by line as well
-```
+````
 
 # See also
 
