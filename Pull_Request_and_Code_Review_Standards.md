@@ -28,6 +28,8 @@
 
 -   Reviewers should do their due diligence to understand the underlying issue, instead of asking contributors to reiterate the details that have already been outlined in GitHub Issues/Discussions.
 
+-   Without the express permission or request of the contributor, the collaborators should not directly push in the PR.
+
 -   If reviewers/contributors missed the issue that motivated the PR and would like to discuss it further when they see the PR, the discussion should take place in the original *issue* and not in the *PR* to minimize cognitive overhead of tracking the same discussion in two different places and to minimize the possibility of talking past each other.
 
 -   The responsibility of resolving code review comments falls squarely on the reviewers. The contributors shouldn't themselves resolve the review comments, even if they are 100% confident that their latest commits address review comments.
@@ -38,7 +40,7 @@
 
 -   Even if contributors possess the right to merge PRs to protected branches without code review, they should exercise this power responsibly and try their best not to circumvent the "number of required reviews" condition stipulated for the protected branch.
 
-## References
+## Further Reading
 
 -   *The Missing Readme: A Guide for the New Software Engineer*
     by Chris Riccomini and Dmitriy Ryaboy (No Starch Press, 2021), Chapter 7.
