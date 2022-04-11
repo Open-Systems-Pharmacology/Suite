@@ -24,6 +24,8 @@
 
 -   Ideally, there should be a one-to-one mapping of issues to PR, although if a number of issues are related to the same underlying functionality, it is completely acceptable to address multiple issues in a single PR.
 
+-   If it's a PR that targets multiple issues or adds significant new functionality, there might be multiple rounds of code reviews and multiple tasks to be completed. In such cases, try to prepare a checklist in the PR description and keep it updated so that the reviewers and contributors always have an up-to-date view of the status of the PR.
+
 -   Reviewers should do their due diligence to understand the underlying issue, instead of asking contributors to reiterate the details that have already been outlined in GitHub Issues/Discussions.
 
 -   If reviewers/contributors missed the issue that motivated the PR and would like to discuss it further when they see the PR, the discussion should take place in the original *issue* and not in the *PR* to minimize cognitive overhead of tracking the same discussion in two different places and to minimize the possibility of talking past each other.
