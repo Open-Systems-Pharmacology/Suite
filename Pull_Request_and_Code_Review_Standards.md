@@ -20,7 +20,7 @@
 
 -   Once the PR is marked as "Ready for Review", contributors should remember to remove \`WIP\` from the PR title.
 
--   Before marking the PR as "Ready for Review", contributors should also try their best to make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md).
+-   Before marking the PR as "Ready for Review", contributors should also try their best to make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md) and to make sure that CI/CD pipelines are executing successfully.
 
 -   Ideally, there should be a one-to-one mapping of issues to PR, although if a number of issues are related to the same underlying functionality, it is completely acceptable to address multiple issues in a single PR.
 
@@ -37,3 +37,8 @@
 -   Reviewers should refrain from making remarks that can potentially be construed as hurtful or dismissive by contributors (e.g. "LOL, this doesn't work", "LMAO, what the hell is this?!", etc.). The comments should be constructive, irrespective of whether they are terse or detailed.
 
 -   Even if contributors possess the right to merge PRs to protected branches without code review, they should exercise this power responsibly and try their best not to circumvent the "number of required reviews" condition stipulated for the protected branch.
+
+## References
+
+-   *The Missing Readme: A Guide for the New Software Engineer*
+    by Chris Riccomini and Dmitriy Ryaboy (No Starch Press, 2021), Chapter 7.
