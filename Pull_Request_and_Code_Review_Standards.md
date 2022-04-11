@@ -1,4 +1,4 @@
-# Pull Request and Code Review Guidelines
+# Pull Request and Code Review Standards
 
 -   Unless it's a trivial change (spelling mistake, code formatting, etc.), there should be an existing issue that will be closed by the given PR.
 
