@@ -2,23 +2,23 @@
 
 -   Unless it's a trivial change (spelling mistake, code formatting, etc.), there should be an existing issue that will be closed by the given PR.
 
--   The branch name from which PR is being made should follow the convention: \`\<issue_number\>-short*-*description\`.
+-   The branch name from which PR is being made should follow the convention: `\<issue_number\>-short-description`.
 
 -   The title for the PR should provide a brief description about the changes.
 
--   The PR should be linked to the issue(s) that it targets, either by using keywords (like `fixes`, `closes`, etc.) in the PR description or by using \`development\` feature.
+-   The PR should be linked to the issue(s) that it targets, either by using [keywords](https://docs.github.com/en/issues/tracking-your-work-with-issues/linking-a-pull-request-to-an-issue) (like `fixes`, `closes`, etc.) in the PR description or by using `development` feature.
 
     ![](figures/development.png)
 
 -   Even if the PR doesn't close any issues, it should refer to the comment or discussion that inspired it. Lacking any of these, the PR description should be self-sufficient to explain the motivation for the PR.
 
--   If the PR is a work in progress, you can convert it to a draft PR and add \`WIP\` to the PR title.
+-   If the PR is a work in progress, you can convert it to a draft PR and add `WIP` to the PR title.
 
     ![](figures/draft.png)
 
 -   Reviewers should not conduct code review of draft PRs, unless otherwise requested by the contributors.
 
--   Once the PR is marked as "Ready for Review", contributors should remember to remove \`WIP\` from the PR title.
+-   Once the PR is marked as "Ready for Review", contributors should remember to remove `WIP` from the PR title.
 
 -   Before marking the PR as "Ready for Review", contributors should also try their best to make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md) and to make sure that CI/CD pipelines are executing successfully.
 
@@ -42,5 +42,4 @@
 
 ## Further Reading
 
--   *The Missing Readme: A Guide for the New Software Engineer*
-    by Chris Riccomini and Dmitriy Ryaboy (No Starch Press, 2021), Chapter 7.
+-   *The Missing Readme: A Guide for the New Software Engineer* by Chris Riccomini and Dmitriy Ryaboy (No Starch Press, 2021), Chapter 7.
