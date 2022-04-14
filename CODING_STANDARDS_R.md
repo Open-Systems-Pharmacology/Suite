@@ -279,6 +279,20 @@ There is a line between text and chunk.
 # and the next section is separated by line as well
 ````
 
+# File naming
+
+File names containing both source code (`/R`) and tests (`/tests`) should follow the kebab-case naming convention.
+
+```r
+# bad
+DataCombined.R
+test-DataCombined.R
+
+# good
+data-combined.R
+test-data-combined.R
+```
+
 # See also
 
 A more comprehensive list of tools helpful for package development can be found in this [resource](https://github.com/IndrajeetPatil/awesome-r-pkgtools/blob/master/README.md).
