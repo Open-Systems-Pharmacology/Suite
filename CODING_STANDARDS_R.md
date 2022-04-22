@@ -100,7 +100,7 @@ Prefer using `return()` for explicitly returning result, although you can rely o
   
   # okay ---------
   
-  # filter to retain only the rows where column `x` has values greater than 5
+  # filter data frame to retain only the rows where column `x` has values greater than 5
   dplyr::filter(data, x > 5)
   ```
 - Use comments to explain the **why**, and not the **what** or **how**.
