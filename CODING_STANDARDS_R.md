@@ -90,7 +90,19 @@ Prefer using `return()` for explicitly returning result, although you can rely o
 
 ## Comments
 
-- Do not comment the obvious.
+- Do not comment the obvious. But, if you use third-party libraries that the team is not familiar with, it is essential that the comments clarify the code (even if it feels obvious to *you*).
+
+  ```r
+  # bad ----------
+  
+  # return the data
+  return(data)
+  
+  # okay ---------
+  
+  # filter to retain only the rows where column `x` has values greater than 5
+  dplyr::filter(data, x > 5)
+  ```
 - Use comments to explain the **why**, and not the **what** or **how**.
 - Indent comment at the same level of indentation as the code you are documenting.
 - All comments must be written in English.
