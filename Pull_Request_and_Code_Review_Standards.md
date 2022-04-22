@@ -10,7 +10,7 @@
 
     ![](figures/development.png)
 
--   Even if the PR doesn't close any issues, it should refer to the comment or discussion that inspired it. Lacking any of these, the PR description should be self-sufficient to explain the motivation for the PR.
+-   Even if the PR doesn't close any issues, it should refer to the comment or discussion that motivated it. Lacking any of these, the PR description should be self-sufficient to explain the motivation for the PR.
 
 -   If the PR is a work in progress, you can convert it to a draft PR and add `WIP` to the PR title.
 
@@ -28,11 +28,15 @@
 
 -   Reviewers should do their due diligence to understand the underlying issue, instead of asking contributors to reiterate the details that have already been outlined in GitHub Issues/Discussions.
 
--   Without the express permission or request of the contributor, the collaborators should not directly push in the PR.
+-   Reviewers should refrain from rubber-stamping reviews. If they feel unqualified or do not have time to review, they should urge contributors to request review from other collaborators instead of rubber-stamping an approval.
+
+-   Without the express permission or request of the contributor, the reviewers/collaborators should **not** directly push in the PR.
 
 -   If reviewers/contributors missed the issue that motivated the PR and would like to discuss it further when they see the PR, the discussion should take place in the original *issue* and not in the *PR* to minimize cognitive overhead of tracking the same discussion in two different places and to minimize the possibility of talking past each other.
 
 -   The responsibility of resolving code review comments falls squarely on the reviewers. The contributors shouldn't themselves resolve the review comments, even if they are 100% confident that their latest commits address review comments.
+
+-   Reviewers should not forget to review test code to make sure that it follows organization's coding standards.
 
 -   Code review comments should strictly follow the ethical decorum stipulated by [Code of Conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODE_OF_CONDUCT.md).
 
