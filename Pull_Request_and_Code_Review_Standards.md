@@ -38,7 +38,7 @@
 
 -   Code review comments should strictly follow the ethical decorum stipulated by [Code of Conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODE_OF_CONDUCT.md).
 
--   Reviewers should refrain from making remarks that can potentially be construed as hurtful or dismissive by contributors (e.g. "LOL, this doesn't work", "LMAO, what the hell is this?!", etc.). The comments should be constructive, irrespective of whether they are terse or detailed.
+-   Reviewers should refrain from making remarks that can potentially be construed as hurtful or dismissive by contributors (e.g. "LMAO, what the hell is this?!"). The comments should be constructive, irrespective of whether they are terse or detailed.
 
 -   Even if contributors possess the right to merge PRs to protected branches without code review, they should exercise this power responsibly and not to circumvent the "number of required reviews" condition stipulated for the protected branch.
 
