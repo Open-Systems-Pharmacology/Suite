@@ -20,7 +20,7 @@
 
 -   Once the PR is marked as "Ready for Review", contributors should remember to remove `WIP` from the PR title.
 
--   Before marking the PR as "Ready for Review", contributors should also try their best to make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md) and to make sure that CI/CD pipelines are executing successfully.
+-   Before marking the PR as "Ready for Review", contributors should also try their best to make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md) and to make sure that CI/CD pipelines are executing successfully. If this is not possible for some reason (e.g. because the code in *other repositories* must be changed) - the contributor should create new issue(s) for those required code changes, link them in the PR, and shortly explain why the change in the PR itself is not possible.
 
 -   Ideally, there should be a one-to-one mapping of issues to PR, although if a number of issues are related to the same underlying functionality, it is completely acceptable to address multiple issues in a single PR.
 
