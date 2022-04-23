@@ -2,7 +2,7 @@
 
 -   Unless it's a trivial change (spelling mistake, code formatting, etc.), there should be an existing issue that will be closed by the given PR.
 
--   The branch name from which PR is being made should follow the convention: `\<issue_number\>-short-description`.
+-   The branch name from which PR is being made should follow the convention: `\<issue_number\>-short-description` (e.g. \`186_implement_data_combined\`).
 
 -   The title for the PR should provide a brief description about the changes.
 
@@ -20,19 +20,17 @@
 
 -   Once the PR is marked as "Ready for Review", contributors should remember to remove `WIP` from the PR title.
 
--   Before marking the PR as "Ready for Review", contributors should also try their best to make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md) and to make sure that CI/CD pipelines are executing successfully. If this is not possible for some reason (e.g. because the code in *other repositories* must be changed) - the contributor should create new issue(s) for those required code changes, link them in the PR, and shortly explain why the change in the PR itself is not possible.
+-   Before marking the PR as "Ready for Review", contributors should also make sure that they are following the organization's [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/develop/CODING_STANDARDS.md) and to make sure that CI/CD pipelines are executing successfully. If this is not possible for some reason (e.g. because the code in *other repositories* must be changed) - the contributor should create new issue(s) for those required code changes, link them in the PR, and shortly explain why the change in the PR itself is not possible.
 
 -   Ideally, there should be a one-to-one mapping of issues to PR, although if a number of issues are related to the same underlying functionality, it is completely acceptable to address multiple issues in a single PR.
 
--   If it's a PR that targets multiple issues or adds significant new functionality, there might be multiple rounds of code reviews and multiple tasks to be completed. In such cases, try to prepare a checklist in the PR description and keep it updated so that the reviewers and contributors always have an up-to-date view of the status of the PR.
+-   If it's a PR that adds significant new functionality, there might be multiple tasks to be completed. In such cases, try to prepare a checklist in the PR description and keep it updated so that the reviewers and contributors always have an up-to-date view of the status of the PR.
 
 -   Reviewers should do their due diligence to understand the underlying issue, instead of asking contributors to reiterate the details that have already been outlined in GitHub Issues/Discussions.
 
--   Reviewers should refrain from rubber-stamping reviews. If they feel unqualified or do not have time to review, they should urge contributors to request review from other collaborators instead of rubber-stamping an approval.
+-   Without the express permission or request of the contributor, the reviewers/collaborators should **not** directly push in the PR. An exception can be made when the contributor is non-responsive.
 
--   Without the express permission or request of the contributor, the reviewers/collaborators should **not** directly push in the PR.
-
--   If reviewers/contributors missed the issue that motivated the PR and would like to discuss it further when they see the PR, the discussion should take place in the original *issue* and not in the *PR* to minimize cognitive overhead of tracking the same discussion in two different places and to minimize the possibility of talking past each other.
+-   If reviewers missed the issue that motivated the PR and would like to discuss it further when they see the PR, the discussion should take place in the original *issue* and not in the *PR* to minimize cognitive overhead of tracking the same discussion in two different places and to minimize the possibility of talking past each other.
 
 -   The responsibility of resolving code review comments falls squarely on the reviewers. The contributors shouldn't themselves resolve the review comments, even if they are 100% confident that their latest commits address review comments.
 
@@ -42,7 +40,7 @@
 
 -   Reviewers should refrain from making remarks that can potentially be construed as hurtful or dismissive by contributors (e.g. "LOL, this doesn't work", "LMAO, what the hell is this?!", etc.). The comments should be constructive, irrespective of whether they are terse or detailed.
 
--   Even if contributors possess the right to merge PRs to protected branches without code review, they should exercise this power responsibly and try their best not to circumvent the "number of required reviews" condition stipulated for the protected branch.
+-   Even if contributors possess the right to merge PRs to protected branches without code review, they should exercise this power responsibly and not to circumvent the "number of required reviews" condition stipulated for the protected branch.
 
 ## Further Reading
 
