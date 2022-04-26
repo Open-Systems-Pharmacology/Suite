@@ -28,8 +28,6 @@
 
 -   Reviewers should do their due diligence to understand the underlying issue, instead of asking contributors to reiterate the details that have already been outlined in GitHub Issues/Discussions.
 
--   Without the express permission or request of the contributor, the reviewers/collaborators should **not** directly push in the PR. An exception can be made when the contributor is non-responsive.
-
 -   If reviewers missed the issue that motivated the PR and would like to discuss it further when they see the PR, the discussion should take place in the original *issue* and not in the *PR* to minimize cognitive overhead of tracking the same discussion in two different places and to minimize the possibility of talking past each other.
 
 -   The responsibility of resolving code review comments falls squarely on the reviewers. The contributors shouldn't themselves resolve the review comments, even if they are 100% confident that their latest commits address review comments.
