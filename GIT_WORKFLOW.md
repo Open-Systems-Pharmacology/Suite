@@ -18,7 +18,7 @@ We will use `git rebase` for all other type of code integration (sub tasks of a 
 # Use Case: Implementing Task "426 it should be possible to delete observed data"
 _Note:_ A task is a cohesive unit of work. This can be part of a bigger feature or a bug fix. We assume that a fork of the repository has already been created.
 
-1. Create a `feature` branch with a **meaningful name** containing the id of the task. We will need to acquire the latest changes from the remote `develop` branch first and then create the feature branch
+1. Create a `feature` branch with a **meaningful name**, **starting with the id of the task**. We will need to acquire the latest changes from the remote `develop` branch first and then create the feature branch
   * With option  git pull -rebase = preserve
   ```
   git checkout develop
