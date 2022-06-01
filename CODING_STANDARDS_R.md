@@ -41,19 +41,16 @@ Use meaningful and understandable names. Code should read as a story and only so
 
 ## Files
 
-- Underscores separated multiple words
-- All lower case
-- Ends in `.R`
+File names containing both source code (`/R`) and tests (`/tests`) should follow the kebab-case naming convention and should have `.R` extension.
 
-```
-# Good
-fit_models.R
-utility_functions.R
+```r
+# bad
+DataCombined.R
+test-DataCombined.R
 
-# Bad
-fit models.R
-foo.r
-stuff.r
+# good
+data-combined.R
+test-data-combined.R
 ```
 
 ## Object names
@@ -187,6 +184,10 @@ Use the `styler` addin for RStudio. It will style the files for you. For more, s
 
 - No hard coded strings and magic number should be used. Declare a constant instead.
 
+## Booleans
+
+- Avoid using boolean abbreviations (`T` and `F`). Instead, use `TRUE` and `FALSE` (respectively).
+
 ## Style
 
 ### Long Lines
@@ -278,20 +279,6 @@ There is a line between text and chunk.
 
 # and the next section is separated by line as well
 ````
-
-# File naming
-
-File names containing both source code (`/R`) and tests (`/tests`) should follow the kebab-case naming convention.
-
-```r
-# bad
-DataCombined.R
-test-DataCombined.R
-
-# good
-data-combined.R
-test-data-combined.R
-```
 
 # See also
 
