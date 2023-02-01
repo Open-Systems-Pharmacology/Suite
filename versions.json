@@ -1,14 +1,14 @@
 [
   {
     "name": "PK-Sim",
-    "version": "11.0"
+    "version": "11.1"
   },
   {
     "name": "MoBi",
-    "version": "11.0"
+    "version": "11.1"
   },
   {
     "name": "BuildingBlockTemplates",
-    "version": "1.0"
+    "version": "1.1"
   }
 ]

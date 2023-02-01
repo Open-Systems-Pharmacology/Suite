@@ -2,15 +2,17 @@
 
 ### [(PBPK) Model Evaluation Reports](https://github.com/Open-Systems-Pharmacology/OSP-PBPK-Model-Library)
 
+### [CKD Population Qualification Report](https://github.com/Open-Systems-Pharmacology/Qualification-CKD/blob/main/Qualification/report/report.md)
+
 ### Unit and integration tests
 
-* [PK-Sim](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/builds/43593881/tests)
-* [MoBi](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/builds/43593882/tests)
-* [Installation Validator](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/builds/43564003/tests)
-* [OSPSuite.Core](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-core/builds/43424699/artifacts)
+* [PK-Sim](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/builds/46052595/tests)
+* [MoBi](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/builds/46052599/tests)
+* [Installation Validator](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/builds/46052834/tests)
+* [OSPSuite.Core](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-core/builds/46039972/tests)
 * OSPSuite.SimModel
-  * [Windows](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/43388528/job/d7b55q4exadqphe8/tests)
-  * [Linux (Ubuntu 18.04)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/43388528/job/40ygje78swtiu0ct/tests)
+  * [Windows](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/45143194/job/hc7ib82c2yci6xja/tests)
+  * [Linux (Ubuntu 18.04)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/45143194/job/0ljw5ow7utjt47vp/tests)
 * [OSPSuite.SimModel.Solver.CVODES](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel-solver-cvodes/builds/31394354/job/sijwuswr2abe3yk4/tests)
 * OSPSuite.FuncParser
   * [Windows](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-funcparser/builds/43088580/job/36g2ob933pbt42ch/tests)
