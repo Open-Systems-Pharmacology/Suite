@@ -48,10 +48,10 @@ Validation and automation tools include for example:
 
 The OSP software suite provides a set of packages for the R computing environment that allow scripted workflows with the models developed in PK-Sim® and MoBi®.
 
-- [ospsuite](https://github.com/Open-Systems-Pharmacology/OSPSuite-R) package provides the functionality of loading, manipulating, and simulating the simulations created in PK-Sim® and MoBi®. It also offers extended workflows such as parameter sensitivity or PK-parameter calculation. The package is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
-- [tlf](https://github.com/Open-Systems-Pharmacology/TLF-Library) package offers a set of functions and methods for creating standardized reporting **T**ables, **L**istings, and **F**igures.
-- [ospsuite.reportingengine](https://github.com/Open-Systems-Pharmacology/OSPSuite.ReportingEngine) for automated generation of model reports.
-- [ospsuite.utils](https://github.com/open-systems-pharmacology/OSPSuite.RUtils) provides a collection of utility functions useful for R packages in the OSP ecosystem.
+- [ospsuite](https://github.com/Open-Systems-Pharmacology/OSPSuite-R) package provides the functionality of loading, manipulating, and simulating the simulations created in PK-Sim® and MoBi®. It also offers extended workflows such as parameter sensitivity or PK-parameter calculation. The package is described in detail in [R documentation](https://www.open-systems-pharmacology.org/OSPSuite-R/).
+- [tlf](https://www.open-systems-pharmacology.org/TLF-Library/) package offers a set of functions and methods for creating standardized reporting **T**ables, **L**istings, and **F**igures.
+- [ospsuite.reportingengine](https://www.open-systems-pharmacology.org/OSPSuite.ReportingEngine/) for automated generation of model reports.
+- [ospsuite.utils](https://www.open-systems-pharmacology.org/OSPSuite.RUtils/) provides a collection of utility functions useful for R packages in the OSP ecosystem.
 - [ospsuite.parameteridentification](https://github.com/Open-Systems-Pharmacology/OSPSuite.ParameterIdentification) provides the functionality of performing parameter identification (i.e., fitting the model to observed data) with simulations. The package is currently under development and everyone is encouraged to contribute.
 
 **OSP Qualification Framework and R packages are not included in the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools or on the GitHub download site.**
