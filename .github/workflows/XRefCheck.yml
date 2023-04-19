@@ -1,0 +1,11 @@
+name: XRefCheck
+
+on: 
+  pull_request:
+    branches:
+      - develop
+
+jobs:
+  crossref-check-without-anchors:
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/XRefCheck.yml@main
+
