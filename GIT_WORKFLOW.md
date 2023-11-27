@@ -1,1 +1,1 @@
-You can find a detailed description of the Github Workflow, the branch naming strategies and release guidelines in the developer documentation [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/setup/git_workflow.md)
+You can find a detailed description of the GitHub Workflow, the branch naming strategies and release guidelines in the developer documentation [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/setup/git_workflow.md)

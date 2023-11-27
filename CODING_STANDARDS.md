@@ -1,1 +1,1 @@
-You can find the C# coding standards for the OSPSuite in the developer documentation [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/setup/coding_standards.md).
+You can find the C# coding standards for the OSP Suite in the developer documentation [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/setup/coding_standards.md).

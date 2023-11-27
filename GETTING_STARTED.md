@@ -1,1 +1,1 @@
-You can find the tutorial for setting up the OSPSuite C# Development Environment [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/setup/getting_started.md)
+You can find the tutorial for setting up the OSP Suite C# Development Environment [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/setup/getting_started.md)

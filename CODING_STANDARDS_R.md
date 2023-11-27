@@ -1,1 +1,1 @@
-You can find the R coding standards for the OSPSuite in the developer documentation [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/ospsuite-r-specifics/CODING_STANDARDS_R.md)
+You can find the R coding standards for the OSP Suite in the developer documentation [here](https://github.com/Open-Systems-Pharmacology/developer-docs/blob/main/ospsuite-r-specifics/CODING_STANDARDS_R.md)
