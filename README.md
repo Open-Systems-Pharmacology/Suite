@@ -67,12 +67,17 @@ PK-Sim can also import and export *project snapshots* in [JSON format](https://e
 
 ## Code Status
 
+[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/latest/total?label=%E2%AD%B3%20Downloads%20latest%20release)](https://github.com/Open-Systems-Pharmacology/Suite/releases/latest)
+[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/total?label=%E2%AD%B3%20Downloads%20total)](https://github.com/Open-Systems-Pharmacology/Suite/releases)
+
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
 [![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/develop?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
 [![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
 [![R status](https://ci.appveyor.com/api/projects/status/5ug50xlaot1x59jy/branch/develop?svg=true&passingText=ospsuite-r)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-r/branch/develop)
 [![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
 
+[![Check Markdown links](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml)
+[![XRefCheck](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml)
 
 ## Software installation
 
