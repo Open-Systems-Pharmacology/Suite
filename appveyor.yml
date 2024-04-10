@@ -1,7 +1,7 @@
 version: '{build}'
 
 init:
-- ps: Update-AppveyorBuild -Version "$($env:ospsuite_version).$($env:appveyor_build_version)"
+- ps: Update-AppveyorBuild -Version "$($env:ospsuite_nightly_version).$($env:appveyor_build_version)"
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
@@ -21,7 +21,7 @@ install:
 
       Copy-Item C:\MikTex.msi .
 
-build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%]"
+build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%, hotfix/11.3]"
 
 artifacts:
   - path: "**/output/OSPSuite*.exe"

@@ -26,7 +26,7 @@ PK-Sim® uses building blocks that are grouped into [**Individuals**](https://do
 
 ### MoBi
 
-[MoBi®](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation) is a systems biology software tool for multiscale physiological modeling and simulation. Within the restrictions of ordinary differential equations, almost any kind of (biological) model can be imported or set up from scratch. Examples include biochemical reaction networks, compartmental disease progression models, or PBPK models. However, the de novo development of a PBPK model, for example, is very cumbersome such that the preferred procedure is to import them from PK-Sim®. Importantly, MoBi® also allows for the combination of the described examples and thereby is a very powerful tool for modeling and simulation of multiscale physiological systems covering molecular details on the one hand and whole-body architecture on the other hand.
+[MoBi®](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation) is a systems biology software tool for multiscale physiological modeling and simulation. Within the restrictions of ordinary differential equations, almost any kind of (biological) model can be imported or set up from scratch. Examples include *in vitro* dissolution testing, biochemical reaction networks, compartmental disease progression models, or PBPK models. However, the de novo development of a PBPK model, for example, is very cumbersome such that the preferred procedure is to import it from PK-Sim®. Importantly, MoBi® also allows for the combination of the described examples and thereby is a very powerful tool for modeling and simulation of multiscale physiological systems covering molecular details on the one hand and whole-body architecture on the other hand.
 
 De novo model establishment and simulation is supported by graphical tools and building blocks to support expert users. MoBi® uses building blocks that are grouped into [**Molecules**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#molecules), [**Reactions**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#reactions), [**Spatial Structures**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#spatial-structures), [**Passive Transports**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#transport-processes), [**Observers**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#observers), [**Events**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#events-and-applications), [**Molecule Start Values**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#molecule-start-values), [**Parameter Start Values**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/model-building-components#parameter-start-values) and [**Observed Data**](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/import-edit-observed-data). Building blocks out of the above-mentioned groups can be combined to [generate models](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/setting-up-simulation). The advantage of building blocks is that they can be reused. Examples:
 
@@ -35,7 +35,7 @@ De novo model establishment and simulation is supported by graphical tools and b
 
 ### Qualification framework
 
-The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. Qualification framework is described in detail [here](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/qualification).
+The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. The qualification framework is described in detail [here](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/qualification).
 
 ### Validation and automation tools
 
@@ -48,10 +48,10 @@ Validation and automation tools include for example:
 
 The OSP software suite provides a set of packages for the R computing environment that allow scripted workflows with the models developed in PK-Sim® and MoBi®.
 
-- [ospsuite](https://github.com/Open-Systems-Pharmacology/OSPSuite-R) package provides the functionality of loading, manipulating, and simulating the simulations created in PK-Sim® and MoBi®. It also offers extended workflows such as parameter sensitivity or PK-parameter calculation. The package is described in detail in [R documentation](https://docs.open-systems-pharmacology.org/working-with-r/r-introduction).
-- [tlf](https://github.com/Open-Systems-Pharmacology/TLF-Library) package offers a set of functions and methods for creating standardized reporting **T**ables, **L**istings, and **F**igures.
-- [ospsuite.reportingengine](https://github.com/Open-Systems-Pharmacology/OSPSuite.ReportingEngine) for automated generation of model reports.
-- [ospsuite.utils](https://github.com/open-systems-pharmacology/OSPSuite.RUtils) provides a collection of utility functions useful for R packages in the OSP ecosystem.
+- [ospsuite](https://github.com/Open-Systems-Pharmacology/OSPSuite-R) package provides the functionality of loading, manipulating, and simulating the simulations created in PK-Sim® and MoBi®. It also offers extended workflows such as parameter sensitivity or PK-parameter calculation. The package is described in detail in [R documentation](https://www.open-systems-pharmacology.org/OSPSuite-R/).
+- [tlf](https://www.open-systems-pharmacology.org/TLF-Library/) package offers a set of functions and methods for creating standardized reporting **T**ables, **L**istings, and **F**igures.
+- [ospsuite.reportingengine](https://www.open-systems-pharmacology.org/OSPSuite.ReportingEngine/) for automated generation of model reports.
+- [ospsuite.utils](https://www.open-systems-pharmacology.org/OSPSuite.RUtils/) provides a collection of utility functions useful for R packages in the OSP ecosystem.
 - [ospsuite.parameteridentification](https://github.com/Open-Systems-Pharmacology/OSPSuite.ParameterIdentification) provides the functionality of performing parameter identification (i.e., fitting the model to observed data) with simulations. The package is currently under development and everyone is encouraged to contribute.
 
 **OSP Qualification Framework and R packages are not included in the main OSP Suite setup and must be installed separately. Installation instructions are provided in the documentation of the tools or on the GitHub download site.**
@@ -67,12 +67,17 @@ PK-Sim can also import and export *project snapshots* in [JSON format](https://e
 
 ## Code Status
 
+[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/latest/total?label=%E2%AD%B3%20Downloads%20latest%20release)](https://github.com/Open-Systems-Pharmacology/Suite/releases/latest)
+[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/total?label=%E2%AD%B3%20Downloads%20total)](https://github.com/Open-Systems-Pharmacology/Suite/releases)
+
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
 [![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/develop?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
 [![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
 [![R status](https://ci.appveyor.com/api/projects/status/5ug50xlaot1x59jy/branch/develop?svg=true&passingText=ospsuite-r)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-r/branch/develop)
 [![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
 
+[![Check Markdown links](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml)
+[![XRefCheck](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml)
 
 ## Software installation
 
