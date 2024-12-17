@@ -12,7 +12,7 @@ install:
       Copy-Item c:\netfx472.exe .
 
   - ps: >-
-      (new-object net.webclient).DownloadFile('https://aka.ms/vs/16/release/vc_redist.x64.exe', 'C:\\vc_redist.x64.exe')
+      (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', 'C:\\vc_redist.x64.exe')
 
       Copy-Item C:\vc_redist.x64.exe .
 
