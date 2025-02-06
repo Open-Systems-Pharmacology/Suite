@@ -73,9 +73,9 @@ PK-Sim can also import and export *project snapshots* in [JSON format](https://e
 [![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
 [![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/develop?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
 [![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
-[![R status](https://ci.appveyor.com/api/projects/status/5ug50xlaot1x59jy/branch/develop?svg=true&passingText=ospsuite-r)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-r/branch/develop)
 [![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
 
+[![R status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/OSPSuite-R/main-workflow.yaml?svg=true&branch=main&label=ospsuite-r)](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/actions/workflows/main-workflow.yaml)
 [![Check Markdown links](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml)
 [![XRefCheck](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml)
 
@@ -93,23 +93,23 @@ Installing the Open Systems Pharmacology Suite with PK-Sim® and MoBi® involves
 
 #### OSP Suite 
 
-Windows 7®, Windows 8®, Windows 10®, Windows 11®, Windows Server 2008 R2®, Windows Server 2012 R2®, Windows Server 2016®, Windows Server 2019®
+Windows 10®, Windows 11®, Windows Server 2016®, Windows Server 2019®
 
 #### R packages
 
-All Windows operating systems listed above and Linux (_precompiled_ packages available for _Ubuntu 18.04_ and _CentOS 7_)
+All Windows operating systems listed above and Linux (_precompiled_ packages available for _Ubuntu 22.04_)
 
 ### Processor
 Minimum: 1 GHz (the faster the better!)
 
 ### Memory
-Minimum: 2 GB RAM (3+ GB recommended)
+Minimum: 4 GB RAM (8+ GB recommended)
 
 ### Disk Space
 Minimum: 2 GB
 
 ### Optional Software
- * R® (versions 3.x / 4.x - 64bit) 
+ * R® (version 4.x - 64bit) 
    
 ## Code of conduct
 
