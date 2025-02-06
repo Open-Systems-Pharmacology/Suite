@@ -75,7 +75,7 @@ PK-Sim can also import and export *project snapshots* in [JSON format](https://e
 [![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
 [![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
 
-[![R status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/OSPSuite-R/main-workflow.yaml?svg=true&branch=main&label=ospsuite-r)](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/actions/workflows/main-workflow.yaml)
+[![R status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/OSPSuite-R/main-workflow.yaml?svg=true&branch=main&label=ospsuite-r&logo=GitHub)](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/actions/workflows/main-workflow.yaml)
 [![Check Markdown links](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml)
 [![XRefCheck](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml)
 
