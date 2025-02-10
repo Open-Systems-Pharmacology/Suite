@@ -1,7 +1,7 @@
 version: '{build}'
 
 init:
-- ps: Update-AppveyorBuild -Version "$($env:ospsuite_nightly_version).$($env:appveyor_build_version)"
+- ps: Update-AppveyorBuild -Version "$($env:ospsuite_version).$($env:appveyor_build_version)"
 
 install:
   - cmd: set PATH=C:\Ruby22\bin;%PATH%
@@ -12,7 +12,7 @@ install:
       Copy-Item c:\netfx472.exe .
 
   - ps: >-
-      (new-object net.webclient).DownloadFile('https://aka.ms/vs/16/release/vc_redist.x64.exe', 'C:\\vc_redist.x64.exe')
+      (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', 'C:\\vc_redist.x64.exe')
 
       Copy-Item C:\vc_redist.x64.exe .
 
@@ -21,7 +21,7 @@ install:
 
       Copy-Item C:\MikTex.msi .
 
-build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%, hotfix/11.3]"
+build_script: rake "create_setup[%APPVEYOR_BUILD_VERSION%]"
 
 artifacts:
   - path: "**/output/OSPSuite*.exe"
