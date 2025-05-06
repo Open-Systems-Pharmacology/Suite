@@ -48,14 +48,14 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-     - run: "echo data: '${{ steps.get-run.outputs.data }}'"
+     - run: "echo data: '${{ steps.get-run.outputs.data.workflow_runs[0].id }}'"
 
      # Step 2: List the artifacts for the latest successful run
      - name: List Artifacts
        id: list-artifacts
        uses: octokit/request-action@v2.1.0
        with:
-         route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/runs/${{ steps.get-run.outputs.response.run_id }}/artifacts
+         route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/runs/${{ steps.get-run.outputs.data.workflow_runs[0].id }}/artifacts
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
