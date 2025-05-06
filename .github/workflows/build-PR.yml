@@ -12,8 +12,17 @@ env:
   RUN: ${{ github.run_number }}
 
 jobs:
-  build-nightly:
 
+  latest-pksim:
+    uses: ./.github/workflows/latest-artifact.yml
+    with:
+      repo-name: PK-Sim
+      action-name: build-nightly.yml
+      artifact-pattern: PKSim Installer
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  build-nightly:
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -31,24 +40,18 @@ jobs:
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
           (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
       
-      - name: Get PK-Sim Artifact
-        id: get-pksim-artifact
-        uses: ./.github/workflows/latest-artifact.yml
-        with:
-          repo-name: PK-Sim
-          action-name: build-nightly.yml
-          artifact-pattern: PKSim Installer
+
       
       - name: Download PK-Sim Artifact
         uses: actions/download-artifact@v4
         with:
-          name: ${{ steps.get-pksim-artifact.outputs.artifact-name }}
+          name: ${{ needs.latest-pksim.outputs.artifact-name }}
           path: ./artifacts
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: Open-Systems-Pharmacology/PK-Sim
-          run-id: ${{ steps.get-pksim-artifact.outputs.run-id }}
+          run-id: ${{ needs.latest-pksim.outputs.run-id }}
 
-          
+
       # - name: Create Portable Setup
       #   run: |
       #     rake "create_setup[${{env.APP_VERSION}}]"
