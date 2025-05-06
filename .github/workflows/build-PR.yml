@@ -13,7 +13,7 @@ env:
 
 jobs:
   build-nightly:
-    needs: download-artifact
+    needs: download-latest-successful-artifact
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -35,7 +35,7 @@ jobs:
       #   run: |
       #     rake "create_setup[${{env.APP_VERSION}}]"
 
-  download-artifact:
+  download-latest-successful-artifact:
    runs-on: ubuntu-latest
 
    steps:
