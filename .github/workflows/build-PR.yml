@@ -63,8 +63,8 @@ jobs:
      - name: Find Matching Artifact
        id: find-artifact
        run: |
-         echo "Artifacts from the run: ${{ steps.list-artifacts.outputs.data }}"
-         ARTIFACT_NAME=$(echo "${{ steps.list-artifacts.outputs.data }}" | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .name')
+         echo "Artifacts from the run: ${{ toJSON(steps.list-artifacts.outputs.data) }}"
+         ARTIFACT_NAME=$(echo "${{ toJSON(steps.list-artifacts.outputs.data) }}" | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .name')
          echo "Artifact Name: $ARTIFACT_NAME"
          echo "artifact_name=$ARTIFACT_NAME" >> $GITHUB_ENV
 
