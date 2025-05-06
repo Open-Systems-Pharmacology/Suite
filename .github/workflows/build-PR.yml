@@ -13,6 +13,7 @@ env:
 
 jobs:
   build-nightly:
+    needs: download-artifact
     runs-on: windows-latest
     steps:
       - name: Checkout code
@@ -30,6 +31,40 @@ jobs:
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
           (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
       
-      - name: Create Portable Setup
-        run: |
-          rake "create_setup[${{env.APP_VERSION}}]"
+      # - name: Create Portable Setup
+      #   run: |
+      #     rake "create_setup[${{env.APP_VERSION}}]"
+
+  download-artifact:
+   runs-on: ubuntu-latest
+
+   steps:
+     # Step 1: Get the latest successful workflow run of Build-Nightly in RepoA
+     - name: Get Latest Successful Run
+       id: get-run
+       uses: octokit/request-action@v2.1.0
+       with:
+         route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/workflows/Build Nightly 12.1/runs
+
+     # Step 2: List the artifacts for the latest successful run
+     - name: List Artifacts
+       id: list-artifacts
+       uses: octokit/request-action@v2.1.0
+       with:
+         route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/runs/${{ steps.get-run.outputs.response.run_id }}/artifacts
+
+     # Step 3: Filter artifacts to find the one starting with "PKSim Installer"
+     - name: Find Matching Artifact
+       id: find-artifact
+       run: |
+         echo "Artifacts from the run: ${{ steps.list-artifacts.outputs.response }}"
+         ARTIFACT_NAME=$(echo "${{ steps.list-artifacts.outputs.response }}" | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .name')
+         echo "Artifact Name: $ARTIFACT_NAME"
+         echo "artifact_name=$ARTIFACT_NAME" >> $GITHUB_ENV
+
+     # Step 4: Download the artifact
+     - name: Download Artifact
+       uses: actions/download-artifact@v2
+       with:
+         name: ${{ env.artifact_name }}
+         path: ./artifacts
