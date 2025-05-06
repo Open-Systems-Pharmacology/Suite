@@ -44,9 +44,6 @@ jobs:
          route: GET /repos/Open-Systems-Pharmacology/${{ inputs.repo-name }}/actions/runs/${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}/artifacts
        env:
          GITHUB_TOKEN: ${{ secrets.github-token }}
-      
-         run: |
-            echo "run-id=${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}" >> $GITHUB_OUTPUT
          
      # Step 3: Filter artifacts by startsWith
      - name: Find Matching Artifact
@@ -55,3 +52,4 @@ jobs:
          echo "Artifacts from the run: '${{ steps.list-artifacts.outputs.data }}'"
          ARTIFACT_NAME=$(echo '${{ steps.list-artifacts.outputs.data }}' | jq -r '.artifacts[] | select(.name | startswith("${{ inputs.artifact-pattern }}")) | .name')
          echo "artifact-name=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
+         echo "run-id=${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}" >> $GITHUB_OUTPUT
