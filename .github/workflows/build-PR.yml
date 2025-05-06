@@ -76,3 +76,4 @@ jobs:
          path: ./artifacts
          github-token: ${{ secrets.GITHUB_TOKEN }}
          repository: Open-Systems-Pharmacology/PK-Sim
+         run-id: ${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}
