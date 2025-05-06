@@ -22,7 +22,7 @@ jobs:
 
       - name: define env variables
         run: |
-          echo "APP_VERSION=${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.RUN }}"
+          echo "APP_VERSION=${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.RUN }}" | Out-File -FilePath $env:GITHUB_ENV -Append
 
       - name: download requirements
         run: |
