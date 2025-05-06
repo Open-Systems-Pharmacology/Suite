@@ -24,7 +24,7 @@ jobs:
   get-latest-successful-artifact:
    runs-on: ubuntu-latest
    outputs:
-      run-id: ${{ steps.list-artifacts.outputs.run-id }}
+      run-id: ${{ steps.find-artifact.outputs.run-id }}
       artifact-name: ${{ steps.find-artifact.outputs.artifact-name }}
    steps:
      # Step 1: Get the latest successful workflow run
