@@ -44,7 +44,7 @@ jobs:
        id: get-run
        uses: octokit/request-action@v2.1.0
        with:
-         route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/workflows/Build Nightly 12.1/runs
+         route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/workflows/build-nightly.yml/runs
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
