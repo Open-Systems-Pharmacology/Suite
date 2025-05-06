@@ -64,7 +64,7 @@ jobs:
        id: find-artifact
        run: |
          echo "Artifacts from the run: '${{ steps.list-artifacts.outputs.data }}'"
-         ARTIFACT_NAME=$(echo '${{ steps.list-artifacts.outputs.data }}' | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .name')
+         ARTIFACT_NAME=$(echo '${{ steps.list-artifacts.outputs.data }}' | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .archive_download_url')
          echo "Artifact Name: $ARTIFACT_NAME"
          echo "artifact_name=$ARTIFACT_NAME" >> $GITHUB_ENV
 
