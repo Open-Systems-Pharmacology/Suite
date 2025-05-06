@@ -45,6 +45,8 @@ jobs:
        uses: octokit/request-action@v2.1.0
        with:
          route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/workflows/Build Nightly 12.1/runs
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
      # Step 2: List the artifacts for the latest successful run
      - name: List Artifacts
@@ -52,7 +54,9 @@ jobs:
        uses: octokit/request-action@v2.1.0
        with:
          route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/runs/${{ steps.get-run.outputs.response.run_id }}/artifacts
-
+       env:
+         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+         
      # Step 3: Filter artifacts to find the one starting with "PKSim Installer"
      - name: Find Matching Artifact
        id: find-artifact
