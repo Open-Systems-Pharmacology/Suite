@@ -59,7 +59,7 @@ jobs:
           name: ${{ needs.latest-mobi.outputs.artifact-name }}
           path: ./artifacts
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: Open-Systems-Pharmacology/PK-Sim
+          repository: Open-Systems-Pharmacology/MoBi
           run-id: ${{ needs.latest-mobi.outputs.run-id }}
 
       - name: Download Validator Artifact
@@ -68,7 +68,7 @@ jobs:
           name: ${{ needs.latest-validator.outputs.artifact-name }}
           path: ./artifacts
           github-token: ${{ secrets.GITHUB_TOKEN }}
-          repository: Open-Systems-Pharmacology/PK-Sim
+          repository: Open-Systems-Pharmacology/InstallationValidator
           run-id: ${{ needs.latest-validator.outputs.run-id }}
 
       - name: Checkout code
