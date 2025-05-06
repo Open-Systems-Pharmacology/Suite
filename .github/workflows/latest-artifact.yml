@@ -1,0 +1,57 @@
+on:
+    workflow_call:
+     inputs:
+      repo-name:
+       required: true
+       type: string
+      action-name:
+        required: true
+        type: string
+      artifact-pattern:
+        required: true
+        type: string
+     secrets:
+      github-token:
+        required: true
+     outputs:
+      artifact-name:
+       value: ${{ jobs.get-latest-successful-artifact.outputs.artifact-name }}
+      run-id:
+       value: ${{ jobs.get-latest-successful-artifact.outputs.run-id }}
+
+
+jobs:
+  get-latest-successful-artifact:
+   runs-on: ubuntu-latest
+   outputs:
+      run-id: ${{ steps.list-artifacts.outputs.run-id }}
+      artifact-name: ${{ steps.find-artifact.outputs.artifact-name }}
+   steps:
+     # Step 1: Get the latest successful workflow run
+     - name: Get Latest Successful Run
+       id: get-run
+       uses: octokit/request-action@v2.1.0
+       with:
+         route: GET /repos/Open-Systems-Pharmacology/${{ inputs.repo-name }}/actions/workflows/${{ inputs.action-name }}/runs?status=success
+       env:
+         GITHUB_TOKEN: ${{ secrets.github-token }}
+
+     # Step 2: List the artifacts for the latest successful run
+     - name: List Artifacts
+       id: list-artifacts
+       uses: octokit/request-action@v2.1.0
+       with:
+         route: GET /repos/Open-Systems-Pharmacology/${{ inputs.repo-name }}/actions/runs/${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}/artifacts
+       env:
+         GITHUB_TOKEN: ${{ secrets.github-token }}
+      
+         run: |
+            echo "run-id=${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}" >> $GITHUB_OUTPUT
+         
+     # Step 3: Filter artifacts by startsWith
+     - name: Find Matching Artifact
+       id: find-artifact
+       run: |
+         echo "Artifacts from the run: '${{ steps.list-artifacts.outputs.data }}'"
+         ARTIFACT_NAME=$(echo '${{ steps.list-artifacts.outputs.data }}' | jq -r '.artifacts[] | select(.name | startswith("${{ inputs.artifact-pattern }}")) | .name')
+         echo "artifact-name=$ARTIFACT_NAME" >> $GITHUB_OUTPUT
