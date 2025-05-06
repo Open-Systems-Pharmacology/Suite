@@ -48,6 +48,8 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
+     - run: "echo data: '${{ steps.get-run.outputs.data }}'"
+
      # Step 2: List the artifacts for the latest successful run
      - name: List Artifacts
        id: list-artifacts
@@ -56,6 +58,8 @@ jobs:
          route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/runs/${{ steps.get-run.outputs.response.run_id }}/artifacts
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+     
          
      # Step 3: Filter artifacts to find the one starting with "PKSim Installer"
      - name: Find Matching Artifact
