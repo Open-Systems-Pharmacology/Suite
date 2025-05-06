@@ -58,15 +58,13 @@ jobs:
          route: GET /repos/Open-Systems-Pharmacology/PK-Sim/actions/runs/${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}/artifacts
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-
-     - run: "echo data: '${{ steps.list-artifacts.outputs.data}}'"
          
      # Step 3: Filter artifacts to find the one starting with "PKSim Installer"
      - name: Find Matching Artifact
        id: find-artifact
        run: |
-         echo "Artifacts from the run: ${{ steps.list-artifacts.outputs.response }}"
-         ARTIFACT_NAME=$(echo "${{ steps.list-artifacts.outputs.response }}" | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .name')
+         echo "Artifacts from the run: ${{ steps.list-artifacts.outputs.data }}"
+         ARTIFACT_NAME=$(echo "${{ steps.list-artifacts.outputs.data }}" | jq -r '.artifacts[] | select(.name | startswith("PKSim Installer")) | .name')
          echo "Artifact Name: $ARTIFACT_NAME"
          echo "artifact_name=$ARTIFACT_NAME" >> $GITHUB_ENV
 
