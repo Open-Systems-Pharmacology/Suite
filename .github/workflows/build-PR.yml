@@ -39,7 +39,6 @@ jobs:
       artifact-pattern: Installation Validator Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
-      
 
   build-nightly:
     runs-on: windows-latest
@@ -91,5 +90,3 @@ jobs:
       # - name: Create Portable Setup
       #   run: |
       #     rake "create_setup[${{env.APP_VERSION}}]"
-
-  
