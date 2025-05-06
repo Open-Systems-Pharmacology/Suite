@@ -31,9 +31,19 @@ jobs:
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
+  latest-validator:
+    uses: ./.github/workflows/latest-artifact.yml
+    with:
+      repo-name: InstallationValidator
+      action-name: build-nightly.yml
+      artifact-pattern: Installation Validator Installer
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+      
+
   build-nightly:
     runs-on: windows-latest
-    needs: [latest-pksim, latest-mobi]
+    needs: [latest-pksim, latest-mobi, latest-validator]
     steps:
       - name: Download PK-Sim Artifact
         uses: actions/download-artifact@v4
@@ -52,7 +62,16 @@ jobs:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: Open-Systems-Pharmacology/PK-Sim
           run-id: ${{ needs.latest-mobi.outputs.run-id }}
-          
+
+      - name: Download Validator Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.latest-validator.outputs.artifact-name }}
+          path: ./artifacts
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: Open-Systems-Pharmacology/PK-Sim
+          run-id: ${{ needs.latest-validator.outputs.run-id }}
+
       - name: Checkout code
         uses: actions/checkout@v4
         with:
@@ -68,6 +87,7 @@ jobs:
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
           (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
 
+          
       # - name: Create Portable Setup
       #   run: |
       #     rake "create_setup[${{env.APP_VERSION}}]"
