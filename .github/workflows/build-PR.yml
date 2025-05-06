@@ -48,7 +48,7 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-     - run: "echo data: '${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}'"
+     
 
      # Step 2: List the artifacts for the latest successful run
      - name: List Artifacts
@@ -59,7 +59,7 @@ jobs:
        env:
          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-     
+     - run: "echo data: '${{ steps.list-artifacts.outputs.data}}'"
          
      # Step 3: Filter artifacts to find the one starting with "PKSim Installer"
      - name: Find Matching Artifact
