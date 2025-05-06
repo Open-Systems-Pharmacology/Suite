@@ -1,0 +1,43 @@
+# Changing the workflow name will reset the run number
+name: Build on PR
+
+on:
+  pull_request:
+    branches:
+    - develop
+
+env:
+  MAJOR: 12
+  MINOR: 1
+  RUN: ${{ github.run_number }}
+
+jobs:
+  build-nightly:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: Add msbuild to PATH
+        uses: microsoft/setup-msbuild@v2
+
+      - name: Restore dependencies
+        run: |
+          nuget sources add -username Open-Systems-Pharmacology -password ${{ secrets.GITHUB_TOKEN }} -name OSP-GitHub-Packages -source "https://nuget.pkg.github.com/Open-Systems-Pharmacology/index.json"
+          dotnet restore
+
+      - name: define env variables
+        run: |
+          echo "APP_VERSION=${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.RUN }}"
+
+      - name: download requirements
+        run: |
+          (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=863265', './netfx472.exe')
+          (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
+          (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
+      
+      - name: Create Portable Setup
+        run: |
+          rake "create_setup[${{env.APP_VERSION}}]"
