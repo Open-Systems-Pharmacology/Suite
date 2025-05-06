@@ -24,6 +24,7 @@ jobs:
 
   build-nightly:
     runs-on: windows-latest
+    needs: latest-pksim
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
