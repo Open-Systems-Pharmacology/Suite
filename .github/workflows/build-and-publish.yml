@@ -74,7 +74,7 @@ jobs:
           repository: Open-Systems-Pharmacology/InstallationValidator
           run-id: ${{ needs.latest-validator.outputs.run-id }}
 
-      - name: download requirements
+      - name: Download Requirements
         run: |
           (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=863265', './netfx472.exe')
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
