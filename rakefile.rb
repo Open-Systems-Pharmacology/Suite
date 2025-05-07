@@ -80,6 +80,7 @@ def create_setup(compressed:'yes', output_name:'OSPSuite')
   exe = File.join(output_dir,"#{output_name}.#{@product_full_version}.exe")
   run_candle compressed
   run_light exe
+  puts exe
 end
 
 desc "Prepare downloaded installers"

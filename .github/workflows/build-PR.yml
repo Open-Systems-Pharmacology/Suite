@@ -38,7 +38,7 @@ jobs:
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
-  build-nightly:
+  build-installers:
     runs-on: windows-latest
     needs: [latest-pksim, latest-mobi, latest-validator]
     steps:
@@ -79,12 +79,6 @@ jobs:
           (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=863265', './netfx472.exe')
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
           (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
-
-      - name: dir check
-        run: |
-          dir ./deploy/pk-sim
-          dir ./deploy/mobi
-          dir ./deploy/installationvalidator
 
       - name: Create Portable Setup
         run: |
