@@ -79,6 +79,6 @@ jobs:
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
           (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
 
-      - name: Create Portable Setup
+      - name: Create Setup
         run: |
           rake "create_setup[12.1.0]"
