@@ -1,0 +1,97 @@
+# Changing the workflow name will reset the run number
+name: Build Nightly
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'
+
+env:
+  WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
+  APP_VERSION: 12.1.${{ github.run_number }}
+
+jobs:
+  latest-pksim:
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
+    with:
+      repo-name: PK-Sim
+      action-name: build-nightly.yml
+      artifact-pattern: PKSim Installer
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  latest-mobi:
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
+    with:
+      repo-name: MoBi
+      action-name: build-nightly.yml
+      artifact-pattern: MoBi Installer
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  latest-validator:
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
+    with:
+      repo-name: InstallationValidator
+      action-name: build-nightly.yml
+      artifact-pattern: Installation Validator Installer
+    secrets:
+      github-token: ${{ secrets.GITHUB_TOKEN }}
+
+  build-installers:
+    runs-on: windows-latest
+    needs: [latest-pksim, latest-mobi, latest-validator]
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
+      - name: Download PK-Sim Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.latest-pksim.outputs.artifact-name }}
+          path: ./deploy/pk-sim
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: Open-Systems-Pharmacology/PK-Sim
+          run-id: ${{ needs.latest-pksim.outputs.run-id }}
+
+      - name: Download MoBi Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.latest-mobi.outputs.artifact-name }}
+          path: ./deploy/mobi
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: Open-Systems-Pharmacology/MoBi
+          run-id: ${{ needs.latest-mobi.outputs.run-id }}
+
+      - name: Download Validator Artifact
+        uses: actions/download-artifact@v4
+        with:
+          name: ${{ needs.latest-validator.outputs.artifact-name }}
+          path: ./deploy/installationvalidator
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          repository: Open-Systems-Pharmacology/InstallationValidator
+          run-id: ${{ needs.latest-validator.outputs.run-id }}
+
+      - name: Download Requirements
+        run: |
+          (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=863265', './netfx472.exe')
+          (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
+          (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
+
+      - name: Create Setup
+        run: |
+          rake "create_setup[${{env.APP_VERSION}}]"
+
+      - name: Push web installer as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OSPSuite Web Installer ${{env.APP_VERSION}}
+          path: output\OSPSuite-WebInstall.${{env.APP_VERSION}}.exe
+
+      - name: Push full as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OSPSuite Full Installer ${{env.APP_VERSION}}
+          path: output\OSPSuite-Full.${{env.APP_VERSION}}.exe

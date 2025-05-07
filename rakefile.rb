@@ -33,7 +33,7 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   MSI[:mobi] = create_package('mobi', 'MoBi')
   MSI[:validator] = create_package('installationvalidator', 'InstallationValidator')
   
-  Rake::Task['downlad_all_packages'].invoke
+  Rake::Task['prepare_all_packages'].invoke
   
   create_versions_file
   create_setup compressed:'no', output_name:'OSPSuite-WebInstall' 
@@ -49,15 +49,13 @@ def create_versions_file
   end
 end
 
-def create_package(appveyor_project_name,  git_repository, artifact_name: 'setup.zip', version: @product_version, branch: @branch_name, uri:nil)
-  compressed = artifact_name.include? '.zip'
-  git_repo = git_repository || appveyor_project_name
+def create_package(project_name,  git_repository, version: @product_version, branch: @branch_name, uri:nil)
+  git_repo = git_repository || project_name
 
   return {
-    appveyor_project_name: appveyor_project_name,
-    artifact_name: artifact_name,
+    project_name: project_name,
     branch: branch,
-    compressed: compressed,
+    compressed: true,
     git_repository: git_repo,
     version: version,
     uri:uri
@@ -82,22 +80,18 @@ def create_setup(compressed:'yes', output_name:'OSPSuite')
   exe = File.join(output_dir,"#{output_name}.#{@product_full_version}.exe")
   run_candle compressed
   run_light exe
+  puts exe
 end
 
-desc "Get a file from a remote server"
-task :downlad_all_packages => :clean do
-  threads = MSI.each_key.collect do |msi|
-    Thread.new(msi) do |_msi|
-      prepare_msi(_msi)
-    end
+desc "Prepare downloaded installers"
+task :prepare_all_packages => :clean do
+  MSI.keys.each do |msi|
+      prepare_msi(msi)
   end
-
-  threads.map(&:join)
 end
 
 desc "cleanup files before starting compilation"
 task :clean do
-  FileUtils.rm_rf  deploy_dir
   FileUtils.mkdir_p deploy_dir  
   FileUtils.mkdir_p output_dir  
 
@@ -109,42 +103,13 @@ end
 def prepare_msi(msi)
   package =  MSI[msi]
 
-  file = download package
-  puts file
-  package[:file_name] = retrieve_package_name(file, package) 
-  download_path = "https://systems-biology.com/fileadmin/sb_ftp/OSP_Updates/#{package[:file_name]}"
-  VARIABLES["#{msi}DownloadPath"] = download_path
+  package[:file_name] = retrieve_package_name(package) 
   VARIABLES[msi] = package[:file_name]
 end
 
-def download(package)
-  file_name = package[:artifact_name]
-  uri = "https://ci.appveyor.com/api/projects/#{APPVEYOR_ACCOUNT_NAME}/#{package[:appveyor_project_name]}/artifacts/#{file_name}?branch=#{package[:branch]}"
-  
-  #Path of package is predefined. This is typically the case for a hotfix when some packages should be fixed
-  uri = package[:uri] if package[:uri]
-  download_file package[:appveyor_project_name], file_name, uri
-end
-
-def download_file(project_name, file_name, uri)
-  download_dir = File.join(deploy_dir, project_name) 
-  FileUtils.mkdir_p download_dir
-  file = File.join(download_dir, file_name)
-  puts "Downloading #{file_name} from #{uri} under #{file}"
-  open(file, 'wb') do |fo| 
-    fo.print open(uri,:read_timeout => nil).read
-  end
-  file
-end
-
-def retrieve_package_name(package_full_path, package)
-  compressed = package[:compressed] || false
-  artifact_name = package[:artifact_name];
-  #pointing to real package already return 
-  return artifact_name unless compressed
-
-  unzip_dir = unzip(package_full_path)
-  copy_msi_to_deploy unzip_dir  
+def retrieve_package_name(package)
+  msi_dir = File.join(deploy_dir, package[:project_name])
+  copy_msi_to_deploy msi_dir  
 end
 
 #copy all msi packages defined under dir and return the name of the packages found (should only be one)
@@ -155,13 +120,6 @@ def copy_msi_to_deploy(dir)
     artifact_name = File.basename(x)
   end 
   artifact_name
-end
-
-def unzip(package_full_path)
-  unzip_dir = File.dirname(package_full_path)
-  command_line = %W[e #{package_full_path} -o#{unzip_dir}]
-  Utils.run_cmd('7z', command_line)
-  unzip_dir
 end
 
 def deploy_dir

@@ -2,3 +2,4 @@ deploy/
 output/
 *.exe
 *.msi
+.vs/

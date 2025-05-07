@@ -18,19 +18,19 @@
         <ExitCode Value="1638" Behavior="success"/>
       </ExePackage>
 
-      <MsiPackage Id="miktex" Vital ="yes" SourceFile="MikTex.msi" Compressed="$(var.Compressed)" DownloadUrl="https://systems-biology.com/fileadmin/sb_ftp/OSP_Updates/MikTex.2.9.3.msi">
+      <MsiPackage Id="miktex" Vital ="yes" SourceFile="MikTex.msi" Compressed="$(var.Compressed)">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
 
-      <MsiPackage Id="pksim" Vital="yes" SourceFile="$(var.pksim)" Compressed="$(var.Compressed)" DownloadUrl="$(var.pksimDownloadPath)">
+      <MsiPackage Id="pksim" Vital="yes" SourceFile="$(var.pksim)" Compressed="$(var.Compressed)">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
 
-      <MsiPackage Id="mobi" Vital="yes" SourceFile="$(var.mobi)" Compressed="$(var.Compressed)" DownloadUrl="$(var.mobiDownloadPath)">
+      <MsiPackage Id="mobi" Vital="yes" SourceFile="$(var.mobi)" Compressed="$(var.Compressed)">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
 
-      <MsiPackage Id="validator" Vital="yes" SourceFile="$(var.validator)" Compressed="$(var.Compressed)" DownloadUrl="$(var.validatorDownloadPath)">
+      <MsiPackage Id="validator" Vital="yes" SourceFile="$(var.validator)" Compressed="$(var.Compressed)">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
     </Chain>
