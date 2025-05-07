@@ -1,5 +1,5 @@
 # Changing the workflow name will reset the run number
-name: Build on PR
+name: Build Nightly
 
 on:
   workflow_dispatch:
