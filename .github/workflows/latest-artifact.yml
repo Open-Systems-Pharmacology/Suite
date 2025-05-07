@@ -30,7 +30,7 @@ jobs:
      # Step 1: Get the latest successful workflow run
      - name: Get Latest Successful Run
        id: get-run
-       uses: octokit/request-action@v2.1.0
+       uses: octokit/request-action@v2.x
        with:
          route: GET /repos/Open-Systems-Pharmacology/${{ inputs.repo-name }}/actions/workflows/${{ inputs.action-name }}/runs?status=success
        env:
@@ -39,7 +39,7 @@ jobs:
      # Step 2: List the artifacts for the latest successful run
      - name: List Artifacts
        id: list-artifacts
-       uses: octokit/request-action@v2.1.0
+       uses: octokit/request-action@v2.x
        with:
          route: GET /repos/Open-Systems-Pharmacology/${{ inputs.repo-name }}/actions/runs/${{ fromJson(steps.get-run.outputs.data).workflow_runs[0].id }}/artifacts
        env:
