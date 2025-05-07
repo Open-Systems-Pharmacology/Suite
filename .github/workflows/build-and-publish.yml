@@ -2,12 +2,13 @@
 name: Build on PR
 
 on:
-  pull_request:
-    branches:
-    - develop
+  workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
+  APP_VERSION: 12.1.${{ github.run_number }}
 
 jobs:
   latest-pksim:
@@ -81,4 +82,16 @@ jobs:
 
       - name: Create Portable Setup
         run: |
-          rake "create_setup[12.1.0]"
+          rake "create_setup[${{env.APP_VERSION}}]"
+
+      - name: Push web installer as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OSPSuite Web Installer ${{env.APP_VERSION}}
+          path: output\OSPSuite-WebInstall.${{env.APP_VERSION}}.exe
+
+      - name: Push full as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OSPSuite Full Installer ${{env.APP_VERSION}}
+          path: output\OSPSuite-Full.${{env.APP_VERSION}}.exe
