@@ -89,7 +89,7 @@ jobs:
 
       - name: dir check
         run: |
-          dir ./deploy/pk-sim
+          dir ./deploy
           dir ./deploy/mobi
           dir ./deploy/installationvalidator
 
