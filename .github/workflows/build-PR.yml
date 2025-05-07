@@ -12,7 +12,7 @@ env:
 
 jobs:
   latest-pksim:
-    uses: ./.github/workflows/latest-artifact.yml
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: PK-Sim
       action-name: build-nightly.yml
@@ -21,7 +21,7 @@ jobs:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
   latest-mobi:
-    uses: ./.github/workflows/latest-artifact.yml
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: MoBi
       action-name: build-nightly.yml
@@ -30,7 +30,7 @@ jobs:
       github-token: ${{ secrets.GITHUB_TOKEN }}
 
   latest-validator:
-    uses: ./.github/workflows/latest-artifact.yml
+    uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: InstallationValidator
       action-name: build-nightly.yml
