@@ -99,22 +99,16 @@ task :clean do
   end
 end
 
-def zip_path(package)
-  Dir.glob(File.join(deploy_dir, package[:project_name], "*.zip")).first
-end
-
 def prepare_msi(msi)
   package =  MSI[msi]
 
-  file = zip_path(package)
-  puts file
-  package[:file_name] = retrieve_package_name(file, package) 
+  package[:file_name] = retrieve_package_name(package) 
   VARIABLES[msi] = package[:file_name]
 end
 
-def retrieve_package_name(package_full_path, package)
-  unzip_dir = unzip(package_full_path)
-  copy_msi_to_deploy unzip_dir  
+def retrieve_package_name(package)
+  msi_dir = File.join(deploy_dir, package[:project_name])
+  copy_msi_to_deploy msi_dir  
 end
 
 #copy all msi packages defined under dir and return the name of the packages found (should only be one)
@@ -125,13 +119,6 @@ def copy_msi_to_deploy(dir)
     artifact_name = File.basename(x)
   end 
   artifact_name
-end
-
-def unzip(package_full_path)
-  unzip_dir = File.dirname(package_full_path)
-  command_line = %W[e #{package_full_path} -o#{unzip_dir}]
-  Utils.run_cmd('7z', command_line)
-  unzip_dir
 end
 
 def deploy_dir
