@@ -1,24 +1,41 @@
+# Retrieves the latest artifact name and run id from a repository with a matching action and starting with pattern
+# The action only considers runs with status="success"
+# Use the name and run-id with actions/download-artifact
+# Note that runs that produce no artifacts are still considered a success, so use only when every run produces artifacts
+# or with repositories that cancel runs when nothing will be produced (like scheduled nightly)
+
+name: Get latest artifact name and run id from a repository
+
 on:
     workflow_call:
      inputs:
       repo-name:
        required: true
        type: string
+       description: The repository where the artifact is produced
+
       action-name:
         required: true
         type: string
+        description: The name of the file producing the action
+
       artifact-pattern:
         required: true
         type: string
+        description: A matching pattern that will be tested by 'startsWith'. Will match artifacts that end with build numbers for example if you exclude the build number
+
      secrets:
       github-token:
         required: true
+
      outputs:
       artifact-name:
        value: ${{ jobs.get-latest-successful-artifact.outputs.artifact-name }}
+       description: The name of the artifact matching the pattern
+
       run-id:
        value: ${{ jobs.get-latest-successful-artifact.outputs.run-id }}
-
+       description: The id of the run that produced the artifact
 
 jobs:
   get-latest-successful-artifact:
@@ -27,6 +44,7 @@ jobs:
       run-id: ${{ steps.find-artifact.outputs.run-id }}
       artifact-name: ${{ steps.find-artifact.outputs.artifact-name }}
    steps:
+     
      # Step 1: Get the latest successful workflow run
      - name: Get Latest Successful Run
        id: get-run
