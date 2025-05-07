@@ -7,13 +7,10 @@ on:
     - develop
 
 env:
-  MAJOR: 12
-  MINOR: 1
-  RUN: ${{ github.run_number }}
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
+  APP_VERSION: 12.1.${{ github.run_number }}
 
 jobs:
-
   latest-pksim:
     uses: ./.github/workflows/latest-artifact.yml
     with:
@@ -45,6 +42,11 @@ jobs:
     runs-on: windows-latest
     needs: [latest-pksim, latest-mobi, latest-validator]
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          submodules: 'true'
+
       - name: Download PK-Sim Artifact
         uses: actions/download-artifact@v4
         with:
@@ -72,15 +74,6 @@ jobs:
           repository: Open-Systems-Pharmacology/InstallationValidator
           run-id: ${{ needs.latest-validator.outputs.run-id }}
 
-      - name: Checkout code
-        uses: actions/checkout@v4
-        with:
-          submodules: 'true'
-
-      - name: define env variables
-        run: |
-          echo "APP_VERSION=${{ env.MAJOR }}.${{ env.MINOR }}.${{ env.RUN }}" | Out-File -FilePath $env:GITHUB_ENV -Append
-
       - name: download requirements
         run: |
           (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=863265', './netfx472.exe')
@@ -89,7 +82,7 @@ jobs:
 
       - name: dir check
         run: |
-          dir ./deploy
+          dir ./deploy/pk-sim
           dir ./deploy/mobi
           dir ./deploy/installationvalidator
 
