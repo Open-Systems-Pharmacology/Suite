@@ -10,6 +10,7 @@ env:
   MAJOR: 12
   MINOR: 1
   RUN: ${{ github.run_number }}
+  WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
 
 jobs:
 
@@ -48,7 +49,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.latest-pksim.outputs.artifact-name }}
-          path: ./artifacts
+          path: ./deploy/pk-sim
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: Open-Systems-Pharmacology/PK-Sim
           run-id: ${{ needs.latest-pksim.outputs.run-id }}
@@ -57,7 +58,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.latest-mobi.outputs.artifact-name }}
-          path: ./artifacts
+          path: ./deploy/mobi
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: Open-Systems-Pharmacology/MoBi
           run-id: ${{ needs.latest-mobi.outputs.run-id }}
@@ -66,7 +67,7 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: ${{ needs.latest-validator.outputs.artifact-name }}
-          path: ./artifacts
+          path: ./deploy/installationvalidator
           github-token: ${{ secrets.GITHUB_TOKEN }}
           repository: Open-Systems-Pharmacology/InstallationValidator
           run-id: ${{ needs.latest-validator.outputs.run-id }}
