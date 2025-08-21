@@ -18,56 +18,6 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 - Data import/export functionality
 - Unit conversion and dimension handling
 
-### tlf
-
-**Repository:** [TLF-Library](https://github.com/Open-Systems-Pharmacology/TLF-Library)  
-**Documentation:** [https://www.open-systems-pharmacology.org/TLF-Library/](https://www.open-systems-pharmacology.org/TLF-Library/)  
-**Description:** An object-oriented framework for creating standardized reporting **T**ables, **L**istings, and **F**igures used across the OSP ecosystem.
-
-**Key Features:**
-- Standardized plotting and table generation
-- Object-oriented framework for reproducible visualizations
-- Integration with other OSP R packages
-- Customizable themes and layouts
-
-## Reporting and Visualization
-
-### ospsuite.reportingengine
-
-**Repository:** [OSPSuite.ReportingEngine](https://github.com/Open-Systems-Pharmacology/OSPSuite.ReportingEngine)  
-**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.ReportingEngine/](https://www.open-systems-pharmacology.org/OSPSuite.ReportingEngine/)  
-**Description:** A comprehensive framework for designing and creating automated reports evaluating PBPK models. Supports both markdown and MS-Word report generation.
-
-**Key Features:**
-- Automated report generation for PBPK model evaluation
-- Support for markdown and MS-Word formats
-- Template-based report creation
-- Integration with qualification workflows
-
-### ospsuite.plots
-
-**Repository:** [OSPSuite.Plots](https://github.com/Open-Systems-Pharmacology/OSPSuite.Plots)  
-**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.Plots/](https://www.open-systems-pharmacology.org/OSPSuite.Plots/)  
-**Description:** A package for creating standardized figures and dependent tables used by R packages in the OSP ecosystem. Currently under development.
-
-**Key Features:**
-- Standardized graphics framework
-- Dependent table generation
-- Integration with OSP visualization standards
-
-## Utility and Support
-
-### ospsuite.utils
-
-**Repository:** [OSPSuite.RUtils](https://github.com/Open-Systems-Pharmacology/OSPSuite.RUtils)  
-**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.RUtils/](https://www.open-systems-pharmacology.org/OSPSuite.RUtils/)  
-**Description:** A collection of utility functions that support R packages in the OSP ecosystem, providing common functionality and helper methods.
-
-**Key Features:**
-- Common utility functions for OSP packages
-- Helper methods for data manipulation
-- Shared functionality across the ecosystem
-
 ## Analysis and Modeling
 
 ### ospsuite.parameteridentification
@@ -101,6 +51,68 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 - Bayesian parameter identification
 - Multi-level modeling approaches
 - Advanced statistical inference
+
+## Reporting and Visualization
+
+### ospsuite.reportingengine
+
+**Repository:** [OSPSuite.ReportingEngine](https://github.com/Open-Systems-Pharmacology/OSPSuite.ReportingEngine)  
+**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.ReportingEngine/](https://www.open-systems-pharmacology.org/OSPSuite.ReportingEngine/)  
+**Description:** A comprehensive framework for designing and creating automated reports evaluating PBPK models. Supports both markdown and MS-Word report generation.
+
+**Key Features:**
+- Automated report generation for PBPK model evaluation
+- Support for markdown and MS-Word formats
+- Template-based report creation
+- Integration with qualification workflows
+
+### ospsuite.plots
+
+**Repository:** [OSPSuite.Plots](https://github.com/Open-Systems-Pharmacology/OSPSuite.Plots)  
+**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.Plots/](https://www.open-systems-pharmacology.org/OSPSuite.Plots/)  
+**Description:** A package for creating standardized figures and dependent tables used by R packages in the OSP ecosystem. Currently under development.
+
+**Key Features:**
+- Standardized graphics framework
+- Dependent table generation
+- Integration with OSP visualization standards
+
+### tlf
+
+**Repository:** [TLF-Library](https://github.com/Open-Systems-Pharmacology/TLF-Library)  
+**Documentation:** [https://www.open-systems-pharmacology.org/TLF-Library/](https://www.open-systems-pharmacology.org/TLF-Library/)  
+**Description:** An object-oriented framework for creating standardized reporting **T**ables, **L**istings, and **F**igures used across the OSP ecosystem.
+
+**Key Features:**
+- Standardized plotting and table generation
+- Object-oriented framework for reproducible visualizations
+- Integration with other OSP R packages
+- Customizable themes and layouts
+
+## Utility and Support
+
+### ospsuite.utils
+
+**Repository:** [OSPSuite.RUtils](https://github.com/Open-Systems-Pharmacology/OSPSuite.RUtils)  
+**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.RUtils/](https://www.open-systems-pharmacology.org/OSPSuite.RUtils/)  
+**Description:** A collection of utility functions that support R packages in the OSP ecosystem, providing common functionality and helper methods.
+
+**Key Features:**
+- Common utility functions for OSP packages
+- Helper methods for data manipulation
+- Shared functionality across the ecosystem
+
+### rSharp
+
+**Repository:** [rSharp](https://github.com/Open-Systems-Pharmacology/rSharp)  
+**Documentation:** [https://www.open-systems-pharmacology.org/rSharp/](https://www.open-systems-pharmacology.org/rSharp/)  
+**Description:** R package for communication with .NET Core that provides access to .NET libraries from R. It allows creating .NET objects, accessing their fields, and calling their methods.
+
+**Key Features:**
+- Access to .NET libraries from R
+- Create .NET objects and call their methods
+- Communication bridge between R and .NET Core
+- Support for Windows, macOS, and Linux platforms
 
 ## Quality Control and Testing
 
