@@ -95,7 +95,7 @@ Installing the Open Systems Pharmacology Suite with PK-Sim® and MoBi® involves
 
 #### OSP Suite 
 
-Windows 10®, Windows 11®, Windows Server 2016®, Windows Server 2019®
+Windows 10®, Windows 11®, Windows Server 2019®, Windows Server 2022®, Windows Server 2025®
 
 #### R packages
 
