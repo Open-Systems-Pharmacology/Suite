@@ -4,24 +4,18 @@
 
 ### Unit and integration tests
 
-* [PK-Sim](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/builds/51461100/tests)
-* [MoBi](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/build/tests)
-* [Installation Validator](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/build/tests)
-* [OSPSuite.Core](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-core/builds/51382482/tests)
-* OSPSuite.SimModel
-  * [Windows](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/51288157/job/8sm21cjf73aeaq1t/tests)
-  * [Linux (Ubuntu 22.04)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/51288157/job/ljqb8k7a4mfa905k/tests)
-  * [macOS (Sonoma)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel/builds/51288157/job/1fqalsjkpgrxslhv/tests)
-* [OSPSuite.SimModel.Solver.CVODES](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-simmodel-solver-cvodes/builds/50448573/job/737shmg58h7s1d4j/tests)
-* OSPSuite.FuncParser
-  * [Windows](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-funcparser/builds/50446463/job/lr4ejbcgvyyvk6j4/tests)
-  * [Linux (Ubuntu 22.04)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-funcparser/builds/50446463/job/0qdib04muln94v88/tests)
-  * [macOS (Sonoma)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-funcparser/builds/50446463/job/vuvp1b7xv498ljn0/tests)
-* [OSPSuite.DataBinding.DevExpress](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-databinding-devexpress/builds/42031208/tests)
-* [OSPSuite.DataBinding](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-databinding/builds/29419442/tests)
-* [OSPSuite.Utility](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-utility/builds/47991279/tests)
-* [OSPSuite.TeXReporting](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-texreporting/builds/50215687/tests)
-* [OSPSuite.Serializer](https://ci.appveyor.com/project/open-systems-pharmacology-ci/ospsuite-serializer/builds/25501936/tests)
+* [PK-Sim](https://github.com/Open-Systems-Pharmacology/PK-Sim/actions/runs/17785149411#artifacts)
+* [MoBi](https://github.com/Open-Systems-Pharmacology/MoBi/actions/runs/17785234484#artifacts)
+* [Installation Validator](https://github.com/Open-Systems-Pharmacology/InstallationValidator/actions/runs/17752953315#artifacts)
+* [OSPSuite.Core](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/actions/runs/17320537598#artifacts)
+* [OSPSuite.SimModel](https://github.com/Open-Systems-Pharmacology/OSPSuite.SimModel/actions/runs/16832845482#artifacts)
+<!-- * [OSPSuite.SimModel.Solver.CVODES]() -->
+* [OSPSuite.FuncParser](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/actions/runs/16811208145#artifacts)
+<!--* [OSPSuite.DataBinding.DevExpress]() -->
+<!--* [OSPSuite.DataBinding]() -->
+<!--* [OSPSuite.Utility]() -->
+<!--* [OSPSuite.TeXReporting]() -->
+<!--* [OSPSuite.Serializer]() -->
 
 ### [Batch comparison tests](BatchComparison)
 
