@@ -99,6 +99,7 @@ jobs:
           file_path: ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe
 
       - name: Push full as artifact
+        if: ${{ success() }}
         uses: actions/upload-artifact@v4
         with:
           name: OSPSuite Full Installer ${{env.APP_VERSION}}
