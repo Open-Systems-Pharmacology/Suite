@@ -9,6 +9,10 @@ on:
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
 
+permissions:
+  contents: read
+  packages: read
+
 jobs:
   latest-pksim:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main

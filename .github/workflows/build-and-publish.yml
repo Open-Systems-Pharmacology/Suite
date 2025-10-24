@@ -8,7 +8,11 @@ on:
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
-  APP_VERSION: 12.1.${{ github.run_number }}
+  APP_VERSION: 12.2.${{ github.run_number }}
+
+permissions:
+  contents: read
+  packages: read
 
 jobs:
   latest-pksim:
@@ -84,11 +88,15 @@ jobs:
         run: |
           rake "create_setup[${{env.APP_VERSION}}]"
 
-      - name: Push web installer as artifact
-        uses: actions/upload-artifact@v4
+      - name: Sign Suite Setup with CodeSignTool
+        uses: Open-Systems-Pharmacology/Workflows/.github/actions/codesigner-SSL@main
+        env:
+          ES_USERNAME: ${{ secrets.ES_USERNAME }}
+          ES_PASSWORD: ${{ secrets.ES_PASSWORD }}
+          ES_CREDENTIAL_ID: ${{ secrets.ES_CREDENTIAL_ID }}
+          ES_TOTP_SECRET: ${{ secrets.ES_TOTP_SECRET }}
         with:
-          name: OSPSuite Web Installer ${{env.APP_VERSION}}
-          path: output\OSPSuite-WebInstall.${{env.APP_VERSION}}.exe
+          file_path: ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe
 
       - name: Push full as artifact
         uses: actions/upload-artifact@v4

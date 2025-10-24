@@ -35,7 +35,7 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 ### ospsuite.globalsensitivity
 
 **Repository:** [OSPSuite.GlobalSensitivity](https://github.com/Open-Systems-Pharmacology/OSPSuite.GlobalSensitivity)  
-**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity/](https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity/)  
+**Documentation:** tbd.  
 **Description:** A package for performing global sensitivity analysis on OSP models. Currently under development.
 
 **Key Features:**
