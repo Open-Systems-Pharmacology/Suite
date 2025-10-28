@@ -4,7 +4,10 @@ on:
   pull_request:
     branches:
       - develop
- 
+
+permissions:
+  contents: read
+
 jobs:
   markdown-link-check:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/MarkdownLinksCheck.yml@main

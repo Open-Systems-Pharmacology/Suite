@@ -5,6 +5,9 @@ on:
     branches:
       - develop
 
+permissions:
+  contents: read
+
 jobs:
   crossref-check-without-anchors:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/XRefCheck.yml@main

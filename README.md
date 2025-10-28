@@ -69,17 +69,13 @@ PK-Sim can also import and export *project snapshots* in [JSON format](https://e
 
 ## Code Status
 
-[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/latest/total?label=%E2%AD%B3%20Downloads%20latest%20release)](https://github.com/Open-Systems-Pharmacology/Suite/releases/latest)
-[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/total?label=%E2%AD%B3%20Downloads%20total)](https://github.com/Open-Systems-Pharmacology/Suite/releases)
+[![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/latest/total?label=%E2%AD%B3%20Downloads%20latest%20release)](https://github.com/Open-Systems-Pharmacology/Suite/releases/latest)  [![](https://img.shields.io/github/downloads/Open-Systems-Pharmacology/Suite/total?label=%E2%AD%B3%20Downloads%20total)](https://github.com/Open-Systems-Pharmacology/Suite/releases)
 
-[![Setup status](https://ci.appveyor.com/api/projects/status/1p3m417amhra2gic/branch/develop?svg=true&passingText=Suite-Setup)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/suite/branch/develop)
-[![PK-Sim status](https://ci.appveyor.com/api/projects/status/65aa66s8aj2tcp45/branch/develop?svg=true&passingText=PK-Sim)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/pk-sim/branch/develop)
-[![MoBi status](https://ci.appveyor.com/api/projects/status/qgv5bpwys5snl7mk/branch/develop?svg=true&passingText=MoBi)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/mobi/branch/develop)
-[![Installation Validator status](https://ci.appveyor.com/api/projects/status/hffh219angc4svdh/branch/develop?svg=true&passingText=InstallationValidator)](https://ci.appveyor.com/project/open-systems-pharmacology-ci/installationvalidator/branch/develop)
+[![Setup status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/Suite/build-and-publish.yml?logo=GitHub&label=Suite%20Setup)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/build-and-publish.yml)  [![PK-Sim status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/PK-Sim/build-nightly_12.2.yml?logo=GitHub&label=PK-Sim)](https://github.com/Open-Systems-Pharmacology/PK-Sim/actions/workflows/build-nightly_12.2.yml)  [![MoBi status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/MoBi/build-nightly_12.2.yml?logo=GitHub&label=MoBi)](https://github.com/Open-Systems-Pharmacology/MoBi/actions/workflows/build-nightly_12.2.yml)  [![Installation Validator status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/InstallationValidator/build-nightly.yml?logo=GitHub&label=Installation%20Validator)](https://github.com/Open-Systems-Pharmacology/InstallationValidator/actions/workflows/build-nightly.yml)  [![Qualification Runner status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/QualificationRunner/build-nightly.yml?logo=GitHub&label=Qualification%20Runner)](https://github.com/Open-Systems-Pharmacology/QualificationRunner/actions/workflows/build-nightly.yml)
 
 [![R status](https://img.shields.io/github/actions/workflow/status/Open-Systems-Pharmacology/OSPSuite-R/main-workflow.yaml?svg=true&branch=main&label=ospsuite-r&logo=GitHub)](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/actions/workflows/main-workflow.yaml)
-[![Check Markdown links](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml)
-[![XRefCheck](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml)
+
+[![Check Markdown links](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/MarkdownLinksCheck.yml)  [![XRefCheck](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml/badge.svg)](https://github.com/Open-Systems-Pharmacology/Suite/actions/workflows/XRefCheck.yml)
 
 ## Software installation
 
