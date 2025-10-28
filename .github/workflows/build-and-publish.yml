@@ -88,15 +88,15 @@ jobs:
         run: |
           rake "create_setup[${{env.APP_VERSION}}]"
 
-      - name: Sign Suite Setup with CodeSignTool
-        uses: Open-Systems-Pharmacology/Workflows/.github/actions/codesigner-SSL@main
-        env:
-          ES_USERNAME: ${{ secrets.ES_USERNAME }}
-          ES_PASSWORD: ${{ secrets.ES_PASSWORD }}
-          ES_CREDENTIAL_ID: ${{ secrets.ES_CREDENTIAL_ID }}
-          ES_TOTP_SECRET: ${{ secrets.ES_TOTP_SECRET }}
-        with:
-          file_path: ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe
+#      - name: Sign Suite Setup with CodeSignTool
+#        uses: Open-Systems-Pharmacology/Workflows/.github/actions/codesigner-SSL@main
+#        env:
+#          ES_USERNAME: ${{ secrets.ES_USERNAME }}
+#          ES_PASSWORD: ${{ secrets.ES_PASSWORD }}
+#          ES_CREDENTIAL_ID: ${{ secrets.ES_CREDENTIAL_ID }}
+#          ES_TOTP_SECRET: ${{ secrets.ES_TOTP_SECRET }}
+#        with:
+#          file_path: ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe
 
       - name: Push full as artifact
         uses: actions/upload-artifact@v4
