@@ -97,6 +97,7 @@ jobs:
           ES_TOTP_SECRET: ${{ secrets.ES_TOTP_SECRET }}
         with:
           file_path: ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe
+          signing_method: v2
 
       - name: Push full as artifact
         uses: actions/upload-artifact@v4
