@@ -92,7 +92,7 @@ jobs:
       # (s. https://docs.firegiant.com/wix3/overview/insignia/)
       # 
       # 1. Extract the burn engine from the bundle
-      # 2. Sign the burn engine with the cerificate
+      # 2. Sign the burn engine with the certificate
       # 3. Re-Attach the burn engine to the bundle
       # 4. Sign the bundle with the certificate
       - name: Extract Wix Burn Engine
