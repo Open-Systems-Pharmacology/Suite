@@ -19,7 +19,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: PK-Sim
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.2.yml
       artifact-pattern: PKSim Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: MoBi
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.2.yml
       artifact-pattern: MoBi Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
