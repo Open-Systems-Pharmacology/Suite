@@ -28,41 +28,10 @@ PK-Sim® uses building blocks that are grouped into [**Individuals**](https://do
 
 [MoBi®](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation) is a systems biology software tool for multiscale physiological modeling and simulation. Within the restrictions of ordinary differential equations, almost any kind of (biological) model can be imported or set up from scratch. Examples include *in vitro* dissolution testing, biochemical reaction networks, compartmental disease progression models, or PBPK models. However, the de novo development of a PBPK model, for example, is very cumbersome such that the preferred procedure is to import it from PK-Sim®. Importantly, MoBi® also allows for the combination of the described examples and thereby is a very powerful tool for modeling and simulation of multiscale physiological systems covering molecular details on the one hand and whole-body architecture on the other hand.
 
-#### Building Block Concept
+De novo model establishment and simulation is supported by graphical tools and a flexible [building block concept](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/building-block-concepts) to support expert users. MoBi® uses building blocks that are grouped into [**Spatial Structures**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/spatial-structures-bb), [**Molecules**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/molecules-bb), [**Reactions**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/reactions-bb), [**Passive Transports**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/passive-transports-bb), [**Observers**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/observers-bb), [**Events**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/events-bb), [**Initial Conditions**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/initial-conditions-bb), [**Parameter Values**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/parameter-values-bb) and [**Observed Data**](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/import-edit-observed-data). Building blocks can be combined to [generate models](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/setting-up-simulation). Starting with version 12, MoBi® implements a [modularization concept](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/modularization-concept) with **PK-Sim Modules** and **Extension Modules**. The advantage of building blocks and modules is that they can be reused. Examples:
 
-De novo model establishment and simulation is supported by graphical tools and a flexible [building block concept](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/building-block-concepts) to support expert users. The building block concept emphasizes modularity and reusability of model components, with each building block representing a different aspect of the system being modeled. This structure provides a clear separation between compound-specific properties (e.g., physico-chemical characteristics) and organism-specific physiological traits (e.g., organ sizes, blood flows).
-
-MoBi® uses building blocks that are grouped into:
-- [**Spatial Structures**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/spatial-structures-bb) - Physical organization of the model (organs, tissues, compartments and their connections)
-- [**Molecules**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/molecules-bb) - Chemical entities with their physico-chemical properties
-- [**Reactions**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/reactions-bb) - Biochemical processes and interactions (e.g., metabolism, binding)
-- [**Passive Transports**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/passive-transports-bb) - Distribution processes like diffusion or permeation
-- [**Observers**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/observers-bb) - Outputs and measurements to be tracked during simulation
-- [**Events**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/events-bb) - Time- or state-triggered changes (e.g., dosing, conditional parameter changes)
-- [**Initial Conditions**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/initial-conditions-bb) - Starting values for molecules in each compartment
-- [**Parameter Values**](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/parameter-values-bb) - Model parameters such as rate constants, partition coefficients
-- [**Observed Data**](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/import-edit-observed-data) - Experimental data for comparison
-
-Building blocks can be saved as `.pkml` files and reused across different projects or shared with other users. They can be combined to [generate models](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/setting-up-simulation). Examples of building block reusability:
-- A different set of parameter or initial condition values may define a new scenario, situation, or individual
-- A refined reaction network can be updated and reused in all tissues where it should be considered
-- A spatial structure developed for one species can be adapted for another
-
-#### Modularization Concept
-
-Starting with version 12, MoBi® implements a [modularization concept](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/modularization-concept) that introduces an additional organizational layer above building blocks. A MoBi® project now consists of **Modules**, which group related building blocks, and **Simulations**, which are created by combining one or more modules.
-
-**Module Types:**
-- **PK-Sim Modules** - Created by exporting PBPK models from PK-Sim® to MoBi®. These are read-only by design to preserve the integrity of the base PBPK model
-- **Extension Modules** - User-created modules where model extensions and modifications are implemented (e.g., adding new organs, tissues, or processes)
-
-**Key advantages of the modularization approach:**
-- **Preserve model integrity** - Original PK-Sim® models remain unmodified; all customizations are contained in separate extension modules
-- **Enhanced reusability** - Modules can be easily reused across different projects and shared with collaborators
-- **Clear documentation** - Changes and extensions are explicitly separated from base models, improving transparency and traceability
-- **Flexible composition** - Simulations can combine multiple PK-Sim modules, extension modules, individuals, and expression profiles as needed
-
-This modular architecture enables efficient management of complex multi-scale models and facilitates collaborative model development.
+- a different set of starting values may define a new scenario, situation, or individual. 
+- refine a Reaction(s) network and update it in all tissues where it should be considered.
 
 ### Qualification framework
 
