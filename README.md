@@ -33,6 +33,11 @@ De novo model establishment and simulation is supported by graphical tools and b
 - a different set of starting values may define a new scenario, situation, or individual. 
 - refine a Reaction(s) network and update it in all tissues where it should be considered.
 
+Starting with version 12, the OSP Suite introduces a new modularization concept for building MoBi models. This concept enables users to create, share, and reuse models more efficiently by breaking them down into smaller, more manageable components called **modules**.
+
+You can find an overview of the modularization concept [here](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/modularization-concept).<br>
+An example workflow illustrating the practical application of the modularization concept can be found [here](https://docs.open-systems-pharmacology.org/working-with-mobi/mobi-documentation/example-workflows#modularization-use-case-adding-a-tumor-to-a-pbpk-model).
+
 ### Qualification framework
 
 The qualification framework enables an automated validation of various scenarios (use-cases) supported by the OSP platform. This technical framework is used, for example, to release, in full confidence, a new version of the OSP Suite by verifying automatically that an ever-growing list of scenarios is performing as expected. The qualification framework is described in detail [here](https://docs.open-systems-pharmacology.org/shared-tools-and-example-workflows/qualification).
