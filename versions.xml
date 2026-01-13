@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <applications>
   <application name="PK-Sim">
-    <version>12.1</version>
+    <version>12.2</version>
   </application>
   <application name="MoBi">
-    <version>12.1</version>
+    <version>12.2</version>
   </application>
 </applications>
