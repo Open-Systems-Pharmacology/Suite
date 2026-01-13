@@ -8,14 +8,18 @@ on:
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
-  APP_VERSION: 12.1.${{ github.run_number }}
+  APP_VERSION: 12.2.${{ github.run_number }}
+
+permissions:
+  contents: read
+  packages: read
 
 jobs:
   latest-pksim:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: PK-Sim
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.2.yml
       artifact-pattern: PKSim Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -24,7 +28,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: MoBi
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.2.yml
       artifact-pattern: MoBi Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -84,11 +88,44 @@ jobs:
         run: |
           rake "create_setup[${{env.APP_VERSION}}]"
 
-      - name: Push web installer as artifact
-        uses: actions/upload-artifact@v4
+      # Sign the setup with the certificate. For a WIX bundle, it requires several steps:
+      # (s. https://docs.firegiant.com/wix3/overview/insignia/)
+      # 
+      # 1. Extract the burn engine from the bundle
+      # 2. Sign the burn engine with the certificate
+      # 3. Re-Attach the burn engine to the bundle
+      # 4. Sign the bundle with the certificate
+      - name: Extract Wix Burn Engine
+        shell: cmd
+        run: |
+          insignia -ib ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe -o burnengine.exe
+
+      - name: Sign Wix burn engine with CodeSignTool
+        uses: Open-Systems-Pharmacology/Workflows/.github/actions/codesigner-SSL@main
+        env:
+          ES_USERNAME: ${{ secrets.ES_USERNAME }}
+          ES_PASSWORD: ${{ secrets.ES_PASSWORD }}
+          ES_CREDENTIAL_ID: ${{ secrets.ES_CREDENTIAL_ID }}
+          ES_TOTP_SECRET: ${{ secrets.ES_TOTP_SECRET }}
         with:
-          name: OSPSuite Web Installer ${{env.APP_VERSION}}
-          path: output\OSPSuite-WebInstall.${{env.APP_VERSION}}.exe
+          file_path: ./burnengine.exe
+
+      - name: Reattach signed Wix Burn engine to the Bundle
+        shell: cmd
+        run: |
+          ren output\OSPSuite-Full.${{env.APP_VERSION}}.exe original_OSPSuite-Full.${{env.APP_VERSION}}.exe
+          insignia -ab burnengine.exe output\original_OSPSuite-Full.${{env.APP_VERSION}}.exe -o output\OSPSuite-Full.${{env.APP_VERSION}}.exe
+          del output\original_OSPSuite-Full.${{env.APP_VERSION}}.exe
+
+      - name: Sign Suite Setup with CodeSignTool
+        uses: Open-Systems-Pharmacology/Workflows/.github/actions/codesigner-SSL@main
+        env:
+          ES_USERNAME: ${{ secrets.ES_USERNAME }}
+          ES_PASSWORD: ${{ secrets.ES_PASSWORD }}
+          ES_CREDENTIAL_ID: ${{ secrets.ES_CREDENTIAL_ID }}
+          ES_TOTP_SECRET: ${{ secrets.ES_TOTP_SECRET }}
+        with:
+          file_path: ./output/OSPSuite-Full.${{env.APP_VERSION}}.exe
 
       - name: Push full as artifact
         uses: actions/upload-artifact@v4
