@@ -4,10 +4,11 @@
 
 ### Unit and integration tests
 
-* [PK-Sim](https://github.com/Open-Systems-Pharmacology/PK-Sim/actions/runs/20871997235#artifacts)
-* [MoBi](https://github.com/Open-Systems-Pharmacology/MoBi/actions/runs/20871935324#artifacts)
-* [Installation Validator](https://github.com/Open-Systems-Pharmacology/InstallationValidator/actions/runs/20871962812#artifacts)
-* [OSPSuite.Core](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/actions/runs/20825164929#artifacts)
+* [PK-Sim](TestLogs/PK-Sim_testLog_Windows.html)
+* [MoBi](TestLogs/MoBi_testLog_Windows.html)
+* [Installation Validator](TestLogs/InstallationValidator_testLog_Windows.html)
+* [Qualification Runner](https://github.com/Open-Systems-Pharmacology/QualificationRunner/actions/runs/26685478878#artifacts)
+* [OSPSuite.Core](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/actions/runs/25579597796#artifacts)
 * [OSPSuite.SimModel](https://github.com/Open-Systems-Pharmacology/OSPSuite.SimModel/actions/runs/16832845482#artifacts)
 <!-- * [OSPSuite.SimModel.Solver.CVODES]() -->
 * [OSPSuite.FuncParser](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/actions/runs/16811208145#artifacts)
