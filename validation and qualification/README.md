@@ -5,8 +5,8 @@
 ### Unit and integration tests
 
 * [PK-Sim](TestLogs/PK-Sim_testLog_Windows.zip)
-* [MoBi](TestLogs/MoBi_testLog_Windows.html)
-* [Installation Validator](TestLogs/InstallationValidator_testLog_Windows.html)
+* [MoBi](TestLogs/MoBi_testLog_Windows.zip)
+* [Installation Validator](TestLogs/InstallationValidator_testLog_Windows.zip)
 * [Qualification Runner](https://github.com/Open-Systems-Pharmacology/QualificationRunner/actions/runs/26685478878#artifacts)
 * [OSPSuite.Core](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/actions/runs/25579597796#artifacts)
 * [OSPSuite.SimModel](https://github.com/Open-Systems-Pharmacology/OSPSuite.SimModel/actions/runs/16832845482#artifacts)
