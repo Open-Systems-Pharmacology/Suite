@@ -8,7 +8,7 @@ on:
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
-  APP_VERSION: 12.2.${{ github.run_number }}
+  APP_VERSION: 12.3.${{ github.run_number }}
 
 permissions:
   contents: read
@@ -19,7 +19,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: PK-Sim
-      action-name: build-nightly_12.2.yml
+      action-name: build-nightly_12.3.yml
       artifact-pattern: PKSim Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -28,7 +28,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: MoBi
-      action-name: build-nightly_12.2.yml
+      action-name: build-nightly_12.3.yml
       artifact-pattern: MoBi Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -37,7 +37,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: InstallationValidator
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.3.yml
       artifact-pattern: Installation Validator Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
