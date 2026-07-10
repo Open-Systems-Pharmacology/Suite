@@ -30,12 +30,11 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 - Parameter estimation and optimization
 - Model fitting to observed data
 - Integration with ospsuite for simulation execution
-- Currently under active development
 
 ### ospsuite.globalsensitivity
 
 **Repository:** [OSPSuite.GlobalSensitivity](https://github.com/Open-Systems-Pharmacology/OSPSuite.GlobalSensitivity)  
-**Documentation:** tbd.  
+**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity](https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity).  
 **Description:** A package for performing global sensitivity analysis on OSP models. Currently under development.
 
 **Key Features:**
