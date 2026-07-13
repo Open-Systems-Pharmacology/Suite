@@ -100,7 +100,7 @@ Windows 10®, Windows 11®, Windows Server 2019®, Windows Server 2022®, Window
 
 #### R packages
 
-All Windows operating systems listed above and Linux (_precompiled_ packages available for _Ubuntu 22.04_)
+All Windows operating systems listed above, Linux (_precompiled_ packages available for _Ubuntu 22.04_) and macOS.
 
 ### Processor
 Minimum: 1 GHz (the faster the better!)
@@ -112,7 +112,7 @@ Minimum: 4 GB RAM (8+ GB recommended)
 Minimum: 2 GB
 
 ### Optional Software
- * R® (version 4.x - 64bit) 
+ * R® (version 4.4 or later - 64bit) 
    
 ## Code of conduct
 
@@ -120,6 +120,6 @@ Everyone interacting in the Open Systems Pharmacology community (codebases, issu
 
 ## Contribution
 
-We encourage contribution to the Open Systems Pharmacology community. Before getting started, please read the [contribution guidelines](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CONTRIBUTING.md). If you are contributing code, please be familiar with the [coding standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODING_STANDARDS.md).
+We encourage contribution to the Open Systems Pharmacology community. Before getting started, please read the [contribution guidelines](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CONTRIBUTING.md). If you are contributing code, please be familiar with the [coding standards](https://dev.open-systems-pharmacology.org/setup/coding_standards).
 
 All trademarks within this document belong to their legitimate owners.
