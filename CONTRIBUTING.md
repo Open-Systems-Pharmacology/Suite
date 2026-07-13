@@ -23,8 +23,7 @@ Here are some ways ***you*** can contribute:
 If you find a bug in any of our tools, you can report that bug to the correct issue tracker on GitHub :
 * [PK-Sim](https://github.com/Open-Systems-Pharmacology/PK-Sim/issues)
 * [MoBi](https://github.com/Open-Systems-Pharmacology/MoBi/issues)
-* [Matlab-Toolbox](https://github.com/Open-Systems-Pharmacology/Matlab-Toolbox/issues)
-* [R-Toolbox](https://github.com/Open-Systems-Pharmacology/R-Toolbox/issues)
+* [OSPSuite-R](https://github.com/Open-Systems-Pharmacology/OSPSuite-R/issues)
 * [Installation Validator](https://github.com/Open-Systems-Pharmacology/InstallationValidator/issues)
 
 The first step when reporting a bug is to search the existing issues for duplicates. If you find a bug report that describes what you have found, you can add a 'me too' or +1 to the existing issue and make any helpful comments here.
@@ -70,7 +69,7 @@ Stay active in any follow-up discussions for the issue you have reported someone
 
 ## New feature / feature change requests
 
-If you have an idea of a new feature or feature change that you would like to see implemented, the first step is to create a new issue in the corresponding issue tracker (see above) to start a discussion. 
+If you have an idea of a new feature or feature change that you would like to see implemented, the first step is to start a discussion in the [OSP Forum](https://github.com/Open-Systems-Pharmacology/Forum/discussions/categories/feature-requests-ideas).
 
 The purpose of the new entry is for the community to discuss the possibilities of the change and agree on a plan and possibly on the implementation strategy.
 
@@ -78,13 +77,13 @@ That does not mean that the next step is certainly a scheduled release date for 
 
 You can also implement the feature on your own fork (see the steps for implementing a contribution below) and propose those changes back via pull request, however positive feedback via community discussion over feature additions or changes are still required.
 
-You should have a look at the [coding standards](CODING_STANDARDS.md) before implementing and proposing code changes.
+You should have a look at the [coding standards](https://dev.open-systems-pharmacology.org/setup/coding_standards) before implementing and proposing code changes.
 
 ## Bug fix contributions:
 
 You will implement a bug fix in your own private fork of the repository, then submit the proposal back to the original repository via pull request.
 
-You should have a look at the [coding standards](CODING_STANDARDS.md) before implementing and proposing code changes. 
+You should have a look at the [coding standards](https://dev.open-systems-pharmacology.org/setup/coding_standards) before implementing and proposing code changes. 
 
 For your first few contributions to the Open Systems Pharmacology project, consider implementing an issue labeled 'help wanted'.
 
@@ -108,7 +107,7 @@ Note that for a contribution to be accepted, the new code should be adequately c
 
 ## Community Discussion
 
-A great way to be involved with the development of the Open Systems Pharmacology project is to participate in discussions about the product. Ask your questions, contribute to the ideas for new features, support others by answering questions
+A great way to be involved with the development of the Open Systems Pharmacology project is to participate in discussions about the product. Ask your questions, contribute to the ideas for new features, support others by answering questions in the [OSP Forum](https://github.com/Open-Systems-Pharmacology/Forum/discussions).
 
 ## Models
 
