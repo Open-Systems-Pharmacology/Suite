@@ -13,7 +13,7 @@ on:
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
-  APP_VERSION: 12.3.${{ github.run_number }}
+  APP_VERSION: 13.0.${{ github.run_number }}
   
 permissions:
   contents: read
@@ -24,7 +24,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: PK-Sim
-      action-name: build-nightly_12.3.yml
+      action-name: build-nightly_v13.yml
       artifact-pattern: PKSim Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -33,7 +33,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: MoBi
-      action-name: build-nightly_12.3.yml
+      action-name: build-nightly_v13.yml
       artifact-pattern: MoBi Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -42,7 +42,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: InstallationValidator
-      action-name: build-nightly_12.3.yml
+      action-name: build-nightly_13.0.yml
       artifact-pattern: Installation Validator Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -52,12 +52,12 @@ jobs:
     needs: [latest-pksim, latest-mobi, latest-validator]
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v6
         with:
           submodules: 'true'
 
       - name: Download PK-Sim Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: ${{ needs.latest-pksim.outputs.artifact-name }}
           path: ./deploy/pk-sim
@@ -66,7 +66,7 @@ jobs:
           run-id: ${{ needs.latest-pksim.outputs.run-id }}
 
       - name: Download MoBi Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: ${{ needs.latest-mobi.outputs.artifact-name }}
           path: ./deploy/mobi
@@ -75,7 +75,7 @@ jobs:
           run-id: ${{ needs.latest-mobi.outputs.run-id }}
 
       - name: Download Validator Artifact
-        uses: actions/download-artifact@v4
+        uses: actions/download-artifact@v8
         with:
           name: ${{ needs.latest-validator.outputs.artifact-name }}
           path: ./deploy/installationvalidator
@@ -85,7 +85,7 @@ jobs:
 
       - name: Download Requirements
         run: |
-          (new-object net.webclient).DownloadFile('https://go.microsoft.com/fwlink/?LinkID=863265', './netfx472.exe')
+          (new-object net.webclient).DownloadFile('https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.10/windowsdesktop-runtime-10.0.10-win-x64.exe', './windowsdesktop-runtime-10.0.10-win-x64.exe')
           (new-object net.webclient).DownloadFile('https://aka.ms/vs/17/release/vc_redist.x64.exe', './vc_redist.x64.exe')
           (new-object net.webclient).DownloadFile('https://github.com/Open-Systems-Pharmacology/MiKTeX/releases/download/v2.9.3/MikTex.2.9.3.msi', './MikTex.msi')
 
