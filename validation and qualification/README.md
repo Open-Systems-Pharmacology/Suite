@@ -11,7 +11,7 @@
 * [OSPSuite.Core](https://github.com/Open-Systems-Pharmacology/OSPSuite.Core/actions/runs/25579597796#artifacts)
 * [OSPSuite.SimModel](https://github.com/Open-Systems-Pharmacology/OSPSuite.SimModel/actions/runs/16832845482#artifacts)
 <!-- * [OSPSuite.SimModel.Solver.CVODES]() -->
-* [OSPSuite.FuncParser](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/actions/runs/16811208145#artifacts)
+* [OSPSuite.FuncParser](https://github.com/Open-Systems-Pharmacology/OSPSuite.FuncParser/actions/runs/25451594842#artifacts)
 <!--* [OSPSuite.DataBinding.DevExpress]() -->
 <!--* [OSPSuite.DataBinding]() -->
 <!--* [OSPSuite.Utility]() -->
