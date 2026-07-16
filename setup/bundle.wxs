@@ -11,7 +11,7 @@
 
     <Variable Name="InstallFolder" Type="string" Value="[ProgramFiles64Folder]"/>
     <Chain>
-      <ExePackage Id="net8" Compressed="$(var.Compressed)" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q /norestart" SourceFile="windowsdesktop-runtime-8.0.20-win-x64.exe" DownloadUrl="https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.20/windowsdesktop-runtime-8.0.20-win-x64.exe" />
+      <ExePackage Id="net10" Compressed="$(var.Compressed)" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q /norestart" SourceFile="windowsdesktop-runtime-10.0.10-win-x64.exe" DownloadUrl="https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/10.0.10/windowsdesktop-runtime-10.0.10-win-x64.exe" />
 
       <ExePackage SourceFile="vc_redist.x64.exe" InstallCommand='/q /norestart' Vital="yes" Compressed="yes" PerMachine="yes" Permanent="yes" >
         <!-- Ignore "Newer version installed" error -->
