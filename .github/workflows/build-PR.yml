@@ -5,16 +5,26 @@ on:
   pull_request:
     branches:
     - develop
+    paths-ignore:
+    - '*.md'
+    - 'OSP_software_landscape.*'
+    - 'versions.*'
+    - 'validation and qualification/**'
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
+  APP_VERSION: 12.3.${{ github.run_number }}
+  
+permissions:
+  contents: read
+  packages: read
 
 jobs:
   latest-pksim:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: PK-Sim
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.3.yml
       artifact-pattern: PKSim Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -23,7 +33,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: MoBi
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.3.yml
       artifact-pattern: MoBi Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -32,7 +42,7 @@ jobs:
     uses: Open-Systems-Pharmacology/Workflows/.github/workflows/latest-artifact.yml@main
     with:
       repo-name: InstallationValidator
-      action-name: build-nightly.yml
+      action-name: build-nightly_12.3.yml
       artifact-pattern: Installation Validator Installer
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}
@@ -81,4 +91,4 @@ jobs:
 
       - name: Create Setup
         run: |
-          rake "create_setup[12.1.0]"
+          rake "create_setup[${{env.APP_VERSION}}]"

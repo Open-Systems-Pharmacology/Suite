@@ -13,24 +13,24 @@
     <Chain>
       <ExePackage Id="net8" Compressed="$(var.Compressed)" PerMachine="yes" Permanent="yes" Vital="yes" InstallCommand="/q /norestart" SourceFile="windowsdesktop-runtime-8.0.20-win-x64.exe" DownloadUrl="https://builds.dotnet.microsoft.com/dotnet/WindowsDesktop/8.0.20/windowsdesktop-runtime-8.0.20-win-x64.exe" />
 
-      <ExePackage SourceFile="vc_redist.x64.exe" InstallCommand='/q /norestart' Vital="yes" Compressed="$(var.Compressed)" PerMachine="yes" Permanent="yes" DownloadUrl="https://aka.ms/vs/16/release/vc_redist.x64.exe">
+      <ExePackage SourceFile="vc_redist.x64.exe" InstallCommand='/q /norestart' Vital="yes" Compressed="yes" PerMachine="yes" Permanent="yes" >
         <!-- Ignore "Newer version installed" error -->
         <ExitCode Value="1638" Behavior="success"/>
       </ExePackage>
 
-      <MsiPackage Id="miktex" Vital ="yes" SourceFile="MikTex.msi" Compressed="$(var.Compressed)">
+      <MsiPackage Id="miktex" Vital ="yes" SourceFile="MikTex.msi" Compressed="yes">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
 
-      <MsiPackage Id="pksim" Vital="yes" SourceFile="$(var.pksim)" Compressed="$(var.Compressed)">
+      <MsiPackage Id="pksim" Vital="yes" SourceFile="$(var.pksim)" Compressed="yes">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
 
-      <MsiPackage Id="mobi" Vital="yes" SourceFile="$(var.mobi)" Compressed="$(var.Compressed)">
+      <MsiPackage Id="mobi" Vital="yes" SourceFile="$(var.mobi)" Compressed="yes">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
 
-      <MsiPackage Id="validator" Vital="yes" SourceFile="$(var.validator)" Compressed="$(var.Compressed)">
+      <MsiPackage Id="validator" Vital="yes" SourceFile="$(var.validator)" Compressed="yes">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
     </Chain>

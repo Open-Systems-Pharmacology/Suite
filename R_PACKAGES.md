@@ -16,6 +16,7 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 - Population simulation capabilities
 - PK analysis and sensitivity analysis
 - Data import/export functionality
+- Visualizations (Time Profile plots, GOF plots, Multi-Panel plots)
 - Unit conversion and dimension handling
 
 ## Analysis and Modeling
@@ -30,12 +31,11 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 - Parameter estimation and optimization
 - Model fitting to observed data
 - Integration with ospsuite for simulation execution
-- Currently under active development
 
 ### ospsuite.globalsensitivity
 
 **Repository:** [OSPSuite.GlobalSensitivity](https://github.com/Open-Systems-Pharmacology/OSPSuite.GlobalSensitivity)  
-**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity/](https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity/)  
+**Documentation:** [https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity](https://www.open-systems-pharmacology.org/OSPSuite.GlobalSensitivity).  
 **Description:** A package for performing global sensitivity analysis on OSP models. Currently under development.
 
 **Key Features:**
@@ -77,7 +77,7 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 - Dependent table generation
 - Integration with OSP visualization standards
 
-### tlf
+### tlf (Will be replaced by ospsuite.plots over time)
 
 **Repository:** [TLF-Library](https://github.com/Open-Systems-Pharmacology/TLF-Library)  
 **Documentation:** [https://www.open-systems-pharmacology.org/TLF-Library/](https://www.open-systems-pharmacology.org/TLF-Library/)  
@@ -141,17 +141,18 @@ The Open Systems Pharmacology (OSP) ecosystem provides a comprehensive suite of 
 
 ### System Requirements
 
-**R Version:** 4.x.x  
+**R Version:** 4.4.x  
 **Operating Systems:** 
 - Windows 10®, Windows 11®, Windows Server 2016®, Windows Server 2019®
 - Linux (Ubuntu 22.04 with precompiled packages available)
+- macOS
 
 ### Prerequisites
 
 Before installing OSP R packages, install the required external dependencies:
 
 - **Visual C++ Redistributable** (Windows)
-- **.NET 8** (Windows and Linux)
+- **.NET 8** (All operating systems)
 
 Detailed installation instructions are available in the [rSharp documentation](https://github.com/Open-Systems-Pharmacology/rSharp#prerequisites).
 
@@ -165,20 +166,9 @@ install.packages("remotes")
 remotes::install_github("Open-Systems-Pharmacology/OSPSuite-R@*release")
 
 # Install additional packages as needed
-remotes::install_github("Open-Systems-Pharmacology/TLF-Library")
-remotes::install_github("Open-Systems-Pharmacology/OSPSuite.ReportingEngine")
+remotes::install_github("Open-Systems-Pharmacology/OSPSuite.ReportingEngine@*release")
 remotes::install_github("Open-Systems-Pharmacology/OSPSuite.ParameterIdentification@*release")
 ```
-
-### Package Dependencies
-
-OSP R packages have interdependencies. The typical installation order is:
-
-1. `{ospsuite.utils}` - Base utility functions
-2. `{tlf}` - Tables, listings, and figures framework  
-3. `{ospsuite}` - Core simulation engine
-4. `{ospsuite.reportingengine}` - Report generation
-5. Additional analysis packages as needed
 
 ## Documentation and Support
 
@@ -196,7 +186,7 @@ For new users, we recommend following the documentation in this order:
 - **Forum:** [Open Systems Pharmacology Project Forum](http://forum.open-systems-pharmacology.org)
 - **Code of Conduct:** [OSP Code of Conduct](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODE_OF_CONDUCT.md)
 - **Contributing:** [Contribution Guidelines](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CONTRIBUTING.md)
-- **R Coding Standards:** [R Coding Standards](https://github.com/Open-Systems-Pharmacology/Suite/blob/master/CODING_STANDARDS_R.md)
+- **R Coding Standards:** [R Coding Standards](https://dev.open-systems-pharmacology.org/r-development-resources/coding_standards_r)
 
 ## License
 

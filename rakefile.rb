@@ -9,7 +9,6 @@ OpenSSL::SSL::VERIFY_PEER = OpenSSL::SSL::VERIFY_NONE
 MANUFACTURER = 'Open Systems Pharmacology'
 PRODUCT_NAME = "#{MANUFACTURER} Suite"
 GITHUB_NAME = 'open-systems-pharmacology'
-APPVEYOR_ACCOUNT_NAME = 'open-systems-pharmacology-ci'
 
 VARIABLES = {}
 MSI = {}
@@ -36,7 +35,6 @@ task :create_setup,[:product_version, :branch_name]  do |t, args|
   Rake::Task['prepare_all_packages'].invoke
   
   create_versions_file
-  create_setup compressed:'no', output_name:'OSPSuite-WebInstall' 
   create_setup compressed:'yes', output_name:'OSPSuite-Full'  
 end
 
