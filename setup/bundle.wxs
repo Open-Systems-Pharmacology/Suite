@@ -18,10 +18,6 @@
         <ExitCode Value="1638" Behavior="success"/>
       </ExePackage>
 
-      <MsiPackage Id="miktex" Vital ="yes" SourceFile="MikTex.msi" Compressed="yes">
-        <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
-      </MsiPackage>
-
       <MsiPackage Id="pksim" Vital="yes" SourceFile="$(var.pksim)" Compressed="yes">
         <MsiProperty Name='TARGETDIR' Value='[InstallFolder]'/>
       </MsiPackage>
