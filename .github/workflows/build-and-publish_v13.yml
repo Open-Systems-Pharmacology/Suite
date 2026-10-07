@@ -3,6 +3,8 @@ name: Build Nightly 13.0
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '0 5 * * *'
 
 env:
   WIX: "C:/Program Files (x86)/WiX Toolset v3.14"
